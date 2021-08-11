@@ -1,0 +1,28 @@
+{
+  "settings": {
+    "name": "Classic Vazult settings & characters",
+    "lore": "some lore",
+    "author": "AZsSPC",
+    "avatar": true,
+    "target": true,
+    "inventory": 0,
+    "properties": 8,
+    "balance": 0
+  },
+  "avatars": [
+    {
+      "name": "asd",
+      "old": "asd",
+      "job": "asd",
+      "sex": "asd",
+      "items": [],
+      "properties": []
+    }
+  ],
+  "items": [
+  ],
+  "properties": [
+  ],
+  "targets": [
+  ]
+}
