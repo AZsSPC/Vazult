@@ -4,7 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Settings {
-    String img_url;
+    //String img_url;
     String name;
     String lore;
     String author;
@@ -15,7 +15,6 @@ public class Settings {
     int balance;
 
     public Settings(JSONObject data) throws JSONException {
-        img_url = data.getString("img_url");
         name = data.getString("name");
         lore = data.getString("lore");
         author = data.getString("author");
@@ -24,12 +23,14 @@ public class Settings {
         inventory = data.getInt("inventory");
         properties = data.getInt("properties");
         balance = data.getInt("balance");
+        //img_url = data.getString("img_url");
     }
 
-    public String getImgURL() {
-        return img_url;
-    }
-
+    /*
+        public String getImgURL() {
+            return img_url;
+        }
+    */
     public String getName() {
         return name;
     }
