@@ -4,14 +4,14 @@
     <string name="restart_it">Перезапустите приложение</string>
 
     <string name="sc_path">Перезапустите приложение</string>
-    <string name="sc_avatar">Наличие базы аватара</string>
+    <string name="sc_avatar">Шаблон аватара</string>
     <string name="sc_author">Автор</string>
     <string name="sc_lore">Описане</string>
     <string name="sc_name">Название</string>
-    <string name="sc_prop">Количество атрибутов</string>
-    <string name="sc_balance">Балансировка атрибутов</string>
-    <string name="sc_target">Наличие игровой цели</string>
-    <string name="sc_inventory">Наличие инвентаря</string>
+    <string name="sc_prop">Случайных свойств</string>
+    <string name="sc_balance">Баланс свойств</string>
+    <string name="sc_target">Игровая цель</string>
+    <string name="sc_inventory">Размер инвентаря</string>
 
     <string name="sc_true">Есть</string>
     <string name="sc_false">Нет</string>

@@ -3,7 +3,12 @@ package com.azsspc.az_vault;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import org.json.JSONArray;
+import com.azsspc.az_vault.game_comp.Avatar;
+import com.azsspc.az_vault.game_comp.Item;
+import com.azsspc.az_vault.game_comp.Property;
+import com.azsspc.az_vault.game_comp.Settings;
+import com.azsspc.az_vault.game_comp.Target;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,39 +20,32 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.util.HashMap;
 
 public class DataLoader {
     public static String active_script_url;
-    public static JSONObject active_script_settings;
-    public static JSONArray active_script_avatars;
-    public static JSONArray active_script_items;
-    public static JSONArray active_script_properties;
-    public static JSONArray active_script_targets;
+    public static Settings as_settings;
+    public static HashMap<String, Avatar> active_script_avatars;
+    public static HashMap<String, Item> active_script_items;
+    public static HashMap<String, Property> active_script_properties;
+    public static HashMap<String, Target> active_script_targets;
     public static final String gfs_error = "gfs_error";
 
-    public static String getScripSetting(String target) {
-        try {
-            return active_script_settings.getString(target);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return "null";
-        }
-    }
 
     public static void loadScript(Context c, String script_url) {
         try {
-            String file_name = script_url.replaceAll("^.+/", "");
             active_script_url = script_url;
+            String file_name = script_url.replaceAll("^.+/", "");
             String script_in = getFromStorage(c, file_name);
             JSONObject uj = new JSONObject(script_in.equals(gfs_error)
                     ? DataLoader.getFromCloud(c, file_name, script_url)
                     : script_in
             );
-            active_script_settings = uj.getJSONObject("settings");
-            active_script_avatars = uj.getJSONArray("avatars");
-            active_script_items = uj.getJSONArray("items");
-            active_script_properties = uj.getJSONArray("properties");
-            active_script_targets = uj.getJSONArray("targets");
+            as_settings = new Settings(uj.getJSONObject("settings"));
+            active_script_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
+            active_script_items = Item.createArray(uj.getJSONArray("items"));
+            active_script_properties = Property.createArray(uj.getJSONArray("properties"));
+            active_script_targets = Target.createArray(uj.getJSONArray("targets"));
         } catch (JSONException e) {
             e.printStackTrace();
         }

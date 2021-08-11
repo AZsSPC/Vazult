@@ -1,8 +1,11 @@
 package com.azsspc.az_vault;
 
 import static com.azsspc.az_vault.DataLoader.active_script_url;
+import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.DataLoader.getFromCloud;
-import static com.azsspc.az_vault.DataLoader.getScripSetting;
+import static com.azsspc.az_vault.DataLoader.getSBool;
+import static com.azsspc.az_vault.DataLoader.getSInt;
+import static com.azsspc.az_vault.DataLoader.getSString;
 import static com.azsspc.az_vault.DataLoader.loadScript;
 
 import android.annotation.SuppressLint;
@@ -36,17 +39,16 @@ public class ScriptManagerActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     void setSettingsView() {
         sc_path.setText(active_script_url);
-        sc_author.setText(getScripSetting("author"));
-        sc_lore.setText(getScripSetting("lore"));
-        sc_name.setText(getScripSetting("name"));
-        sc_avatar.setText(getString(R.string.sc_avatar) + ": " +
-                (Boolean.parseBoolean(getScripSetting("avatar")) ? getString(R.string.sc_true) : getString(R.string.sc_false)));
-        sc_target.setText(getString(R.string.sc_target) + ": " +
-                (Boolean.parseBoolean(getScripSetting("target")) ? getString(R.string.sc_true) : getString(R.string.sc_false)));
-        sc_inventory.setText(getString(R.string.sc_inventory) + ": " +
-                (Boolean.parseBoolean(getScripSetting("inventory")) ? getString(R.string.sc_true) : getString(R.string.sc_false)));
-        sc_prop.setText(getString(R.string.sc_prop) + ": " + getScripSetting("properties"));
-        sc_balance.setText(getString(R.string.sc_balance) + ": " + getScripSetting("balance"));
+        sc_author.setText(as_settings.getAuthor());
+        sc_lore.setText(as_settings.getLore());
+        sc_name.setText(as_settings.getName());
+        sc_inventory.setText(getString(R.string.sc_inventory) + ": " + as_settings.getInventorySize());
+        sc_prop.setText(getString(R.string.sc_prop) + ": " + as_settings.getPropertiesCount());
+        sc_balance.setText(getString(R.string.sc_balance) + ": " + as_settings.getBalance());
+        sc_avatar.setText(getString(R.string.sc_avatar) + ": " + (as_settings.isAvatarAllow()
+                ? getString(R.string.sc_true) : getString(R.string.sc_false)));
+        sc_target.setText(getString(R.string.sc_target) + ": " + (as_settings.isTargetAllow()
+                ? getString(R.string.sc_true) : getString(R.string.sc_false)));
     }
 
     public void reloadActiveScript(View v) {

@@ -1,6 +1,7 @@
 package com.azsspc.az_vault;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
             Toast.makeText(this, getString(R.string.restart_it), Toast.LENGTH_LONG).show();
         }
+    }
+
+    public static String[] getFromJSONArray(JSONArray data) throws JSONException {
+        int rel = data.length();
+        String[] ret = new String[rel];
+        for (int i = 0; i < rel; i++)
+            ret[i] = data.getString(i);
+        return ret;
     }
 }
 

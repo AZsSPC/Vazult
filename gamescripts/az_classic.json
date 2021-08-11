@@ -1,28 +1,56 @@
 {
   "settings": {
+    "img_url": "https://raw.githubusercontent.com/AZsSPC/Vazult_/master/gameimages/",
     "name": "Classic Vazult settings & characters",
     "lore": "some lore",
     "author": "AZsSPC",
     "avatar": true,
     "target": true,
-    "inventory": 0,
-    "properties": 8,
+    "inventory": 8,
+    "properties": 10,
     "balance": 0
   },
   "avatars": [
     {
+      "id": "id",
       "name": "asd",
       "old": "asd",
       "job": "asd",
       "sex": "asd",
+      "lore": "lore",
       "items": [],
       "properties": []
     }
   ],
   "items": [
+    {
+      "id": "id",
+      "name": "Name",
+      "abilities": [],
+      "lore": "lore",
+      "type": "papper",
+      "weight": 1,
+      "img": "papper"
+    }
   ],
   "properties": [
+    {
+      "id": "id",
+      "name": "Name",
+      "abilities": [],
+      "lore": "lore",
+      "visibility": "visible",
+      "allow": true,
+      "tags": []
+    }
   ],
   "targets": [
+    {
+      "id": "id",
+      "name": "Name",
+      "abilities": [],
+      "lore": "lore",
+      "chance": 1
+    }
   ]
 }
