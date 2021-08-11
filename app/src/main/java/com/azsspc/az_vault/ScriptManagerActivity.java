@@ -3,9 +3,6 @@ package com.azsspc.az_vault;
 import static com.azsspc.az_vault.DataLoader.active_script_url;
 import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.DataLoader.getFromCloud;
-import static com.azsspc.az_vault.DataLoader.getSBool;
-import static com.azsspc.az_vault.DataLoader.getSInt;
-import static com.azsspc.az_vault.DataLoader.getSString;
 import static com.azsspc.az_vault.DataLoader.loadScript;
 
 import android.annotation.SuppressLint;
