@@ -1,5 +1,9 @@
 package com.azsspc.az_vault.game_comp;
 
+import android.content.Context;
+
+import com.azsspc.az_vault.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,6 +17,8 @@ public class Target extends Tile {
 
     Target(JSONObject data) throws JSONException {
         super(data);
+        this.img = R.drawable.ic_target;
+        this.color = R.color.target;
         this.chance = data.getInt("chance");
     }
 
@@ -33,4 +39,7 @@ public class Target extends Tile {
         return chance;
     }
 
+    public String getFullCenter(Context c) {
+        return "  • " + c.getString(R.string.target_chance) + ": " + chance + "\n" + getCenter(c);
+    }
 }

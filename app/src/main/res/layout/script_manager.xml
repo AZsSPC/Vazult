@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     android:background="@color/white">
 
     <ScrollView
@@ -11,8 +12,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -47,11 +50,10 @@
                 android:id="@+id/script_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:padding="4dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/script_author"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/script_url" />
 
@@ -59,14 +61,15 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:minHeight="148dp"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toStartOf="@+id/scrollView3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/script_name">
+                app:layout_constraintTop_toBottomOf="@+id/script_author">
 
                 <TextView
                     android:id="@+id/script_avatar"
@@ -95,73 +98,90 @@
 
             </LinearLayout>
 
-            <GridLayout
-                android:id="@+id/linearLayout4"
+            <ScrollView
+                android:id="@+id/scrollView3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:columnCount="2"
-                android:foregroundGravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2">
 
-                <Button
-                    android:id="@+id/b_show_avatars"
-                    android:layout_width="128dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/avatar"
-                    android:gravity="center_vertical"
-                    android:onClick="showMeArrayOf"
-                    android:text="Avatars"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
+                    android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/b_show_prop"
-                    android:layout_width="128dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/property"
-                    android:gravity="center_vertical"
-                    android:onClick="showMeArrayOf"
-                    android:text="Properties"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/script_rel_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/b_st"
+                        android:gravity="center"
+                        android:onClick="reloadActiveScript"
+                        android:text="@string/menu_reload"
+                        android:textColor="@color/white" />
 
-                <Button
-                    android:id="@+id/b_show_targets"
-                    android:layout_width="128dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/target"
-                    android:gravity="center_vertical"
-                    android:onClick="showMeArrayOf"
-                    android:text="Targets"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/b_show_targets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/target"
+                        android:gravity="center"
+                        android:onClick="showMeArrayOf"
+                        android:text="@string/menu_target"
+                        android:textColor="@color/white" />
 
-                <Button
-                    android:id="@+id/b_show_items"
-                    android:layout_width="128dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/item"
-                    android:gravity="center_vertical"
-                    android:onClick="showMeArrayOf"
-                    android:text="Items"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/b_show_avatars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/avatar"
+                        android:gravity="center"
+                        android:onClick="showMeArrayOf"
+                        android:text="@string/menu_avatar"
+                        android:textColor="@color/white" />
 
-            </GridLayout>
+                    <Button
+                        android:id="@+id/b_show_prop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/property"
+                        android:gravity="center"
+                        android:onClick="showMeArrayOf"
+                        android:text="@string/menu_property"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/b_show_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/item"
+                        android:gravity="center"
+                        android:onClick="showMeArrayOf"
+                        android:text="@string/menu_items"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/script_del_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/b_gp"
+                        android:gravity="center"
+                        android:text="@string/menu_delete"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
 
             <TextView
                 android:id="@+id/script_lore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:paddingBottom="120dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/script_add_new"
@@ -176,45 +196,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_add_circle_24" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/linearLayout2">
-
-                <Button
-                    android:id="@+id/script_del_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/b_gp"
-                    android:text="delete"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
-
-                <Button
-                    android:id="@+id/script_rel_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/b_st"
-                    android:gravity="center_vertical"
-                    android:onClick="reloadActiveScript"
-                    android:text="reload"
-                    android:textAlignment="center"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
             <TextView
                 android:id="@+id/script_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/script_name"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/script_name" />
+                app:layout_constraintTop_toBottomOf="@+id/script_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

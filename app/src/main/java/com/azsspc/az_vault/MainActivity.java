@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ScriptManagerActivity.class));
     }
 
+    public void buttonHowToPlay(View v) {
+        startActivity(new Intent(this, HowToPlayActivity.class));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

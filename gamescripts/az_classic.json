@@ -74,7 +74,9 @@
       "allow": true,
       "balance": 1,
       "tags": [],
-      "items": ["stump"]
+      "items": [
+        "stump"
+      ]
     }
   ],
   "targets": [
@@ -85,5 +87,6 @@
       "lore": "lore",
       "chance": 9
     }
-  ]
+  ],
+  "locations": []
 }

@@ -1,5 +1,6 @@
 package com.azsspc.az_vault.game_comp;
 
+import android.content.Context;
 import android.view.View;
 
 import com.azsspc.az_vault.R;
@@ -10,6 +11,8 @@ import org.json.JSONObject;
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Tile {
+    public static final String VISIBLE = "visible";
+    public static final String INVISIBLE = "invisible";
     int color;
     int img;
     final String id;
@@ -51,15 +54,19 @@ public class Tile {
         return abilities;
     }
 
-    public String getTop() {
+    public String getTop(Context c) {
         return getName();
     }
 
-    public String getCenter() {
-        return "• " + String.join("• ", abilities);
+    public String getCenter(Context c) {
+        return toList(abilities);
     }
 
-    public String getBottom() {
+    public String getBottom(Context c) {
         return getLore();
+    }
+
+    public static String toList(String[] s) {
+        return "  • " + String.join("\n  • ", s);
     }
 }

@@ -1,5 +1,6 @@
 package com.azsspc.az_vault.game_comp;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.azsspc.az_vault.R;
@@ -11,6 +12,7 @@ import org.json.JSONObject;
 import java.lang.reflect.Constructor;
 import java.util.HashMap;
 
+import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.MainActivity.getCPFS;
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
@@ -72,5 +74,20 @@ public class Property extends Tile {
 
     public String[] getTags() {
         return tags;
+    }
+
+    public String getCenter(Context c) {
+        String type = "";
+        if (visibility.equals(VISIBLE)) type = c.getString(R.string.prop_vis) + "\n";
+        else if (visibility.equals(INVISIBLE)) type = c.getString(R.string.prop_invis) + "\n";
+        return type + toList(abilities);
+    }
+
+    public String getFullCenter(Context c) {
+        return getCenter(c) +
+                "\n---\n" +
+                c.getString(R.string.prop_tags) + ": \n" + toList(tags) +
+                "\n---\n" +
+                c.getString(R.string.prop_allow) + ": " + c.getString(allow ? R.string.sc_true : R.string.sc_false);
     }
 }

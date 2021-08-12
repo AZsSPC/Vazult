@@ -12,33 +12,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
 import com.azsspc.az_vault.game_comp.Item;
-import com.azsspc.az_vault.game_comp.Property;
+import com.azsspc.az_vault.game_comp.Target;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import static com.azsspc.az_vault.DataLoader.as_items;
-
-public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHolder> {
+public class TargetAdapter extends RecyclerView.Adapter<TargetAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
-    private final List<Property> tiles;
+    private final List<Target> tiles;
 
-    public PropertyAdapter(Context context, List<Property> tiles) {
+    public TargetAdapter(Context context, List<Target> tiles) {
         this.tiles = tiles;
         this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
-    public PropertyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.ad_property, parent, false));
+    public TargetAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(inflater.inflate(R.layout.ad_target, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(PropertyAdapter.ViewHolder holder, int position) {
-        Property tile = tiles.get(position);
+    public void onBindViewHolder(TargetAdapter.ViewHolder holder, int position) {
+        Target tile = tiles.get(position);
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
@@ -52,14 +48,10 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         holder.center.setTextColor(color);
         //holder.bottom.setTextColor(color);
 
-        ArrayList<Item> items = new ArrayList<>();
-        for (String item : tile.getItems()) items.add(as_items.get(item));
-        holder.rv_items.setAdapter(new ItemAdapter(holder.context.getContext(), items));
-
         holder.context.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View c = holder.rv_items;
+                View c = holder.bottom;
                 if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
                 else c.setVisibility(View.VISIBLE);
             }
@@ -83,17 +75,15 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final ImageView img;
         final TextView top, center, bottom;
-        final RecyclerView rv_items;
         final View context;
 
         ViewHolder(View view) {
             super(view);
-            context = view.findViewById(R.id.ad_p_context);
-            img = view.findViewById(R.id.ad_p_img);
-            top = view.findViewById(R.id.ad_p_top);
-            center = view.findViewById(R.id.ad_p_center);
-            bottom = view.findViewById(R.id.ad_p_bottom);
-            rv_items = view.findViewById(R.id.ad_p_items);
+            context = view.findViewById(R.id.ad_t_context);
+            img = view.findViewById(R.id.ad_t_img);
+            top = view.findViewById(R.id.ad_t_top);
+            center = view.findViewById(R.id.ad_t_center);
+            bottom = view.findViewById(R.id.ad_t_bottom);
         }
     }
 }

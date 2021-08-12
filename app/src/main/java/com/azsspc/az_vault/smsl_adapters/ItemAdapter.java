@@ -34,12 +34,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
         Item tile = tiles.get(position);
-        int color = tile.getColor();
+        Context c = holder.context.getContext();
+        int color = c.getColor(tile.getColor());
 
         holder.img.setImageResource(tile.getImg());
-        holder.top.setText(tile.getTop());
-        holder.center.setText(tile.getCenter());
-        holder.bottom.setText(tile.getBottom());
+        holder.top.setText(tile.getTop(c));
+        holder.center.setText(tile.getCenter(c));
+        holder.bottom.setText(tile.getBottom(c));
 
         holder.img.setColorFilter(color);
         holder.top.setTextColor(color);

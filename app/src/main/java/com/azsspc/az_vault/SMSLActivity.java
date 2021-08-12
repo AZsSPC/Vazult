@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.game_comp.Avatar;
 import com.azsspc.az_vault.game_comp.Item;
+import com.azsspc.az_vault.smsl_adapters.AvatarAdapter;
 import com.azsspc.az_vault.smsl_adapters.ItemAdapter;
 import com.azsspc.az_vault.game_comp.Property;
 import com.azsspc.az_vault.smsl_adapters.PropertyAdapter;
 import com.azsspc.az_vault.game_comp.Target;
+import com.azsspc.az_vault.smsl_adapters.TargetAdapter;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -41,7 +43,7 @@ public class SMSLActivity extends AppCompatActivity {
                 ArrayList<Avatar> avatars = new ArrayList<>();
                 for (Map.Entry<String, Avatar> entry : as_avatars.entrySet())
                     avatars.add(entry.getValue());
-                //rv.setAdapter(new AvatarAdapter(this, avatars));
+                rv.setAdapter(new AvatarAdapter(this, avatars));
                 break;
             case key_i:
                 ArrayList<Item> items = new ArrayList<>();
@@ -53,7 +55,7 @@ public class SMSLActivity extends AppCompatActivity {
                 ArrayList<Target> tiles = new ArrayList<>();
                 for (Map.Entry<String, Target> entry : as_targets.entrySet())
                     tiles.add(entry.getValue());
-                //rv.setAdapter(new TargetAdapter(this, tiles));
+                rv.setAdapter(new TargetAdapter(this, tiles));
                 break;
             case key_p:
                 ArrayList<Property> properties = new ArrayList<>();

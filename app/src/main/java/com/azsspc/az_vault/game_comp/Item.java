@@ -16,6 +16,7 @@ public class Item extends Tile {
     Item(JSONObject data) throws JSONException {
         super(data);
         this.img = R.drawable.ic_item;
+        this.color = R.color.item;
         this.weight = data.getInt("weight");
     }
 
@@ -31,7 +32,6 @@ public class Item extends Tile {
             }
         return ret;
     }
-
 
     public int getWeight() {
         return weight;

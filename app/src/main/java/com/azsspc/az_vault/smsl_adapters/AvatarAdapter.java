@@ -11,40 +11,41 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
+import com.azsspc.az_vault.game_comp.Avatar;
 import com.azsspc.az_vault.game_comp.Item;
 import com.azsspc.az_vault.game_comp.Property;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import static com.azsspc.az_vault.DataLoader.as_items;
+import static com.azsspc.az_vault.DataLoader.as_properties;
 
-public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHolder> {
+public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
-    private final List<Property> tiles;
+    private final List<Avatar> tiles;
 
-    public PropertyAdapter(Context context, List<Property> tiles) {
+    public AvatarAdapter(Context context, List<Avatar> tiles) {
         this.tiles = tiles;
         this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
-    public PropertyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.ad_property, parent, false));
+    public AvatarAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(inflater.inflate(R.layout.ad_avatar, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(PropertyAdapter.ViewHolder holder, int position) {
-        Property tile = tiles.get(position);
+    public void onBindViewHolder(AvatarAdapter.ViewHolder holder, int position) {
+        Avatar tile = tiles.get(position);
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
         holder.img.setImageResource(tile.getImg());
         holder.top.setText(tile.getTop(c));
-        holder.center.setText(tile.getFullCenter(c));
+        holder.center.setText(tile.getCenter(c));
         holder.bottom.setText(tile.getBottom(c));
 
         holder.img.setColorFilter(color);
@@ -56,12 +57,22 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         for (String item : tile.getItems()) items.add(as_items.get(item));
         holder.rv_items.setAdapter(new ItemAdapter(holder.context.getContext(), items));
 
+        ArrayList<Property> properties = new ArrayList<>();
+        for (String prop : tile.getProperties()) properties.add(as_properties.get(prop));
+        holder.rv_properties.setAdapter(new PropertyAdapter(holder.context.getContext(), properties));
+
         holder.context.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 View c = holder.rv_items;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
+                View c2 = holder.rv_properties;
+                if (c.getVisibility() == View.VISIBLE) {
+                    c.setVisibility(View.GONE);
+                    c2.setVisibility(View.GONE);
+                } else {
+                    c.setVisibility(View.VISIBLE);
+                    c2.setVisibility(View.VISIBLE);
+                }
             }
         });
         holder.context.setOnLongClickListener(new View.OnLongClickListener() {
@@ -83,17 +94,18 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final ImageView img;
         final TextView top, center, bottom;
-        final RecyclerView rv_items;
+        final RecyclerView rv_items, rv_properties;
         final View context;
 
         ViewHolder(View view) {
             super(view);
-            context = view.findViewById(R.id.ad_p_context);
-            img = view.findViewById(R.id.ad_p_img);
-            top = view.findViewById(R.id.ad_p_top);
-            center = view.findViewById(R.id.ad_p_center);
-            bottom = view.findViewById(R.id.ad_p_bottom);
-            rv_items = view.findViewById(R.id.ad_p_items);
+            context = view.findViewById(R.id.ad_a_context);
+            img = view.findViewById(R.id.ad_a_img);
+            top = view.findViewById(R.id.ad_a_top);
+            center = view.findViewById(R.id.ad_a_center);
+            bottom = view.findViewById(R.id.ad_a_bottom);
+            rv_items = view.findViewById(R.id.ad_a_items);
+            rv_properties = view.findViewById(R.id.ad_a_properties);
         }
     }
 }

@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vazult">
+        <activity android:name=".HowToPlayActivity"></activity>
         <activity android:name=".SMSLActivity" />
         <activity android:name=".ScriptManagerActivity" />
         <activity
