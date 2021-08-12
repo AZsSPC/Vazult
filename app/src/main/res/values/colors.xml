@@ -22,4 +22,8 @@
     <color name="item">#648C05</color>
     <color name="property">#0665B8</color>
     <color name="comment">#B6B6B6</color>
+
+    <color name="p_bad">#A60747</color>
+    <color name="p_normal">#066BB8</color>
+    <color name="p_good">#048F06</color>
 </resources>

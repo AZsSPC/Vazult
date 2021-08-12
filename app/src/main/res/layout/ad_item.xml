@@ -5,9 +5,8 @@
     android:id="@+id/ad_i_context"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="6dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginRight="6dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
     android:background="@color/white"
     android:columnCount="2"
     android:padding="4dp">

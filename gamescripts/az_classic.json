@@ -59,7 +59,7 @@
       "lore": "lore",
       "visibility": "visible",
       "allow": true,
-      "balance": -99,
+      "balance": -1,
       "tags": [
         "sasat"
       ],
@@ -72,6 +72,7 @@
       "lore": "lore",
       "visibility": "visible",
       "allow": true,
+      "balance": 1,
       "tags": [],
       "items": ["stump"]
     }

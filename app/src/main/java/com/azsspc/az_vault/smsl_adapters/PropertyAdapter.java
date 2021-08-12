@@ -33,7 +33,7 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
     @NonNull
     @Override
     public PropertyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.ad_item, parent, false));
+        return new ViewHolder(inflater.inflate(R.layout.ad_property, parent, false));
     }
 
     @Override
@@ -58,7 +58,7 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         holder.context.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View c = holder.bottom;
+                View c = holder.rv_items;
                 if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
                 else c.setVisibility(View.VISIBLE);
             }
