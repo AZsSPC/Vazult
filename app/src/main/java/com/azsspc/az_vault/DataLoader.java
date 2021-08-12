@@ -27,7 +27,7 @@ public class DataLoader {
     public static Settings as_settings;
     public static HashMap<String, Avatar> active_script_avatars;
     public static HashMap<String, Item> active_script_items;
-    public static HashMap<String, Property> active_script_properties;
+    public static HashMap<String, Object> active_script_properties;
     public static HashMap<String, Target> active_script_targets;
     public static final String gfs_error = "gfs_error";
 

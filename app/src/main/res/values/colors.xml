@@ -15,4 +15,10 @@
     <color name="b_tt_d">#EF6C00</color>
     <color name="b_st">#1565C0</color>
     <color name="b_el">#FF8F00</color>
+
+
+    <color name="target">#771DA8</color>
+    <color name="avatar">#495157</color>
+    <color name="item">#648C05</color>
+    <color name="property">#0665B8</color>
 </resources>

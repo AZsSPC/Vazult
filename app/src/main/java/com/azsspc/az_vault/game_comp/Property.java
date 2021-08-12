@@ -1,9 +1,12 @@
 package com.azsspc.az_vault.game_comp;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Constructor;
 import java.util.HashMap;
 
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
@@ -16,8 +19,11 @@ public class Property {
     String visibility;
     boolean allow;
     String[] tags;
+    String custom_class;
+    JSONObject data;
+    boolean custom;
 
-    Property(JSONObject data) throws JSONException {
+    public Property(JSONObject data) throws JSONException {
         this.allow = data.getBoolean("allow");
         this.id = data.getString("id");
         this.name = data.getString("name");
@@ -25,16 +31,40 @@ public class Property {
         this.lore = data.getString("lore");
         this.abilities = getFromJSONArray(data.getJSONArray("abilities"));
         this.tags = getFromJSONArray(data.getJSONArray("tags"));
+        this.custom = false;
+        try {
+            this.custom_class = data.getString("class");
+            data.remove("class");
+            data.remove("allow");
+            data.remove("id");
+            data.remove("name");
+            data.remove("visibility");
+            data.remove("lore");
+            data.remove("abilities");
+            data.remove("tags");
+            this.data = data;
+            this.custom = true;
+        } catch (Exception ignored) {
+        }
     }
 
-    public static HashMap<String, Property> createArray(JSONArray data) {
+    public static HashMap<String, Object> createArray(JSONArray data) {
         int rel = data.length();
-        HashMap<String, Property> ret = new HashMap<>();
+        HashMap<String, Object> ret = new HashMap<>();
         for (int i = 0; i < rel; i++)
             try {
                 Property property = new Property(data.getJSONObject(i));
-                ret.put(property.getId(), property);
-            } catch (JSONException e) {
+                Object prop = property;
+                if (property.isCustom()) try {
+                    prop = Class.forName("com.azsspc.az_vault.game_comp.special" + property.getCustomClass())
+                            .getConstructor(Property.class, JSONObject.class)
+                            .newInstance(property, property.getData());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Log.e("asdasd", "Class is " + prop.getClass());
+                ret.put(property.getId(), prop);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         return ret;
@@ -66,5 +96,17 @@ public class Property {
 
     public String[] getTags() {
         return tags;
+    }
+
+    public JSONObject getData() {
+        return data;
+    }
+
+    public boolean isCustom() {
+        return custom;
+    }
+
+    public String getCustomClass() {
+        return custom_class;
     }
 }

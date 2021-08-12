@@ -12,28 +12,49 @@
   },
   "avatars": [
     {
-      "id": "id",
-      "name": "asd",
-      "old": "asd",
-      "job": "asd",
-      "sex": "asd",
-      "lore": "lore",
-      "items": [],
-      "properties": []
+      "id": "a_1",
+      "name": "Олег",
+      "old": 25,
+      "job": "Программист",
+      "sex": "ж",
+      "lore": "21 век, хуле",
+      "items": ["korobka"],
+      "properties": ["p_1"]
     }
   ],
   "items": [
     {
-      "id": "id",
-      "name": "Name",
-      "abilities": [],
-      "lore": "lore",
+      "id": "stump",
+      "name": "oak stump",
+      "abilities": ["drop people"],
+      "lore": "be stump",
+      "weight": 5,
       "type": "papper",
-      "weight": 1,
+      "img": "papper"
+    },
+    {
+      "id": "korobka",
+      "name": "korobka c red ball",
+      "abilities": ["zakrit rot blat"],
+      "lore": "korobka",
+      "weight": 2,
+      "type": "",
       "img": "papper"
     }
   ],
   "properties": [
+    {
+      "id": "p_1",
+      "name": "Name",
+      "abilities": [],
+      "lore": "lore",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -99,
+      "tags": ["sasat"],
+      "items": [],
+      "class": "SelfControl"
+    },
     {
       "id": "id",
       "name": "Name",
@@ -50,7 +71,7 @@
       "name": "Name",
       "abilities": [],
       "lore": "lore",
-      "chance": 1
+      "chance": 9
     }
   ]
 }

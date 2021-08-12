@@ -15,8 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vazult">
+        <activity android:name=".game_comp.SMSL" />
         <activity android:name=".ScriptManagerActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.VazultLoad">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

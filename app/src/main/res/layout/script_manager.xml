@@ -62,6 +62,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:background="#FFFFFF"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
                 app:layout_constraintStart_toStartOf="parent"
@@ -94,15 +95,73 @@
 
             </LinearLayout>
 
+            <GridLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:foregroundGravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <Button
+                    android:id="@+id/b_show_avatars"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/avatar"
+                    android:gravity="center_vertical"
+                    android:onClick="showMeArrayOf"
+                    android:text="Avatars"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/b_show_prop"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/property"
+                    android:gravity="center_vertical"
+                    android:onClick="showMeArrayOf"
+                    android:text="Properties"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/b_show_targets"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/target"
+                    android:gravity="center_vertical"
+                    android:onClick="showMeArrayOf"
+                    android:text="Targets"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/b_show_items"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/item"
+                    android:gravity="center_vertical"
+                    android:onClick="showMeArrayOf"
+                    android:text="Items"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+            </GridLayout>
+
             <TextView
                 android:id="@+id/script_lore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
                 android:paddingBottom="120dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/script_add_new"

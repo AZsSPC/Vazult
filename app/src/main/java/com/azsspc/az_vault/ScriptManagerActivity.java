@@ -6,12 +6,15 @@ import static com.azsspc.az_vault.DataLoader.getFromCloud;
 import static com.azsspc.az_vault.DataLoader.loadScript;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.azsspc.az_vault.game_comp.SMSL;
 
 public class ScriptManagerActivity extends AppCompatActivity {
 
@@ -42,10 +45,8 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_inventory.setText(getString(R.string.sc_inventory) + ": " + as_settings.getInventorySize());
         sc_prop.setText(getString(R.string.sc_prop) + ": " + as_settings.getPropertiesCount());
         sc_balance.setText(getString(R.string.sc_balance) + ": " + as_settings.getBalance());
-        sc_avatar.setText(getString(R.string.sc_avatar) + ": " + (as_settings.isAvatarAllow()
-                ? getString(R.string.sc_true) : getString(R.string.sc_false)));
-        sc_target.setText(getString(R.string.sc_target) + ": " + (as_settings.isTargetAllow()
-                ? getString(R.string.sc_true) : getString(R.string.sc_false)));
+        sc_avatar.setText(getString(R.string.sc_avatar) + ": " + (as_settings.isAvatarAllow() ? getString(R.string.sc_true) : getString(R.string.sc_false)));
+        sc_target.setText(getString(R.string.sc_target) + ": " + (as_settings.isTargetAllow() ? getString(R.string.sc_true) : getString(R.string.sc_false)));
     }
 
     public void reloadActiveScript(View v) {
@@ -54,5 +55,29 @@ public class ScriptManagerActivity extends AppCompatActivity {
         loadScript(this, active_script_url);
         setSettingsView();
         Toast.makeText(this, getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    public void showMeArrayOf(View v) {
+        /*
+        Intent intent = new Intent(this, SMSL.class);
+        switch (v.getId()) {
+            case R.id.b_show_avatars:
+                intent.putExtra(SMSL.key, SMSL.key_a);
+                break;
+            case R.id.b_show_items:
+                intent.putExtra(SMSL.key, SMSL.key_i);
+                break;
+            case R.id.b_show_prop:
+                intent.putExtra(SMSL.key, SMSL.key_p);
+                break;
+            case R.id.b_show_targets:
+                intent.putExtra(SMSL.key, SMSL.key_t);
+                break;
+            default:
+               return;
+        }
+        startActivity(intent);
+        */
     }
 }
