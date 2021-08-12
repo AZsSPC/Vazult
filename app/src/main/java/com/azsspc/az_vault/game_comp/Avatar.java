@@ -8,22 +8,17 @@ import java.util.HashMap;
 
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
-public class Avatar {
+public class Avatar extends Tile{
 
     int old;
-    String id;
-    String name;
     String job;
     String sex;
-    String lore;
     String[] properties;
     String[] items;
 
     Avatar(JSONObject data) throws JSONException {
+        super(data);
         this.old = data.getInt("old");
-        this.id = data.getString("id");
-        this.lore = data.getString("lore");
-        this.name = data.getString("name");
         this.job = data.getString("job");
         this.sex = data.getString("sex");
         this.properties = getFromJSONArray(data.getJSONArray("properties"));
@@ -45,18 +40,6 @@ public class Avatar {
 
     public int getOld() {
         return old;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getLore() {
-        return lore;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getJob() {

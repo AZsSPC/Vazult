@@ -8,19 +8,12 @@ import java.util.HashMap;
 
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
-public class Target {
+public class Target extends Tile {
     int chance;
-    String id;
-    String name;
-    String lore;
-    String[] abilities;
 
     Target(JSONObject data) throws JSONException {
+        super(data);
         this.chance = data.getInt("chance");
-        this.id = data.getString("id");
-        this.name = data.getString("name");
-        this.lore = data.getString("lore");
-        this.abilities = getFromJSONArray(data.getJSONArray("abilities"));
     }
 
     public static HashMap<String, Target> createArray(JSONArray data) {
@@ -40,19 +33,4 @@ public class Target {
         return chance;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getLore() {
-        return lore;
-    }
-
-    public String[] getAbilities() {
-        return abilities;
-    }
 }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
+    public static Animation tile_center_close, tile_center_open;
 
     public void buttonScriptManager(View v) {
         startActivity(new Intent(this, ScriptManagerActivity.class));
@@ -28,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         checkPermissions();
         DataLoader.loadScript(this, getResources().getStringArray(R.array.gs_url)[0]);
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
-
+        tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
+        tile_center_open = AnimationUtils.loadAnimation(this, R.anim.open_center);
     }
 
     void checkPermissions() {
@@ -46,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < rel; i++)
             ret[i] = data.getString(i);
         return ret;
+    }
+
+    public static Class<?> getCPFS(String s) throws ClassNotFoundException {
+        return Class.forName("com.azsspc.az_vault.game_comp.special." + s);
     }
 }
 

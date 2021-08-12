@@ -23,29 +23,29 @@ import java.nio.channels.ReadableByteChannel;
 import java.util.HashMap;
 
 public class DataLoader {
-    public static String active_script_url;
+    public static String as_url;
     public static Settings as_settings;
-    public static HashMap<String, Avatar> active_script_avatars;
-    public static HashMap<String, Item> active_script_items;
-    public static HashMap<String, Object> active_script_properties;
-    public static HashMap<String, Target> active_script_targets;
+    public static HashMap<String, Avatar> as_avatars;
+    public static HashMap<String, Item> as_items;
+    public static HashMap<String, Property> as_properties;
+    public static HashMap<String, Target> as_targets;
     public static final String gfs_error = "gfs_error";
 
 
     public static void loadScript(Context c, String script_url) {
         try {
-            active_script_url = script_url;
-            String file_name = script_url.replaceAll("^.+/", "");
+            as_url = script_url;
+            String file_name = as_url.replaceAll("^.+/", "");
             String script_in = getFromStorage(c, file_name);
             JSONObject uj = new JSONObject(script_in.equals(gfs_error)
-                    ? DataLoader.getFromCloud(c, file_name, script_url)
+                    ? DataLoader.getFromCloud(c, file_name, as_url)
                     : script_in
             );
             as_settings = new Settings(uj.getJSONObject("settings"));
-            active_script_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
-            active_script_items = Item.createArray(uj.getJSONArray("items"));
-            active_script_properties = Property.createArray(uj.getJSONArray("properties"));
-            active_script_targets = Target.createArray(uj.getJSONArray("targets"));
+            as_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
+            as_items = Item.createArray(uj.getJSONArray("items"));
+            as_properties = Property.createArray(uj.getJSONArray("properties"));
+            as_targets = Target.createArray(uj.getJSONArray("targets"));
         } catch (JSONException e) {
             e.printStackTrace();
         }

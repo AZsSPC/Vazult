@@ -41,15 +41,6 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/create_avatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/b_gp"
-            android:text="create avatar"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-        <Button
             android:id="@+id/script_manager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,15 +56,6 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/b_st"
             android:text="how to play"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/author_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/b_st"
-            android:text="else"
             android:textColor="@color/white"
             android:textStyle="bold" />
 

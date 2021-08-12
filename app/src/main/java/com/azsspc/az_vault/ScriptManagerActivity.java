@@ -1,6 +1,6 @@
 package com.azsspc.az_vault;
 
-import static com.azsspc.az_vault.DataLoader.active_script_url;
+import static com.azsspc.az_vault.DataLoader.as_url;
 import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.DataLoader.getFromCloud;
 import static com.azsspc.az_vault.DataLoader.loadScript;
@@ -13,8 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.azsspc.az_vault.game_comp.SMSL;
 
 public class ScriptManagerActivity extends AppCompatActivity {
 
@@ -38,7 +36,7 @@ public class ScriptManagerActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     void setSettingsView() {
-        sc_path.setText(active_script_url);
+        sc_path.setText(as_url);
         sc_author.setText(as_settings.getAuthor());
         sc_lore.setText(as_settings.getLore());
         sc_name.setText(as_settings.getName());
@@ -51,33 +49,31 @@ public class ScriptManagerActivity extends AppCompatActivity {
 
     public void reloadActiveScript(View v) {
         Toast.makeText(this, getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
-        getFromCloud(this, active_script_url.replaceAll("^.+/", ""), active_script_url);
-        loadScript(this, active_script_url);
+        getFromCloud(this, as_url.replaceAll("^.+/", ""), as_url);
+        loadScript(this, as_url);
         setSettingsView();
         Toast.makeText(this, getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
     }
 
     @SuppressLint("NonConstantResourceId")
     public void showMeArrayOf(View v) {
-        /*
-        Intent intent = new Intent(this, SMSL.class);
+        Intent intent = new Intent(this, SMSLActivity.class);
         switch (v.getId()) {
             case R.id.b_show_avatars:
-                intent.putExtra(SMSL.key, SMSL.key_a);
+                intent.putExtra(SMSLActivity.key, SMSLActivity.key_a);
                 break;
             case R.id.b_show_items:
-                intent.putExtra(SMSL.key, SMSL.key_i);
+                intent.putExtra(SMSLActivity.key, SMSLActivity.key_i);
                 break;
             case R.id.b_show_prop:
-                intent.putExtra(SMSL.key, SMSL.key_p);
+                intent.putExtra(SMSLActivity.key, SMSLActivity.key_p);
                 break;
             case R.id.b_show_targets:
-                intent.putExtra(SMSL.key, SMSL.key_t);
+                intent.putExtra(SMSLActivity.key, SMSLActivity.key_t);
                 break;
             default:
                return;
         }
         startActivity(intent);
-        */
     }
 }
