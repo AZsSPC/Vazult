@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.game_comp;
+package com.azsspc.az_vault.gamp;
 
 import android.content.Context;
 

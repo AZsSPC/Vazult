@@ -31,11 +31,11 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_target = findViewById(R.id.script_target);
         sc_balance = findViewById(R.id.script_balance);
         sc_inventory = findViewById(R.id.script_inventory);
-        setSettingsView(null);
+        reloadAS(2);
     }
 
     @SuppressLint("SetTextI18n")
-    void setSettingsView(Object o) {
+    void setSettingsView() {
         sc_path.setText(as_url);
         sc_lore.setText(as_settings.getLore());
         sc_name.setText(as_settings.getName());
@@ -47,11 +47,18 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_target.setText(getString(R.string.sc_target) + ": " + getString(as_settings.isTargetAllow() ? R.string.sc_true : R.string.sc_false));
     }
 
-    public void reloadActiveScript(View v) {
+    public void buttonReloadActiveScript(View v) {
+        reloadAS(2);
+    }
+
+    void reloadAS(int c) {
+        if (c-- <= 0) return;
         Toast.makeText(this, getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
         getFromCloud(this, as_url.replaceAll("^.+/", ""), as_url);
-        setSettingsView(loadScript(this, as_url));
+        loadScript(this, as_url);
+        setSettingsView();
         Toast.makeText(this, getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
+        reloadAS(c);
     }
 
     @SuppressLint("NonConstantResourceId")

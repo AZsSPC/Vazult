@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.smsl_adapters;
+package com.azsspc.az_vault.gamp.ingame;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,29 +11,29 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
-import com.azsspc.az_vault.game_comp.Item;
+import com.azsspc.az_vault.gamp.Target;
 
 import java.util.List;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
+public class TargetAdapter extends RecyclerView.Adapter<TargetAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
-    private final List<Item> tiles;
+    private final List<Target> tiles;
 
-    public ItemAdapter(Context context, List<Item> tiles) {
+    public TargetAdapter(Context context, List<Target> tiles) {
         this.tiles = tiles;
         this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
-    public ItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.ad_item, parent, false));
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(inflater.inflate(R.layout.gt_target, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(ItemAdapter.ViewHolder holder, int position) {
-        Item tile = tiles.get(position);
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Target tile = tiles.get(position);
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
@@ -78,11 +78,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         ViewHolder(View view) {
             super(view);
-            context = view.findViewById(R.id.ad_i_context);
-            img = view.findViewById(R.id.ad_i_img);
-            top = view.findViewById(R.id.ad_i_top);
-            center = view.findViewById(R.id.ad_i_center);
-            bottom = view.findViewById(R.id.ad_i_bottom);
+            context = view.findViewById(R.id.gt_t_context);
+            img = view.findViewById(R.id.gt_t_img);
+            top = view.findViewById(R.id.gt_t_top);
+            center = view.findViewById(R.id.gt_t_center);
+            bottom = view.findViewById(R.id.gt_t_bottom);
         }
     }
 }

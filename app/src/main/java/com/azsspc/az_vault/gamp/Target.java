@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.game_comp;
+package com.azsspc.az_vault.gamp;
 
 import android.content.Context;
 
@@ -9,8 +9,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
-import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Target extends Tile {
     int chance;

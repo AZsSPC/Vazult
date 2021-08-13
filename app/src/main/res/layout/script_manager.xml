@@ -126,7 +126,7 @@
                         android:layout_marginBottom="8dp"
                         android:backgroundTint="@color/b_st"
                         android:gravity="center"
-                        android:onClick="reloadActiveScript"
+                        android:onClick="buttonReloadActiveScript"
                         android:text="@string/menu_reload"
                         android:textColor="@color/white" />
 

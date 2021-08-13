@@ -1,7 +1,6 @@
-package com.azsspc.az_vault.game_comp;
+package com.azsspc.az_vault.gamp;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.azsspc.az_vault.R;
 
@@ -9,11 +8,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Constructor;
 import java.util.HashMap;
 
-import static com.azsspc.az_vault.DataLoader.as_settings;
-import static com.azsspc.az_vault.MainActivity.getCPFS;
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Property extends Tile {

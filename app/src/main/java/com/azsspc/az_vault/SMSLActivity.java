@@ -5,14 +5,14 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.azsspc.az_vault.game_comp.Avatar;
-import com.azsspc.az_vault.game_comp.Item;
-import com.azsspc.az_vault.smsl_adapters.AvatarAdapter;
-import com.azsspc.az_vault.smsl_adapters.ItemAdapter;
-import com.azsspc.az_vault.game_comp.Property;
-import com.azsspc.az_vault.smsl_adapters.PropertyAdapter;
-import com.azsspc.az_vault.game_comp.Target;
-import com.azsspc.az_vault.smsl_adapters.TargetAdapter;
+import com.azsspc.az_vault.gamp.Avatar;
+import com.azsspc.az_vault.gamp.Item;
+import com.azsspc.az_vault.gamp.smsl.AvatarAdapter;
+import com.azsspc.az_vault.gamp.smsl.ItemAdapter;
+import com.azsspc.az_vault.gamp.Property;
+import com.azsspc.az_vault.gamp.smsl.PropertyAdapter;
+import com.azsspc.az_vault.gamp.Target;
+import com.azsspc.az_vault.gamp.smsl.TargetAdapter;
 
 import java.util.ArrayList;
 import java.util.Map;

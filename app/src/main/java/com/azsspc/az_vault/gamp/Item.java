@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.game_comp;
+package com.azsspc.az_vault.gamp;
 
 import com.azsspc.az_vault.R;
 
@@ -7,8 +7,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
-import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Item extends Tile {
     int weight;

@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.game_comp;
+package com.azsspc.az_vault.gamp;
 
 import org.json.JSONException;
 import org.json.JSONObject;

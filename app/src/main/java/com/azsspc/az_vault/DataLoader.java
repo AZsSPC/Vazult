@@ -3,11 +3,11 @@ package com.azsspc.az_vault;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.azsspc.az_vault.game_comp.Avatar;
-import com.azsspc.az_vault.game_comp.Item;
-import com.azsspc.az_vault.game_comp.Property;
-import com.azsspc.az_vault.game_comp.Settings;
-import com.azsspc.az_vault.game_comp.Target;
+import com.azsspc.az_vault.gamp.Avatar;
+import com.azsspc.az_vault.gamp.Item;
+import com.azsspc.az_vault.gamp.Property;
+import com.azsspc.az_vault.gamp.Settings;
+import com.azsspc.az_vault.gamp.Target;
 
 import org.json.JSONException;
 import org.json.JSONObject;

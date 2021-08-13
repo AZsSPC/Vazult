@@ -1,4 +1,4 @@
-package com.azsspc.az_vault.smsl_adapters;
+package com.azsspc.az_vault.gamp.ingame;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,36 +11,35 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
-import com.azsspc.az_vault.game_comp.Item;
-import com.azsspc.az_vault.game_comp.Target;
+import com.azsspc.az_vault.gamp.Property;
 
 import java.util.List;
 
-public class TargetAdapter extends RecyclerView.Adapter<TargetAdapter.ViewHolder> {
+public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
-    private final List<Target> tiles;
+    private final List<Property> tiles;
 
-    public TargetAdapter(Context context, List<Target> tiles) {
+    public PropertyAdapter(Context context, List<Property> tiles) {
         this.tiles = tiles;
         this.inflater = LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
-    public TargetAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.ad_target, parent, false));
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(inflater.inflate(R.layout.gt_property, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(TargetAdapter.ViewHolder holder, int position) {
-        Target tile = tiles.get(position);
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Property tile = tiles.get(position);
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
         holder.img.setImageResource(tile.getImg());
         holder.top.setText(tile.getTop(c));
-        holder.center.setText(tile.getFullCenter(c));
+        holder.center.setText(tile.getCenter(c));
         holder.bottom.setText(tile.getBottom(c));
 
         holder.img.setColorFilter(color);
@@ -79,11 +78,11 @@ public class TargetAdapter extends RecyclerView.Adapter<TargetAdapter.ViewHolder
 
         ViewHolder(View view) {
             super(view);
-            context = view.findViewById(R.id.ad_t_context);
-            img = view.findViewById(R.id.ad_t_img);
-            top = view.findViewById(R.id.ad_t_top);
-            center = view.findViewById(R.id.ad_t_center);
-            bottom = view.findViewById(R.id.ad_t_bottom);
+            context = view.findViewById(R.id.gt_p_context);
+            img = view.findViewById(R.id.gt_p_img);
+            top = view.findViewById(R.id.gt_p_top);
+            center = view.findViewById(R.id.gt_p_center);
+            bottom = view.findViewById(R.id.gt_p_bottom);
         }
     }
 }
