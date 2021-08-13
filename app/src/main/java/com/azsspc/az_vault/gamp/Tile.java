@@ -23,10 +23,10 @@ public class Tile {
     Tile(JSONObject data) throws JSONException {
         this.img = R.drawable.ic_steam;
         this.color = R.color.black;
-        this.id = data.getString("id");
+        this.id = data.getString("id").toLowerCase();
         this.name = data.getString("name");
         this.lore = data.getString("lore");
-        this.abilities = getFromJSONArray(data.getJSONArray("abilities"));
+        this.abilities = getFromJSONArray(data.getJSONArray("abilities"), false);
     }
 
     public int getColor() {

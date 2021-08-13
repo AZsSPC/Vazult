@@ -25,8 +25,8 @@ public class Avatar extends Tile {
         this.color = R.color.avatar;
         this.old = data.getInt("old");
         this.sex = data.getString("sex");
-        this.properties = getFromJSONArray(data.getJSONArray("properties"));
-        this.items = getFromJSONArray(data.getJSONArray("items"));
+        this.properties = getFromJSONArray(data.getJSONArray("properties"), true);
+        this.items = getFromJSONArray(data.getJSONArray("items"), true);
     }
 
     public static HashMap<String, Avatar> createArray(JSONArray data) {

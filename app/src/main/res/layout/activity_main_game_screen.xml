@@ -4,6 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="2"
     tools:context=".gamp.views.MainGameScreen">
+
+    <HorizontalScrollView
+        android:id="@+id/char_key_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/b_tt"
+        android:padding="8dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/char_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="a idfgbasoi dgabs ohfo hafb agfg g83 y2t8y4r 4ry2 0y4r r2y30r23r p2r923 ur"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_ground"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/char_key_scroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/ap_t_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:columnCount="2"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/ap_t_img"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_row="0"
+                    android:layout_columnSpan="1"
+                    app:srcCompat="@drawable/ic_target"
+                    app:tint="@color/target" />
+
+                <TextView
+                    android:id="@+id/ap_t_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_columnSpan="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/target"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ap_t_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:textColor="@color/target" />
+
+                <TextView
+                    android:id="@+id/ap_t_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/target"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/ap_a_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:columnCount="2"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/ap_a_img"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_row="0"
+                    android:layout_columnSpan="1"
+                    app:srcCompat="@drawable/ic_avatar"
+                    app:tint="@color/avatar" />
+
+                <TextView
+                    android:id="@+id/ap_a_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_columnSpan="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/avatar"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ap_a_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:textColor="@color/avatar" />
+
+                <TextView
+                    android:id="@+id/ap_a_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/avatar"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </GridLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ap_properties"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ap_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

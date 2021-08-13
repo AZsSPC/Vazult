@@ -21,12 +21,11 @@ public class Property extends Tile {
 
     public Property(JSONObject data) throws JSONException {
         super(data);
-        this.img = R.drawable.ic_property_0;
         this.balance = data.getInt("balance");
         this.allow = data.getBoolean("allow");
-        this.visibility = data.getString("visibility");
-        this.tags = getFromJSONArray(data.getJSONArray("tags"));
-        this.items = getFromJSONArray(data.getJSONArray("items"));
+        this.visibility = data.getString("visibility").toLowerCase();
+        this.tags = getFromJSONArray(data.getJSONArray("tags"),true);
+        this.items = getFromJSONArray(data.getJSONArray("items"),true);
         if (getBalance() > 0) {
             this.img = getBalance() == 1 ? R.drawable.ic_property_1 : R.drawable.ic_property_2;
             this.color = R.color.p_good;
@@ -34,7 +33,7 @@ public class Property extends Tile {
             this.img = getBalance() == -1 ? R.drawable.ic_property_n1 : R.drawable.ic_property_n2;
             this.color = R.color.p_bad;
         } else {
-            this.img = R.drawable.ic_property_n2;
+            this.img = R.drawable.ic_property_0;
             this.color = R.color.p_normal;
         }
     }

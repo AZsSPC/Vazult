@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static String[] getFromJSONArray(JSONArray data) throws JSONException {
+    public static String[] getFromJSONArray(JSONArray data, boolean lowerCase) throws JSONException {
         int rel = data.length();
         String[] ret = new String[rel];
         for (int i = 0; i < rel; i++)
-            ret[i] = data.getString(i);
+            ret[i] = lowerCase ? data.getString(i).toLowerCase() : data.getString(i);
         return ret;
     }
 
