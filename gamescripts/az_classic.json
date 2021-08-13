@@ -2,7 +2,7 @@
   "settings": {
     "img_url": "https://raw.githubusercontent.com/AZsSPC/Vazult_/master/gameimages/",
     "name": "Classic Vazult settings & characters",
-    "lore": "some lore",
+    "lore": "Более детальное описание",
     "author": "AZsSPC",
     "avatar": true,
     "target": true,

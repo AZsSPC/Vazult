@@ -50,7 +50,7 @@
                 android:id="@+id/script_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:padding="4dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +62,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="#FFFFFF"
                 android:gravity="center_vertical"
@@ -69,7 +70,12 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toStartOf="@+id/scrollView3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/script_author">
+                app:layout_constraintTop_toBottomOf="@+id/script_name">
+
+                <TextView
+                    android:id="@+id/script_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/script_avatar"
@@ -105,7 +111,8 @@
                 android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                tools:ignore="NestedScrolling">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -116,6 +123,7 @@
                         android:id="@+id/script_rel_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
                         android:backgroundTint="@color/b_st"
                         android:gravity="center"
                         android:onClick="reloadActiveScript"
@@ -166,6 +174,7 @@
                         android:id="@+id/script_del_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
                         android:backgroundTint="@color/b_gp"
                         android:gravity="center"
                         android:text="@string/menu_delete"
@@ -194,14 +203,8 @@
                 app:fabSize="mini"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_add_circle_24" />
-
-            <TextView
-                android:id="@+id/script_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/script_name" />
+                app:srcCompat="@drawable/ic_baseline_add_circle_24"
+                tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

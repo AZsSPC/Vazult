@@ -37,14 +37,14 @@ public class ScriptManagerActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     void setSettingsView() {
         sc_path.setText(as_url);
-        sc_author.setText(as_settings.getAuthor());
         sc_lore.setText(as_settings.getLore());
         sc_name.setText(as_settings.getName());
+        sc_author.setText(getString(R.string.sc_author) + ": " + as_settings.getAuthor());
         sc_inventory.setText(getString(R.string.sc_inventory) + ": " + as_settings.getInventorySize());
         sc_prop.setText(getString(R.string.sc_prop) + ": " + as_settings.getPropertiesCount());
         sc_balance.setText(getString(R.string.sc_balance) + ": " + as_settings.getBalance());
-        sc_avatar.setText(getString(R.string.sc_avatar) + ": " + (as_settings.isAvatarAllow() ? getString(R.string.sc_true) : getString(R.string.sc_false)));
-        sc_target.setText(getString(R.string.sc_target) + ": " + (as_settings.isTargetAllow() ? getString(R.string.sc_true) : getString(R.string.sc_false)));
+        sc_avatar.setText(getString(R.string.sc_avatar) + ": " + getString(as_settings.isAvatarAllow() ? R.string.sc_true : R.string.sc_false));
+        sc_target.setText(getString(R.string.sc_target) + ": " + getString(as_settings.isTargetAllow() ? R.string.sc_true : R.string.sc_false));
     }
 
     public void reloadActiveScript(View v) {
@@ -72,7 +72,7 @@ public class ScriptManagerActivity extends AppCompatActivity {
                 intent.putExtra(SMSLActivity.key, SMSLActivity.key_t);
                 break;
             default:
-               return;
+                return;
         }
         startActivity(intent);
     }
