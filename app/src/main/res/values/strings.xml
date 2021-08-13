@@ -11,11 +11,11 @@
     <string name="sc_name">Название</string>
     <string name="sc_prop">Случайных свойств</string>
     <string name="sc_balance">Баланс свойств</string>
-    <string name="sc_target">Игровая цель</string>
+    <string name="sc_target">Стиль игры</string>
     <string name="sc_inventory">Размер инвентаря</string>
 
     <string name="menu_avatar">Аватары</string>
-    <string name="menu_target">Цели</string>
+    <string name="menu_target">Стили игры</string>
     <string name="menu_items">Предметы</string>
     <string name="menu_property">Свойства</string>
     <string name="menu_play">Играть</string>

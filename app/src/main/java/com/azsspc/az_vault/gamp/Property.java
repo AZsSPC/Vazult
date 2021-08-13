@@ -28,10 +28,10 @@ public class Property extends Tile {
         this.tags = getFromJSONArray(data.getJSONArray("tags"));
         this.items = getFromJSONArray(data.getJSONArray("items"));
         if (getBalance() > 0) {
-            this.img = R.drawable.ic_property_2;
+            this.img = getBalance() == 1 ? R.drawable.ic_property_1 : R.drawable.ic_property_2;
             this.color = R.color.p_good;
         } else if (getBalance() < 0) {
-            this.img = R.drawable.ic_property_n2;
+            this.img = getBalance() == -1 ? R.drawable.ic_property_n1 : R.drawable.ic_property_n2;
             this.color = R.color.p_bad;
         } else {
             this.img = R.drawable.ic_property_n2;

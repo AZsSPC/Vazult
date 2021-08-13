@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/b_gp"
+            android:onClick="buttonPlay"
             android:text="@string/menu_play"
             android:textColor="@color/white"
             android:textStyle="bold" />

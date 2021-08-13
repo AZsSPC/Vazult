@@ -32,7 +32,7 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_target = findViewById(R.id.script_target);
         sc_balance = findViewById(R.id.script_balance);
         sc_inventory = findViewById(R.id.script_inventory);
-        reloadAS();
+        setSettingsView();
     }
 
     @SuppressLint("SetTextI18n")
@@ -49,12 +49,7 @@ public class ScriptManagerActivity extends AppCompatActivity {
     }
 
     public void buttonReloadActiveScript(View v) {
-        reloadAS();
-    }
-
-    void reloadAS() {
-        Log.e("asd", "" + getFromCloud(this, as_url.replaceAll("^.+/", ""), as_url).getClass());
-        Log.e("asd", "" + loadScript(this, as_url));
+        Log.e("asd", "" + loadScript(this, as_url,true));
         setSettingsView();
     }
 

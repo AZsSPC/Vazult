@@ -33,22 +33,17 @@ public class DataLoader {
     public static final String gfs_error = "gfs_error";
 
 
-    public static boolean loadScript(Context c, String script_url) {
+    public static boolean loadScript(Context c, String script_url, boolean from_cloud) {
         try {
-            Toast.makeText(c, c.getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
             as_url = script_url;
             String file_name = as_url.replaceAll("^.+/", "");
             String script_in = getFromStorage(c, file_name);
-            JSONObject uj = new JSONObject(script_in.equals(gfs_error)
-                    ? DataLoader.getFromCloud(c, file_name, as_url)
-                    : script_in
-            );
+            JSONObject uj = new JSONObject(script_in.equals(gfs_error) || from_cloud ? DataLoader.getFromCloud(c, file_name, as_url) : script_in);
             as_settings = new Settings(uj.getJSONObject("settings"));
             as_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
             as_items = Item.createArray(uj.getJSONArray("items"));
             as_properties = Property.createArray(uj.getJSONArray("properties"));
             as_targets = Target.createArray(uj.getJSONArray("targets"));
-            Toast.makeText(c, c.getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
             return true;
         } catch (JSONException e) {
             e.printStackTrace();
@@ -57,7 +52,9 @@ public class DataLoader {
     }
 
     public static String getFromCloud(Context c, String file_name, String url) {
+        Toast.makeText(c, c.getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
         new FromCloudLoader().execute(c, url, file_name);
+        Toast.makeText(c, c.getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
         return getFromStorage(c, file_name);
     }
 
@@ -78,15 +75,9 @@ public class DataLoader {
 }
 
 /**
- * <p>
- * [0] - context
- * </p>
- * <p>
- * [1] - load url
- * </p>
- * <p>
- * [2] - file name
- * </p>
+ * <p>[0] - context</p>
+ * <p>[1] - load url</p>
+ * <p>[2] - file name</p>
  */
 class FromCloudLoader extends AsyncTask<Object, Void, Boolean> {
     @Override

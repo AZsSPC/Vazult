@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.azsspc.az_vault.gamp.views.MainGameScreen;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -32,12 +34,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, HowToPlayActivity.class));
     }
 
+    public void buttonPlay(View v) {
+        startActivity(new Intent(this, MainGameScreen.class));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkPermissions();
-        DataLoader.loadScript(this, getResources().getStringArray(R.array.gs_url)[0]);
+        DataLoader.loadScript(this, getResources().getStringArray(R.array.gs_url)[0], false);
         ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
         //tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
