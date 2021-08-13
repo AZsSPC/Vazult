@@ -31,11 +31,11 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_target = findViewById(R.id.script_target);
         sc_balance = findViewById(R.id.script_balance);
         sc_inventory = findViewById(R.id.script_inventory);
-        setSettingsView();
+        setSettingsView(null);
     }
 
     @SuppressLint("SetTextI18n")
-    void setSettingsView() {
+    void setSettingsView(Object o) {
         sc_path.setText(as_url);
         sc_lore.setText(as_settings.getLore());
         sc_name.setText(as_settings.getName());
@@ -50,8 +50,7 @@ public class ScriptManagerActivity extends AppCompatActivity {
     public void reloadActiveScript(View v) {
         Toast.makeText(this, getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
         getFromCloud(this, as_url.replaceAll("^.+/", ""), as_url);
-        loadScript(this, as_url);
-        setSettingsView();
+        setSettingsView(loadScript(this, as_url));
         Toast.makeText(this, getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
     }
 

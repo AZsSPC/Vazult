@@ -32,7 +32,7 @@ public class DataLoader {
     public static final String gfs_error = "gfs_error";
 
 
-    public static void loadScript(Context c, String script_url) {
+    public static boolean loadScript(Context c, String script_url) {
         try {
             as_url = script_url;
             String file_name = as_url.replaceAll("^.+/", "");
@@ -46,9 +46,11 @@ public class DataLoader {
             as_items = Item.createArray(uj.getJSONArray("items"));
             as_properties = Property.createArray(uj.getJSONArray("properties"));
             as_targets = Target.createArray(uj.getJSONArray("targets"));
+            return true;
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
     public static String getFromCloud(Context c, String file_name, String url) {
