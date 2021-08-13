@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +17,12 @@ import androidx.core.app.ActivityCompat;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import static com.azsspc.az_vault.DataLoader.as_settings;
+import static com.azsspc.az_vault.DataLoader.as_url;
+import static com.azsspc.az_vault.DataLoader.loadScript;
+
 public class MainActivity extends AppCompatActivity {
-    public static Animation tile_center_close, tile_center_open;
+    //public static Animation tile_center_close, tile_center_open;
 
     public void buttonScriptManager(View v) {
         startActivity(new Intent(this, ScriptManagerActivity.class));
@@ -33,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         checkPermissions();
         DataLoader.loadScript(this, getResources().getStringArray(R.array.gs_url)[0]);
+        ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
-        tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
-        tile_center_open = AnimationUtils.loadAnimation(this, R.anim.open_center);
+        //tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
+        //tile_center_open = AnimationUtils.loadAnimation(this, R.anim.open_center);
     }
 
     void checkPermissions() {

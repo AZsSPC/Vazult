@@ -2,6 +2,7 @@ package com.azsspc.az_vault;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.azsspc.az_vault.gamp.Avatar;
 import com.azsspc.az_vault.gamp.Item;
@@ -34,6 +35,7 @@ public class DataLoader {
 
     public static boolean loadScript(Context c, String script_url) {
         try {
+            Toast.makeText(c, c.getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
             as_url = script_url;
             String file_name = as_url.replaceAll("^.+/", "");
             String script_in = getFromStorage(c, file_name);
@@ -46,6 +48,7 @@ public class DataLoader {
             as_items = Item.createArray(uj.getJSONArray("items"));
             as_properties = Property.createArray(uj.getJSONArray("properties"));
             as_targets = Target.createArray(uj.getJSONArray("targets"));
+            Toast.makeText(c, c.getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
             return true;
         } catch (JSONException e) {
             e.printStackTrace();
