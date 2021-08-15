@@ -1,0 +1,1105 @@
+{
+  "settings": {
+    "img_url": "https://raw.githubusercontent.com/AZsSPC/Vazult_/master/gameimages/",
+    "name": "Классический игровой пакет \"Vazult\"",
+    "lore": "Ещё более детальное описание, да, я уже не знаю что сюда можно вписать для заполнения места",
+    "author": "AZsSPC",
+    "avatar": true,
+    "target": true,
+    "inventory": 20,
+    "properties": 8,
+    "balance": 0,
+    "version": "2.1.8 beta"
+  },
+  "avatars": [
+    {
+      "id": "a_0",
+      "name": "Борис",
+      "abilities": [
+        "Деятельность: Профессор биологии"
+      ],
+      "old": 54,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_1",
+      "name": "Оля",
+      "abilities": [
+        "Деятельность: Оперная певица"
+      ],
+      "old": 24,
+      "sex": "Ж",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_2",
+      "name": "Олег",
+      "abilities": [
+        "Деятельность: Военный"
+      ],
+      "old": 31,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_3",
+      "name": "Валера",
+      "abilities": [
+        "Деятельность: Программист"
+      ],
+      "old": 27,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_4",
+      "name": "Антон",
+      "abilities": [
+        "Деятельность: Пеший турист"
+      ],
+      "old": 20,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_5",
+      "name": "Миша",
+      "abilities": [
+        "Деятельность: Школьник"
+      ],
+      "old": 16,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_6",
+      "name": "Лена",
+      "abilities": [
+        "Деятельность: Выпускница"
+      ],
+      "old": 18,
+      "sex": "Ж",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_7",
+      "name": "Джон",
+      "abilities": [
+        "Деятельность: Фермер"
+      ],
+      "old": 40,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_8",
+      "name": "Даг",
+      "abilities": [
+        "Деятельность: Повар военного судна"
+      ],
+      "old": 35,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_9",
+      "name": "Юля",
+      "abilities": [
+        "Деятельность: Юрист"
+      ],
+      "old": 25,
+      "sex": "Ж",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_10",
+      "name": "Юра",
+      "abilities": [
+        "Деятельность: Учитель труда"
+      ],
+      "old": 32,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_11",
+      "name": "Женя",
+      "abilities": [
+        "Деятельность: Монополист"
+      ],
+      "old": 58,
+      "sex": "Ж",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_12",
+      "name": "Семен",
+      "abilities": [
+        "Деятельность: Архитектор"
+      ],
+      "old": 22,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_13",
+      "name": "Акрам",
+      "abilities": [
+        "Деятельность: Купец"
+      ],
+      "old": 50,
+      "sex": "М",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "a_14",
+      "name": "Йена",
+      "abilities": [
+        "Деятельность: Фрилансер"
+      ],
+      "old": 27,
+      "sex": "Ж",
+      "lore": "-----",
+      "items": [],
+      "properties": []
+    }
+  ],
+  "items": [
+    {
+      "id": "pistol",
+      "name": "Пистолет",
+      "abilities": [
+        "Пистолет без боеприпасов",
+        "Кто знает, где их можно найти"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "ammo",
+      "name": "Патрон для пистолета",
+      "abilities": [
+        "Достаточно для одного выстрела из пистолета"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "book_botany",
+      "name": "\"Ботаника для садоводов\"",
+      "abilities": [
+        "Книга по ботанике и садоводству"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "spy_set",
+      "name": "Набор шпиона",
+      "abilities": [
+        "Скрытая камера",
+        "Устройство воспроизведения"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "beans",
+      "name": "Бобы",
+      "abilities": [
+        "Примерно пол-кило фасоли"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "invalid_chair",
+      "name": "Кресло-каталка",
+      "abilities": [
+        "Подходит для передвижения инвалидов"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "backpack",
+      "name": "Рюкзак",
+      "abilities": [
+        "Увеличивает твой инвентарь!"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "knife_swiss",
+      "name": "Швейцарский нож",
+      "abilities": [
+        "Без него - никуда"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "food_dry",
+      "name": "Сух-паёк",
+      "abilities": [
+        "Пусть и сухой, но питательный"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "art_kit",
+      "name": "Набор художника",
+      "abilities": [
+        "Ручка",
+        "Карандаши",
+        "Тетрадь"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "hat",
+      "name": "Шляпа",
+      "abilities": [
+        "Стильная шляпа"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "glasses",
+      "name": "Очки",
+      "abilities": [
+        "Неизвестные технологии сделали эти очки подходящими для любого отклонения зрения"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "goggles",
+      "name": "Гогглы",
+      "abilities": [
+        "Как обычные очки, только с тонировкой, да и выглядят круче"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "cross",
+      "name": "Деревянный крестик",
+      "abilities": [
+        "Большой деревянный Хрест с Иисусом"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "wig",
+      "name": "Парик",
+      "abilities": [
+        "Просто парик"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "gold_coin",
+      "name": "Золотая монета",
+      "abilities": [
+        "В подобных условиях валюта теряет свою ценность, а металы - нет!"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    }
+  ],
+  "properties": [
+    {
+      "id": "muteness",
+      "name": "Немота",
+      "abilities": [
+        "Вы не можете использовать голос в игре"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "talking"
+      ],
+      "items": []
+    },
+    {
+      "id": "blindness",
+      "name": "Слепота",
+      "abilities": [
+        "Вы не можете видеть происходящее в игре"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "deafness",
+      "name": "Глухота",
+      "abilities": [
+        "Вы не способны слышать игровые звуки"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "rumor"
+      ],
+      "items": []
+    },
+    {
+      "id": "weakness",
+      "name": "Слабость",
+      "abilities": [
+        "У вас плохие гены, вашему телу не позавидует комар",
+        "Мало того, что внешность не очень, так еще и мышц нет"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -2,
+      "tags": [
+        "strength"
+      ],
+      "items": []
+    },
+    {
+      "id": "metabolism_plus",
+      "name": "Ускоренный метаболизм",
+      "abilities": [
+        "Вы потребляете в полтора раза больше пищи, чем обычный игрок"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "negroid",
+      "name": "Негроид",
+      "abilities": [
+        "Ваш цвет кожи отличается",
+        "Вы легче переносите высокую температуру",
+        "Вы хуже переносите низкую темпереатуру"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": 0,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "self_control",
+      "name": "Самоконтроль",
+      "abilities": [
+        "В начале игры вы можете выбрать скрытое свойство, которое в дальнейшем будет игнорироваться"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "strength",
+      "name": "Крепкость",
+      "abilities": [
+        "У вас хорошие гены, ваше тело как у атлета",
+        "И лицом красив, и мускулатурой хорош"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": 2,
+      "tags": [
+        "strength"
+      ],
+      "items": []
+    },
+    {
+      "id": "metamorphose",
+      "name": "Метаморфоза",
+      "abilities": [
+        "В начале игры вы можете выбрать обычное свойство, которое в дальнейшем будет игнорироваться"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "dumbness",
+      "name": "Тупость",
+      "abilities": [
+        "Вы не приспособлены к умственному труду и развитию"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "intelligence"
+      ],
+      "items": []
+    },
+    {
+      "id": "asthma",
+      "name": "Астма",
+      "abilities": [
+        "У вас астма, проблемы с кислородом могут доконать вас"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "breath"
+      ],
+      "items": []
+    },
+    {
+      "id": "stomach_fool",
+      "name": "Слабый желудок",
+      "abilities": [
+        "Вы не можете переварить тяжелую пищу"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "stomach"
+      ],
+      "items": []
+    },
+    {
+      "id": "squeamishness",
+      "name": "Брезгля",
+      "abilities": [
+        "Вы не можете питаться консервами",
+        "Беспорядок вас пугает"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "squeamishness"
+      ],
+      "items": []
+    },
+    {
+      "id": "insomnia",
+      "name": "Бессонница",
+      "abilities": [
+        "Вы не можете нормально спать"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "rest"
+      ],
+      "items": []
+    },
+    {
+      "id": "affectionate",
+      "name": "Привязчивый",
+      "abilities": [
+        "Траур затрагивает вас сильнее"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "attitude"
+      ],
+      "items": []
+    },
+    {
+      "id": "necrophobia",
+      "name": "Некрофоб",
+      "abilities": [
+        "Вы крайне сильно боитесь трупов"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "ein_vis",
+      "name": "Эйн-вис",
+      "abilities": [
+        "Беспорядок вас ничем не напрягает"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "squeamishness"
+      ],
+      "items": []
+    },
+    {
+      "id": "honesty",
+      "name": "Чистословие",
+      "abilities": [
+        "Вам запрещено лгать",
+        "Никто не запрещает уходить от ответа"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "honesty"
+      ],
+      "items": []
+    },
+    {
+      "id": "nymphomania",
+      "name": "Нимфомания",
+      "abilities": [
+        "Вы не можете сдерживать свое желание"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "attraction"
+      ],
+      "items": []
+    },
+    {
+      "id": "asexual",
+      "name": "Асексуальность",
+      "abilities": [
+        "Вы не предрасположены к продолжению рода"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "attraction"
+      ],
+      "items": []
+    },
+    {
+      "id": "robot_m",
+      "name": "rst-nr-2w",
+      "abilities": [
+        "Вы - робот не подчиняющийся законам Азимова",
+        "Вы не отличимы от человека",
+        "Источник жизни возобновляемый аккумулятор",
+        "У вас нет мышления",
+        "Все ваши свойства становятся обычными",
+        "Вы следуете любому приказу",
+        "Вы не способны принимать решения"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "robot",
+        "honesty",
+        "attitude",
+        "stomach",
+        "squeamishness",
+        "subaltern"
+      ],
+      "items": []
+    },
+    {
+      "id": "subordinate",
+      "name": "Подчиненный",
+      "abilities": [
+        "Вы следуете любому приказу",
+        "Вы не способны принимать решения"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "subaltern"
+      ],
+      "items": []
+    },
+    {
+      "id": "metabolism_slow",
+      "name": "Замедленный метаболизм",
+      "abilities": [
+        "Вы потребляете в полтора раза меньше пищи, чем обычный игрок"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "metabolism"
+      ],
+      "items": []
+    },
+    {
+      "id": "intelligence",
+      "name": "Интеллект",
+      "abilities": [
+        "Вы - умный человек",
+        "Вы крайне хорошо обучаетесь"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 2,
+      "tags": [
+        "subaltern",
+        "intelligence"
+      ],
+      "items": []
+    },
+    {
+      "id": "quick_learner",
+      "name": "Способный ученик",
+      "abilities": [
+        "Вы крайне хорошо обучаетесь"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "intelligence"
+      ],
+      "items": []
+    },
+    {
+      "id": "claustrophobia",
+      "name": "Клаустрофобия",
+      "abilities": [
+        "Вы боитесь замкнутого пространства"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "alcoholism",
+      "name": "Алкоголизм",
+      "abilities": [
+        "При недостаточном потреблении алкоголя вы будете сходить с ума",
+        "Все ваши свойства отыгрывают себя сильнее"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -2,
+      "tags": [
+        "psycho"
+      ],
+      "items": []
+    },
+    {
+      "id": "psychopath",
+      "name": "Психологическая опасность",
+      "abilities": [
+        "Все ваши свойства отыгрывают себя сильнее"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "psycho"
+      ],
+      "items": []
+    },
+    {
+      "id": "sterility",
+      "name": "Бесплодие",
+      "abilities": [
+        "Вы не можете иметь детей"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "racist",
+      "name": "Рассизм",
+      "abilities": [
+        "Вы ненавиде все другие рассы"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "subaltern"
+      ],
+      "items": []
+    },
+    {
+      "id": "weak_heart",
+      "name": "Слабое сердце",
+      "abilities": [
+        "Если вы испытаете большую нагрузку - вы умрете"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "incurable",
+      "name": "Неизлечимый",
+      "abilities": [
+        "Ни одно ваше негативное качество нельзя излечить",
+        "Самоконтроль не может избавиться от этого свойства"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "sexist",
+      "name": "Сексизм",
+      "abilities": [
+        "Вы ненавиде противоположный пол"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "chameleon",
+      "name": "Хамелеон",
+      "abilities": [
+        "Вас не засекают скрытые камеры",
+        "Черт, что ты такое?"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": 1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "bipolar",
+      "name": "Биполярное расстройсто",
+      "abilities": [
+        "В вас скрыто много личностей",
+        "Ваши действия могут отыгрываться не совсем так, как вы планировали"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "alzheimer",
+      "name": "Альцгеймер",
+      "abilities": [
+        "Каждый месяц вы забываете что-либо, по решению ведущего"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "liar",
+      "name": "Лжец",
+      "abilities": [
+        "Вам запрещено говорить правду",
+        "Никто не запрещает уходить от ответа"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "honesty"
+      ],
+      "items": []
+    },
+    {
+      "id": "sensitive",
+      "name": "Медиум",
+      "abilities": [
+        "Вы можете видеть мертвых игроков"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "intelligence",
+        "honesty"
+      ],
+      "items": []
+    },
+    {
+      "id": "robot_a",
+      "name": "ra1-az-7c",
+      "abilities": [
+        "Вы - робот подчиняющийся законам Азимова",
+        "Вы не отличимы от человека",
+        "Источник жизни - внутренний реактор, заряд которого расчитан на 10 месяцев",
+        "Реактор работает от плутония",
+        "У вас искуственный интеллект"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "robot"
+      ],
+      "items": []
+    },
+    {
+      "id": "homie",
+      "name": "Как дома",
+      "abilities": [
+        "Что бы выйти из бункера нужен пароль, к счастью, вы его помните"
+      ],
+      "lore": "---------------",
+      "visibility": "invisible",
+      "allow": true,
+      "balance": 2,
+      "tags": [],
+      "items": []
+    }
+  ],
+  "targets": [
+    {
+      "id": "survivor",
+      "name": "Выживальщик",
+      "abilities": [
+        "Следите за своим здоровьем",
+        "Проживите 1 год"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "egoist",
+      "name": "Эгоист",
+      "abilities": [
+        "Останьтесь единственным выжившим"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "suicide",
+      "name": "Суицидник",
+      "abilities": [
+        "Покончите с собой в бункере"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "genocide",
+      "name": "Геноцидник",
+      "abilities": [
+        "Покончите со всеми, включая себя"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "maniac",
+      "name": "Маньяк",
+      "abilities": [
+        "Будьте свидетелем всех смертей, произошедших в бункере"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "victim",
+      "name": "Жертва",
+      "abilities": [
+        "Останьтесь за пределами бункера"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "vision",
+      "name": "Наблюдатель",
+      "abilities": [
+        "У вас нет цели",
+        "Вы бессмертны",
+        "Вы уже победитель"
+      ],
+      "tags": [
+        "R"
+      ],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": [
+        "muteness"
+      ]
+    },
+    {
+      "id": "mommy",
+      "name": "Мамочка",
+      "abilities": [
+        "Ни один выживший не должен умереть в бункере",
+        "Проживите 1 год"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": []
+    },
+    {
+      "id": "oracle",
+      "name": "Оракул",
+      "abilities": [
+        "Раз в месяц узнайте что-либо у ведущего",
+        "Проживите 1 год"
+      ],
+      "tags": [],
+      "lore": "",
+      "chance": 1,
+      "items": [],
+      "properties": [
+        "muteness"
+      ]
+    }
+  ],
+  "map": {
+    "zones": [],
+    "loot_tables": []
+  }
+}

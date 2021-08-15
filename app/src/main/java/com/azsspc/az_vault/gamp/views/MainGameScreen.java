@@ -63,11 +63,8 @@ public class MainGameScreen extends AppCompatActivity {
         buf = as_avatars.keySet().toArray(new String[0]);
         char_key.append(" ").append(as_avatars.get(buf[(int) (buf.length * Math.random())]).getId());
         ArrayList<String> uf = new ArrayList<>(as_properties.keySet());
-        for (int i = 0; i < 8; i++) {
-            int id = (int) (uf.size() * Math.random());
-            char_key.append(" ").append(as_properties.get(uf.get(id)).getId());
-            uf.remove(id);
-        }
+        for (int i = 0; i < 8; i++)
+            char_key.append(" ").append(as_properties.get(uf.remove((int) (uf.size() * Math.random()))).getId());
         //
 
         Character player = new Character(char_key.toString());

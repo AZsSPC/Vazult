@@ -1,5 +1,7 @@
 package com.azsspc.az_vault.gamp;
 
+import android.util.Log;
+
 import com.azsspc.az_vault.gamp.tiles.Avatar;
 import com.azsspc.az_vault.gamp.tiles.Item;
 import com.azsspc.az_vault.gamp.tiles.Property;
@@ -24,7 +26,7 @@ public class Character {
 
     public Character(String character_key_code) {
         this.CKC = character_key_code;
-        String[] key_codes = character_key_code.split(" ",3);
+        String[] key_codes = character_key_code.split(" ", 3);
         target = as_targets.get(key_codes[0]);
         avatar = as_avatars.get(key_codes[1]);
 
