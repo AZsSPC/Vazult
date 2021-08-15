@@ -4,11 +4,11 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.azsspc.az_vault.gamp.Avatar;
-import com.azsspc.az_vault.gamp.Item;
-import com.azsspc.az_vault.gamp.Property;
+import com.azsspc.az_vault.gamp.tiles.Avatar;
+import com.azsspc.az_vault.gamp.tiles.Item;
+import com.azsspc.az_vault.gamp.tiles.Property;
 import com.azsspc.az_vault.gamp.Settings;
-import com.azsspc.az_vault.gamp.Target;
+import com.azsspc.az_vault.gamp.tiles.Target;
 
 import org.json.JSONException;
 import org.json.JSONObject;

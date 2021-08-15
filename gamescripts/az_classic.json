@@ -439,7 +439,7 @@
       "id": "metabolism_plus",
       "name": "Ускоренный метаболизм",
       "abilities": [
-        "Вы потребляете в 2 раза больше пищи, чем обычный игрок"
+        "Вы потребляете в полтора раза больше пищи, чем обычный игрок"
       ],
       "lore": "---------------",
       "visibility": "*",
@@ -506,152 +506,172 @@
       "items": []
     },
     {
-      "id": "---------",
+      "id": "dumbness",
       "name": "Тупость",
       "abilities": [
         "Вы не приспособлены к умственному труду и развитию"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "intelligence"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "asthma",
       "name": "Астма",
       "abilities": [
         "У вас астма, проблемы с кислородом могут доконать вас"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "breath"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "stomach_fool",
       "name": "Слабый желудок",
       "abilities": [
         "Вы не можете переварить тяжелую пищу"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "stomach"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "squeamishness",
       "name": "Брезгля",
       "abilities": [
         "Вы не можете питаться консервами",
         "Беспорядок вас пугает"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "squeamishness"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "insomnia",
       "name": "Бессонница",
       "abilities": [
         "Вы не можете нормально спать"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "rest"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "affectionate",
       "name": "Привязчивый",
       "abilities": [
         "Траур затрагивает вас сильнее"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "attitude"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "necrophobia",
       "name": "Некрофоб",
       "abilities": [
         "Вы крайне сильно боитесь трупов"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "ein_vis",
       "name": "Эйн-вис",
       "abilities": [
         "Беспорядок вас ничем не напрягает"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "squeamishness"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "honesty",
       "name": "Чистословие",
       "abilities": [
         "Вам запрещено лгать",
         "Никто не запрещает уходить от ответа"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "honesty"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "nymphomania",
       "name": "Нимфомания",
       "abilities": [
         "Вы не можете сдерживать свое желание"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "attraction"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "asexual",
       "name": "Асексуальность",
       "abilities": [
         "Вы не предрасположены к продолжению рода"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "attraction"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "robot_m",
       "name": "rst-nr-2w",
       "abilities": [
         "Вы - робот не подчиняющийся законам Азимова",
@@ -663,242 +683,269 @@
         "Вы не способны принимать решения"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "robot",
+        "honesty",
+        "attitude",
+        "stomach",
+        "squeamishness",
+        "subaltern"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "subordinate",
       "name": "Подчиненный",
       "abilities": [
         "Вы следуете любому приказу",
         "Вы не способны принимать решения"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "subaltern"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "metabolism_slow",
       "name": "Замедленный метаболизм",
       "abilities": [
-        "Вы потребляете в 2 раза меньше пищи, чем обычный игрок"
+        "Вы потребляете в полтора раза меньше пищи, чем обычный игрок"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": 1,
+      "tags": [
+        "metabolism"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "intelligence",
       "name": "Интеллект",
       "abilities": [
         "Вы - умный человек",
         "Вы крайне хорошо обучаетесь"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": 2,
+      "tags": [
+        "subaltern",
+        "intelligence"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "quick_learner",
       "name": "Способный ученик",
       "abilities": [
         "Вы крайне хорошо обучаетесь"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": 1,
+      "tags": [
+        "intelligence"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "claustrophobia",
       "name": "Клаустрофобия",
       "abilities": [
         "Вы боитесь замкнутого пространства"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
+      "balance": -1,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "alcoholism",
       "name": "Алкоголизм",
       "abilities": [
         "При недостаточном потреблении алкоголя вы будете сходить с ума",
         "Все ваши свойства отыгрывают себя сильнее"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -2,
+      "tags": [
+        "psycho"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "psychopath",
       "name": "Психологическая опасность",
       "abilities": [
         "Все ваши свойства отыгрывают себя сильнее"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": -1,
+      "tags": [
+        "psycho"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "sterility",
       "name": "Бесплодие",
       "abilities": [
         "Вы не можете иметь детей"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": -2,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "racist",
       "name": "Рассизм",
       "abilities": [
         "Вы ненавиде все другие рассы"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "subaltern"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "weak_heart",
       "name": "Слабое сердце",
       "abilities": [
         "Если вы испытаете большую нагрузку - вы умрете"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": -1,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "incurable",
       "name": "Неизлечимый",
       "abilities": [
         "Ни одно ваше негативное качество нельзя излечить",
         "Самоконтроль не может избавиться от этого свойства"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": -2,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "sexist",
       "name": "Сексизм",
       "abilities": [
         "Вы ненавиде противоположный пол"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "chameleon",
       "name": "Хамелеон",
       "abilities": [
         "Вас не засекают скрытые камеры",
         "Черт, что ты такое?"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": 1,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "bipolar",
       "name": "Биполярное расстройсто",
       "abilities": [
         "В вас скрыто много личностей",
         "Ваши действия могут отыгрываться не совсем так, как вы планировали"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": -1,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "alzheimer",
       "name": "Альцгеймер",
       "abilities": [
         "Каждый месяц вы забываете что-либо, по решению ведущего"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": -1,
       "tags": [],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "liar",
       "name": "Лжец",
       "abilities": [
         "Вам запрещено говорить правду",
         "Никто не запрещает уходить от ответа"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "honesty"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "sensitive",
       "name": "Медиум",
       "abilities": [
         "Вы можете видеть мертвых игроков"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "*",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "intelligence",
+        "honesty"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "robot_a",
       "name": "ra1-az-7c",
       "abilities": [
         "Вы - робот подчиняющийся законам Азимова",
@@ -908,22 +955,24 @@
         "У вас искуственный интеллект"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
-      "tags": [],
+      "balance": 1,
+      "tags": [
+        "robot"
+      ],
       "items": []
     },
     {
-      "id": "---------",
+      "id": "homie",
       "name": "Как дома",
       "abilities": [
         "Что бы выйти из бункера нужен пароль, к счастью, вы его помните"
       ],
       "lore": "---------------",
-      "visibility": "--------------",
+      "visibility": "invisible",
       "allow": true,
-      "balance": 0,
+      "balance": 2,
       "tags": [],
       "items": []
     }

@@ -2,6 +2,9 @@ package com.azsspc.az_vault;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -67,8 +70,15 @@ public class MainActivity extends AppCompatActivity {
         return ret;
     }
 
-    public static Class<?> getCPFS(String s) throws ClassNotFoundException {
-        return Class.forName("com.azsspc.az_vault.game_comp.special." + s);
+    public static Class<?> getTileClass(String s) throws ClassNotFoundException {
+        return Class.forName("com.azsspc.az_vault.gamp.tiles.special." + s);
+    }
+
+    public static void setClipboard(Context context, String text) {
+        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(context.getString(R.string.text_copied), text);
+        clipboard.setPrimaryClip(clip);
+        Toast.makeText(context, context.getString(R.string.text_copied), Toast.LENGTH_SHORT).show();
     }
 }
 

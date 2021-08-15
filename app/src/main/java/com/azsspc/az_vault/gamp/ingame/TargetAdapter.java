@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
-import com.azsspc.az_vault.gamp.Target;
+import com.azsspc.az_vault.gamp.tiles.Target;
 
 import java.util.List;
 

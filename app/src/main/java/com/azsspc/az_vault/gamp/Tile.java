@@ -12,15 +12,15 @@ import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 public class Tile {
     public static final String VISIBLE = "visible";
     public static final String INVISIBLE = "invisible";
-    int color;
-    int img;
-    final String id;
-    final String name;
-    final String lore;
-    final String[] abilities;
+    public int color;
+    public int img;
+    public final String id;
+    public final String name;
+    public final String lore;
+    public final String[] abilities;
 
 
-    Tile(JSONObject data) throws JSONException {
+    public Tile(JSONObject data) throws JSONException {
         this.img = R.drawable.ic_steam;
         this.color = R.color.black;
         this.id = data.getString("id").toLowerCase();

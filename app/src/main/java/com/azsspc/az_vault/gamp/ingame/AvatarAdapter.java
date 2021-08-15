@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azsspc.az_vault.R;
-import com.azsspc.az_vault.gamp.Avatar;
+import com.azsspc.az_vault.gamp.tiles.Avatar;
 
 import java.util.List;
 

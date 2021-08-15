@@ -1,8 +1,9 @@
-package com.azsspc.az_vault.gamp;
+package com.azsspc.az_vault.gamp.tiles;
 
 import android.content.Context;
 
 import com.azsspc.az_vault.R;
+import com.azsspc.az_vault.gamp.Tile;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/ad_t_img"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_columnSpan="1" />
 
     <TextView
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"
         android:layout_gravity="center_vertical"
+        android:layout_marginLeft="4dp"
         android:textSize="18sp"
         android:textStyle="bold" />
 

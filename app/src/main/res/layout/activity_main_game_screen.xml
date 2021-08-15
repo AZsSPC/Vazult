@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="a idfgbasoi dgabs ohfo hafb agfg g83 y2t8y4r 4ry2 0y4r r2y30r23r p2r923 ur"
+            android:text="char key code here"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -55,8 +55,8 @@
 
                 <ImageView
                     android:id="@+id/ap_t_img"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_row="0"
                     android:layout_columnSpan="1"
                     app:srcCompat="@drawable/ic_target"
@@ -69,6 +69,7 @@
                     android:layout_row="0"
                     android:layout_columnSpan="1"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
                     android:textColor="@color/target"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -107,8 +108,8 @@
 
                 <ImageView
                     android:id="@+id/ap_a_img"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_row="0"
                     android:layout_columnSpan="1"
                     app:srcCompat="@drawable/ic_avatar"
@@ -121,6 +122,7 @@
                     android:layout_row="0"
                     android:layout_columnSpan="1"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
                     android:textColor="@color/avatar"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -150,12 +152,16 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ap_properties"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ap_items"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </LinearLayout>
     </ScrollView>
 

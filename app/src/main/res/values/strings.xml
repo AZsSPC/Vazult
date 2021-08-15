@@ -3,6 +3,7 @@
     <string name="app_tab">• VAZULT •</string>
     <string name="version">v: 2.0 beta</string>
     <string name="restart_it">Перезапустите приложение</string>
+    <string name="text_copied">Скопировано в буфер обмена!</string>
 
     <string name="sc_path">Перезапустите приложение</string>
     <string name="sc_avatar">Шаблон аватара</string>
