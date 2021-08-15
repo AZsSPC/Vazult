@@ -7,6 +7,9 @@ import com.azsspc.az_vault.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Tile {
@@ -67,5 +70,12 @@ public class Tile {
 
     public static String toList(String[] s) {
         return "  • " + String.join("\n  • ", s);
+    }
+
+    public static boolean doesTagsEquals(String[] t1, String[] t2) {
+        HashSet<String> set = new HashSet<>();
+        set.addAll(Arrays.asList(t1));
+        set.addAll(Arrays.asList(t2));
+        return set.size() != (t1.length + t2.length);
     }
 }

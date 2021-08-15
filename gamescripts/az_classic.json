@@ -13,7 +13,7 @@
   },
   "avatars": [
     {
-      "id": "a_0",
+      "id": "boris",
       "name": "Борис",
       "abilities": [
         "Деятельность: Профессор биологии"
@@ -25,7 +25,7 @@
       "properties": []
     },
     {
-      "id": "a_1",
+      "id": "olga",
       "name": "Оля",
       "abilities": [
         "Деятельность: Оперная певица"
@@ -37,7 +37,7 @@
       "properties": []
     },
     {
-      "id": "a_2",
+      "id": "oleg",
       "name": "Олег",
       "abilities": [
         "Деятельность: Военный"
@@ -49,7 +49,7 @@
       "properties": []
     },
     {
-      "id": "a_3",
+      "id": "valera",
       "name": "Валера",
       "abilities": [
         "Деятельность: Программист"
@@ -61,7 +61,7 @@
       "properties": []
     },
     {
-      "id": "a_4",
+      "id": "anton",
       "name": "Антон",
       "abilities": [
         "Деятельность: Пеший турист"
@@ -73,7 +73,7 @@
       "properties": []
     },
     {
-      "id": "a_5",
+      "id": "misha",
       "name": "Миша",
       "abilities": [
         "Деятельность: Школьник"
@@ -85,7 +85,7 @@
       "properties": []
     },
     {
-      "id": "a_6",
+      "id": "lena",
       "name": "Лена",
       "abilities": [
         "Деятельность: Выпускница"
@@ -97,7 +97,7 @@
       "properties": []
     },
     {
-      "id": "a_7",
+      "id": "jon",
       "name": "Джон",
       "abilities": [
         "Деятельность: Фермер"
@@ -109,7 +109,7 @@
       "properties": []
     },
     {
-      "id": "a_8",
+      "id": "dag",
       "name": "Даг",
       "abilities": [
         "Деятельность: Повар военного судна"
@@ -121,7 +121,7 @@
       "properties": []
     },
     {
-      "id": "a_9",
+      "id": "ula",
       "name": "Юля",
       "abilities": [
         "Деятельность: Юрист"
@@ -133,7 +133,7 @@
       "properties": []
     },
     {
-      "id": "a_10",
+      "id": "ura",
       "name": "Юра",
       "abilities": [
         "Деятельность: Учитель труда"
@@ -145,7 +145,7 @@
       "properties": []
     },
     {
-      "id": "a_11",
+      "id": "jenya",
       "name": "Женя",
       "abilities": [
         "Деятельность: Монополист"
@@ -157,7 +157,7 @@
       "properties": []
     },
     {
-      "id": "a_12",
+      "id": "semen",
       "name": "Семен",
       "abilities": [
         "Деятельность: Архитектор"
@@ -169,7 +169,7 @@
       "properties": []
     },
     {
-      "id": "a_13",
+      "id": "akram",
       "name": "Акрам",
       "abilities": [
         "Деятельность: Купец"
@@ -181,7 +181,7 @@
       "properties": []
     },
     {
-      "id": "a_14",
+      "id": "iena",
       "name": "Йена",
       "abilities": [
         "Деятельность: Фрилансер"
@@ -190,7 +190,9 @@
       "sex": "Ж",
       "lore": "-----",
       "items": [],
-      "properties": []
+      "properties": [
+        "strength","insomnia"
+      ]
     }
   ],
   "items": [
@@ -376,6 +378,48 @@
     }
   ],
   "properties": [
+    {
+      "id": "vorior",
+      "name": "Воитель",
+      "abilities": [
+        "Навыки вашей самообороны превосходят строение вашего идеального тела"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": false,
+      "balance": 1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "freelancer",
+      "name": "Фрилансер",
+      "abilities": [
+        "Вы приспособлены к долгой и неподвижной работе"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": ["activity"],
+      "items": []
+    },
+    {
+      "id": "asian",
+      "name": "Азиат",
+      "abilities": [
+        "Ваш цвет кожи отличается",
+        "Алкоголь противопоказан"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "alko"
+      ],
+      "items": []
+    },
     {
       "id": "muteness",
       "name": "Немота",
@@ -784,6 +828,7 @@
       "allow": true,
       "balance": -2,
       "tags": [
+        "alko",
         "psycho"
       ],
       "items": []

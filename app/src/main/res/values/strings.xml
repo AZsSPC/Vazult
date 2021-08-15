@@ -4,6 +4,7 @@
     <string name="version">v: 2.0 beta</string>
     <string name="restart_it">Перезапустите приложение</string>
     <string name="text_copied">Скопировано в буфер обмена!</string>
+    <string name="key_gen_tries">Попыток генераций ключа</string>
 
     <string name="sc_path">Перезапустите приложение</string>
     <string name="sc_avatar">Шаблон аватара</string>
@@ -15,6 +16,8 @@
     <string name="sc_target">Стиль игры</string>
     <string name="sc_inventory">Размер инвентаря</string>
 
+    <string name="menu_inventory">Инвентарь</string>
+    <string name="menu_map">Карта</string>
     <string name="menu_avatar">Аватары</string>
     <string name="menu_target">Стили игры</string>
     <string name="menu_items">Предметы</string>

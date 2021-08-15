@@ -1,6 +1,7 @@
 package com.azsspc.az_vault.gamp;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import com.azsspc.az_vault.gamp.tiles.Avatar;
 import com.azsspc.az_vault.gamp.tiles.Item;
@@ -21,8 +22,8 @@ public class Character {
     final Avatar avatar;
     Item[] inventory;
     Property[] properties;
-    int position;
     String location;
+    int balance;
 
     public Character(String character_key_code) {
         this.CKC = character_key_code;
@@ -48,6 +49,8 @@ public class Character {
         for (String s : arr_items) list_items.add(as_items.get(s));
         inventory = list_items.toArray(new Item[0]);
         properties = list_prop.toArray(new Property[0]);
+        this.balance = 0;
+        for (Property p : properties) this.balance += p.getBalance();
     }
 
     public String getCKC() {
@@ -70,19 +73,15 @@ public class Character {
         return properties;
     }
 
-    public int getPosition() {
-        return position;
-    }
-
     public String getLocation() {
         return location;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getBalance() {
+        return balance;
     }
 }

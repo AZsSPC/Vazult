@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -21,6 +22,15 @@ import com.azsspc.az_vault.gamp.views.MainGameScreen;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
 
 import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.DataLoader.as_url;
@@ -79,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
         ClipData clip = ClipData.newPlainText(context.getString(R.string.text_copied), text);
         clipboard.setPrimaryClip(clip);
         Toast.makeText(context, context.getString(R.string.text_copied), Toast.LENGTH_SHORT).show();
+    }
+
+    public void connect(View v) {
+    }
+
+    public void server(View v) {
     }
 }
 

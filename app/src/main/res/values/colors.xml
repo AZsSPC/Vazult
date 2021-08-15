@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#5E5E5E</color>
 
     <color name="bg_overlay">#4D000000</color>
     <color name="gray_ground">#9BA2A8</color>
@@ -22,6 +23,7 @@
     <color name="item">#DD7C06</color>
     <color name="property">#0665B8</color>
     <color name="comment">#B6B6B6</color>
+    <color name="map">#D55981</color>
 
     <color name="p_bad">#A60747</color>
     <color name="p_normal">#066BB8</color>
