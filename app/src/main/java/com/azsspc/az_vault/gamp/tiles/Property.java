@@ -1,6 +1,7 @@
 package com.azsspc.az_vault.gamp.tiles;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.azsspc.az_vault.R;
 import com.azsspc.az_vault.gamp.Tile;
@@ -25,8 +26,8 @@ public class Property extends Tile {
         this.balance = data.getInt("balance");
         this.allow = data.getBoolean("allow");
         this.visibility = data.getString("visibility").toLowerCase();
-        this.tags = getFromJSONArray(data.getJSONArray("tags"),true);
-        this.items = getFromJSONArray(data.getJSONArray("items"),true);
+        this.tags = getFromJSONArray(data.getJSONArray("tags"), true);
+        this.items = getFromJSONArray(data.getJSONArray("items"), true);
         if (getBalance() > 0) {
             this.img = getBalance() == 1 ? R.drawable.ic_property_1 : R.drawable.ic_property_2;
             this.color = R.color.p_good;

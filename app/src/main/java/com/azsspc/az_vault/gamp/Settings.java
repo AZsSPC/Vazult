@@ -8,8 +8,6 @@ public class Settings {
     String name;
     String lore;
     String author;
-    boolean avatar;
-    boolean target;
     int inventory;
     int properties;
     int balance_max;
@@ -19,8 +17,6 @@ public class Settings {
         name = data.getString("name");
         lore = data.getString("lore");
         author = data.getString("author");
-        avatar = data.getBoolean("avatar");
-        target = data.getBoolean("target");
         inventory = data.getInt("inventory");
         properties = data.getInt("properties");
         balance_max = data.getInt("balance_max");
@@ -43,14 +39,6 @@ public class Settings {
 
     public String getAuthor() {
         return author;
-    }
-
-    public boolean isAvatarAllow() {
-        return avatar;
-    }
-
-    public boolean isTargetAllow() {
-        return target;
     }
 
     public int getInventorySize() {
