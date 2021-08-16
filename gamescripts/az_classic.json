@@ -513,6 +513,22 @@
       "items": []
     },
     {
+      "id": "leader",
+      "name": "Лидер",
+      "abilities": [
+        "Вы умеете расположить людей к себе",
+        "Вы умеете управлять людьми"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "dumb"
+      ],
+      "items": []
+    },
+    {
       "id": "spy",
       "name": "Шпион",
       "abilities": [
@@ -784,7 +800,8 @@
       "allow": true,
       "balance": -1,
       "tags": [
-        "intelligence"
+        "intelligence",
+        "dumb"
       ],
       "items": []
     },

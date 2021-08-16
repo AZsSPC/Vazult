@@ -140,14 +140,16 @@ public class MainGameScreen extends AppCompatActivity {
         list_prop.addAll(Arrays.asList(target.getProperties()));
         for (String sin : list_prop) tags.addAll(Arrays.asList(as_properties.get(sin).getTags()));
         int prop_count = as_settings.getPropertiesCount();
-        for (int i = 0; i < prop_count; i++) {
-            String s = uf.get((int) (uf.size() * Math.random()));
-            char_key.append(" ").append(as_properties.get(s).getId());
-            for (String sin : uf)
-                if (doesTagsEquals(as_properties.get(sin).getTags(), tags.toArray(new String[0])))
-                    uf.remove(sin);
-            uf.remove(s);
-        }
+        for (int i = 0; i < prop_count; i++)
+            try {
+                String s = uf.get((int) ((uf.size() - 0.01) * Math.random()));
+                char_key.append(" ").append(as_properties.get(s).getId());
+                for (String sin : uf)
+                    if (doesTagsEquals(as_properties.get(sin).getTags(), tags.toArray(new String[0])))
+                        uf.remove(sin);
+                uf.remove(s);
+            } catch (Exception ignored) {
+            }
         Character player = new Character(char_key.toString());
         if (player.getBalance() < as_settings.getBalanceMin() || player.getBalance() > as_settings.getBalanceMax())
             return tryGenKey(++counter);
