@@ -23,6 +23,8 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.util.HashMap;
 
+import static com.azsspc.az_vault.MainActivity.SP_KEY_AS;
+
 public class DataLoader {
     public static String as_url;
     public static Settings as_settings;
@@ -35,9 +37,9 @@ public class DataLoader {
 
     public static boolean loadScript(Context c, String script_url, boolean from_cloud) {
         try {
-            as_url = script_url;
+            MainActivity.sp.edit().putString(SP_KEY_AS, as_url = script_url).apply();
             String file_name = as_url.replaceAll("^.+/", "");
-            String script_in = getFromStorage(c, file_name);
+            String script_in = getFromStorage(c, file_name).replaceAll("\\s+", " ");
             JSONObject uj = new JSONObject(script_in.equals(gfs_error) || from_cloud ? DataLoader.getFromCloud(c, file_name, as_url) : script_in);
             as_settings = new Settings(uj.getJSONObject("settings"));
             as_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
@@ -55,18 +57,16 @@ public class DataLoader {
         Toast.makeText(c, c.getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
         new FromCloudLoader().execute(c, url, file_name);
         Toast.makeText(c, c.getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
-        return getFromStorage(c, file_name);
+        return getFromStorage(c, file_name).replaceAll("\\s+", " ");
     }
 
     public static String getFromStorage(Context c, String file_name) {
         try {
             StringBuilder ret = new StringBuilder();
             String line;
-            BufferedReader bread = new BufferedReader(new InputStreamReader(
-                    new FileInputStream(new File(c.getFilesDir(), file_name))
-            ));
+            BufferedReader bread = new BufferedReader(new InputStreamReader(new FileInputStream(new File(c.getFilesDir(), file_name))));
             while ((line = bread.readLine()) != null) ret.append(line);
-            return ret.toString().replaceAll("\\s+", " ");
+            return ret.toString();
         } catch (Exception e) {
             e.printStackTrace();
         }

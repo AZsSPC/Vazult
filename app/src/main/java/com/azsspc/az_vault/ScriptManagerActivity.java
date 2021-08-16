@@ -43,13 +43,13 @@ public class ScriptManagerActivity extends AppCompatActivity {
         sc_author.setText(getString(R.string.sc_author) + ": " + as_settings.getAuthor());
         sc_inventory.setText(getString(R.string.sc_inventory) + ": " + as_settings.getInventorySize());
         sc_prop.setText(getString(R.string.sc_prop) + ": " + as_settings.getPropertiesCount());
-        sc_balance.setText(getString(R.string.sc_balance) + ": " + as_settings.getBalance());
+        sc_balance.setText(getString(R.string.sc_balance) + ": " + as_settings.getBalanceMin() + " - " + as_settings.getBalanceMax());
         sc_avatar.setText(getString(R.string.sc_avatar) + ": " + getString(as_settings.isAvatarAllow() ? R.string.sc_true : R.string.sc_false));
         sc_target.setText(getString(R.string.sc_target) + ": " + getString(as_settings.isTargetAllow() ? R.string.sc_true : R.string.sc_false));
     }
 
     public void buttonReloadActiveScript(View v) {
-        Log.e("asd", "" + loadScript(this, as_url,true));
+        Log.e("asd", "" + loadScript(this, as_url, true));
         setSettingsView();
     }
 

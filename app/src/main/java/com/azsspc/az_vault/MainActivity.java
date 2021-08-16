@@ -6,6 +6,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,8 @@ import static com.azsspc.az_vault.DataLoader.loadScript;
 
 public class MainActivity extends AppCompatActivity {
     //public static Animation tile_center_close, tile_center_open;
+    public static final String SP_KEY_AS = "spas_kay";
+    public static SharedPreferences sp;
 
     public void buttonScriptManager(View v) {
         startActivity(new Intent(this, ScriptManagerActivity.class));
@@ -51,12 +54,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MainGameScreen.class));
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        sp = getSharedPreferences(getPackageName(), MODE_PRIVATE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkPermissions();
-        DataLoader.loadScript(this, getResources().getStringArray(R.array.gs_url)[0], false);
+        DataLoader.loadScript(this, sp.getString(SP_KEY_AS, getResources().getStringArray(R.array.gs_url)[0]), false);
         ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
         //tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);

@@ -28,6 +28,7 @@ import java.util.Map;
 import static com.azsspc.az_vault.DataLoader.as_avatars;
 import static com.azsspc.az_vault.DataLoader.as_items;
 import static com.azsspc.az_vault.DataLoader.as_properties;
+import static com.azsspc.az_vault.DataLoader.as_settings;
 import static com.azsspc.az_vault.DataLoader.as_targets;
 import static com.azsspc.az_vault.MainActivity.setClipboard;
 import static com.azsspc.az_vault.gamp.Tile.doesTagsEquals;
@@ -61,7 +62,7 @@ public class MainGameScreen extends AppCompatActivity {
     }
 
     void initContext() {
-        Character player = new Character(tryGenKey(0));
+        Character player = new Character(tryGenKey(1));
         Target t = player.getTarget();
         Avatar a = player.getAvatar();
         char_key_view.setText(player.getCKC());
@@ -138,8 +139,8 @@ public class MainGameScreen extends AppCompatActivity {
         list_prop.addAll(Arrays.asList(avatar.getProperties()));
         list_prop.addAll(Arrays.asList(target.getProperties()));
         for (String sin : list_prop) tags.addAll(Arrays.asList(as_properties.get(sin).getTags()));
-
-        for (int i = 0; i < 8; i++) {
+        int prop_count = as_settings.getPropertiesCount();
+        for (int i = 0; i < prop_count; i++) {
             String s = uf.get((int) (uf.size() * Math.random()));
             char_key.append(" ").append(as_properties.get(s).getId());
             for (String sin : uf)
@@ -148,7 +149,8 @@ public class MainGameScreen extends AppCompatActivity {
             uf.remove(s);
         }
         Character player = new Character(char_key.toString());
-        if (player.getBalance() != 0) return tryGenKey(1 + ++counter);
+        if (player.getBalance() < as_settings.getBalanceMin() || player.getBalance() > as_settings.getBalanceMax())
+            return tryGenKey(++counter);
         Toast.makeText(this, getString(R.string.key_gen_tries) + ": " + counter, Toast.LENGTH_SHORT).show();
         return char_key.toString();
     }

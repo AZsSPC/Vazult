@@ -4,11 +4,10 @@
     "name": "Классический игровой пакет \"Vazult\"",
     "lore": "Ещё более детальное описание, да, я уже не знаю что сюда можно вписать для заполнения места",
     "author": "AZsSPC",
-    "avatar": true,
-    "target": true,
     "inventory": 20,
     "properties": 8,
-    "balance": 0,
+    "balance_min": -2,
+    "balance_max": 2,
     "version": "2.1.8 beta"
   },
   "avatars": [
@@ -21,8 +20,15 @@
       "old": 54,
       "sex": "М",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "beans",
+        "book_botany"
+      ],
+      "properties": [
+        "medic",
+        "weak_heart",
+        "diabetic"
+      ]
     },
     {
       "id": "olga",
@@ -34,7 +40,10 @@
       "sex": "Ж",
       "lore": "-----",
       "items": [],
-      "properties": []
+      "properties": [
+        "breather",
+        "sterility"
+      ]
     },
     {
       "id": "oleg",
@@ -45,8 +54,12 @@
       "old": 31,
       "sex": "М",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "knife"
+      ],
+      "properties": [
+        "invalid_arm_r"
+      ]
     },
     {
       "id": "valera",
@@ -57,8 +70,12 @@
       "old": 27,
       "sex": "М",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "invalid_chair"
+      ],
+      "properties": [
+        "invalid_legs"
+      ]
     },
     {
       "id": "anton",
@@ -69,7 +86,11 @@
       "old": 20,
       "sex": "М",
       "lore": "-----",
-      "items": [],
+      "items": [
+        "backpack",
+        "knife_swiss",
+        "food_dry"
+      ],
       "properties": []
     },
     {
@@ -82,7 +103,10 @@
       "sex": "М",
       "lore": "-----",
       "items": [],
-      "properties": []
+      "properties": [
+        "leader",
+        "sterility"
+      ]
     },
     {
       "id": "lena",
@@ -93,8 +117,12 @@
       "old": 18,
       "sex": "Ж",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "art_kit"
+      ],
+      "properties": [
+        "dumbness"
+      ]
     },
     {
       "id": "jon",
@@ -105,8 +133,13 @@
       "old": 40,
       "sex": "М",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "hat"
+      ],
+      "properties": [
+        "lang_eng",
+        "steel_stomach"
+      ]
     },
     {
       "id": "dag",
@@ -117,8 +150,14 @@
       "old": 35,
       "sex": "М",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "beans",
+        "food_dry"
+      ],
+      "properties": [
+        "starver",
+        "dyslexia"
+      ]
     },
     {
       "id": "ula",
@@ -129,8 +168,13 @@
       "old": 25,
       "sex": "Ж",
       "lore": "-----",
-      "items": [],
-      "properties": []
+      "items": [
+        "glasses"
+      ],
+      "properties": [
+        "blindness_lite",
+        "spy"
+      ]
     },
     {
       "id": "ura",
@@ -191,7 +235,8 @@
       "lore": "-----",
       "items": [],
       "properties": [
-        "strength","insomnia"
+        "strength",
+        "insomnia"
       ]
     }
   ],
@@ -280,6 +325,17 @@
       "name": "Швейцарский нож",
       "abilities": [
         "Без него - никуда"
+      ],
+      "lore": "--------------",
+      "weight": 5,
+      "type": "---------",
+      "img": "--------"
+    },
+    {
+      "id": "knife",
+      "name": "Нож",
+      "abilities": [
+        "Хорошо заточенный нож в чехле"
       ],
       "lore": "--------------",
       "weight": 5,
@@ -379,6 +435,151 @@
   ],
   "properties": [
     {
+      "id": "dyslexia",
+      "name": "Дислексия",
+      "abilities": [
+        "Вы не способны читать"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "intelligence"
+      ],
+      "items": []
+    },
+    {
+      "id": "lang_eng",
+      "name": "Американец",
+      "abilities": [
+        "Вы владеете только английским языком"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "lang"
+      ],
+      "items": []
+    },
+    {
+      "id": "lang_ua",
+      "name": "Хохол",
+      "abilities": [
+        "Вы владеете только украинским языком",
+        "Вы любите сало",
+        "Вы не любите окружающих, если они не хохлы"
+      ],
+      "lore": "А вы знали, что игра сделана хохлом, ахахах",
+      "visibility": "visible",
+      "allow": true,
+      "balance": 0,
+      "tags": [
+        "lang"
+      ],
+      "items": []
+    },
+    {
+      "id": "starver",
+      "name": "Голодальщик",
+      "abilities": [
+        "Вы способны без травм перетерпеть недельный голод"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "stomach"
+      ],
+      "items": []
+    },
+    {
+      "id": "spy",
+      "name": "Шпион",
+      "abilities": [
+        "Вы крайне наблюдательны"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "blindness_lite",
+      "name": "Плохое зрение",
+      "abilities": [
+        "Вам нужны очки"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": -1,
+      "tags": [
+        "blindness"
+      ],
+      "items": []
+    },
+    {
+      "id": "diabetic",
+      "name": "Диабет",
+      "abilities": [
+        "Соблюдайте диету, и все будет хорошо",
+        "Вам нельзя употреблять быстрые углеводы"
+      ],
+      "lore": "Сладенького нельзя(",
+      "visibility": "*",
+      "allow": true,
+      "balance": -2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "medic",
+      "name": "Врач",
+      "abilities": [
+        "Вы способны оказать больному больше, чем первую помочь"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": true,
+      "balance": 1,
+      "tags": [
+        "activity"
+      ],
+      "items": []
+    },
+    {
+      "id": "invalid_legs",
+      "name": "Инвалид",
+      "abilities": [
+        "У вас атрофированы обе ноги"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -2,
+      "tags": [],
+      "items": []
+    },
+    {
+      "id": "invalid_arm_r",
+      "name": "Инвалид",
+      "abilities": [
+        "У вас нет правой руки"
+      ],
+      "lore": "---------------",
+      "visibility": "visible",
+      "allow": true,
+      "balance": -1,
+      "tags": [],
+      "items": []
+    },
+    {
       "id": "vorior",
       "name": "Воитель",
       "abilities": [
@@ -401,7 +602,9 @@
       "visibility": "*",
       "allow": true,
       "balance": 1,
-      "tags": ["activity"],
+      "tags": [
+        "activity"
+      ],
       "items": []
     },
     {
@@ -416,7 +619,8 @@
       "allow": true,
       "balance": 0,
       "tags": [
-        "alko"
+        "alko",
+        "race"
       ],
       "items": []
     },
@@ -445,7 +649,9 @@
       "visibility": "visible",
       "allow": true,
       "balance": -1,
-      "tags": [],
+      "tags": [
+        "blindness"
+      ],
       "items": []
     },
     {
@@ -504,7 +710,9 @@
       "visibility": "visible",
       "allow": true,
       "balance": 0,
-      "tags": [],
+      "tags": [
+        "race"
+      ],
       "items": []
     },
     {
@@ -568,7 +776,8 @@
       "id": "asthma",
       "name": "Астма",
       "abilities": [
-        "У вас астма, проблемы с кислородом могут доконать вас"
+        "У вас астма, проблемы с кислородом могут доконать вас",
+        "Вы потребляете в полтора раза больше кислорода"
       ],
       "lore": "---------------",
       "visibility": "*",
@@ -589,6 +798,21 @@
       "visibility": "*",
       "allow": true,
       "balance": -1,
+      "tags": [
+        "stomach"
+      ],
+      "items": []
+    },
+    {
+      "id": "steel_stomach",
+      "name": "Стальной желудок",
+      "abilities": [
+        "Вы можете съесть все, что сможете прожевать"
+      ],
+      "lore": "---------------",
+      "visibility": "*",
+      "allow": false,
+      "balance": 2,
       "tags": [
         "stomach"
       ],

@@ -12,7 +12,8 @@ public class Settings {
     boolean target;
     int inventory;
     int properties;
-    int balance;
+    int balance_max;
+    int balance_min;
 
     public Settings(JSONObject data) throws JSONException {
         name = data.getString("name");
@@ -22,7 +23,8 @@ public class Settings {
         target = data.getBoolean("target");
         inventory = data.getInt("inventory");
         properties = data.getInt("properties");
-        balance = data.getInt("balance");
+        balance_max = data.getInt("balance_max");
+        balance_min = data.getInt("balance_min");
         //img_url = data.getString("img_url");
     }
 
@@ -59,7 +61,11 @@ public class Settings {
         return properties;
     }
 
-    public int getBalance() {
-        return balance;
+    public int getBalanceMax() {
+        return balance_max;
+    }
+
+    public int getBalanceMin() {
+        return balance_min;
     }
 }
