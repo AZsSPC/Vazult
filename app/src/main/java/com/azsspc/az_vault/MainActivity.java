@@ -62,17 +62,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         checkPermissions();
         DataLoader.loadScript(this, sp.getString(SP_KEY_AS, getResources().getStringArray(R.array.gs_url)[0]), false);
-        ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
+        try {
+            ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
+        } catch (Exception ignored) {
+        }
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
         //tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
         //tile_center_open = AnimationUtils.loadAnimation(this, R.anim.open_center);
     }
 
     void checkPermissions() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
             Toast.makeText(this, getString(R.string.restart_it), Toast.LENGTH_LONG).show();
         }
     }
@@ -80,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public static String[] getFromJSONArray(JSONArray data, boolean lowerCase) throws JSONException {
         int rel = data.length();
         String[] ret = new String[rel];
-        for (int i = 0; i < rel; i++)
-            ret[i] = lowerCase ? data.getString(i).toLowerCase() : data.getString(i);
+        for (int i = 0; i < rel; i++) ret[i] = lowerCase ? data.getString(i).toLowerCase() : data.getString(i);
         return ret;
     }
 

@@ -24,8 +24,8 @@ public class Property extends Tile {
     public Property(JSONObject data) throws JSONException {
         super(data);
         this.balance = data.getInt("balance");
-        this.allow = data.getBoolean("allow");
-        this.visibility = data.getString("visibility").toLowerCase();
+        this.allow = data.getBoolean("status");
+        this.visibility = data.getString("visible").toLowerCase();
         this.tags = getFromJSONArray(data.getJSONArray("tags"), true);
         this.items = getFromJSONArray(data.getJSONArray("items"), true);
         if (getBalance() > 0) {

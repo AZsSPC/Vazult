@@ -33,8 +33,7 @@
     <string name="sc_load_wait">Обновляем скрипт\n\nЭто может занять несколько минут</string>
     <string name="sc_load_done">Обновление скрипта завершено!</string>
     <array name="gs_url">
-        <item>https://raw.githubusercontent.com/AZsSPC/Vazult_/master/gamescripts/az_classic.json
-        </item>
+        <item>https://raw.githubusercontent.com/AZsSPC/Vazult_/master/gamescripts/az_classic.json</item>
     </array>
 
     <string name="prop_vis">Очевидное свойство!</string>
