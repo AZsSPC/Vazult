@@ -39,7 +39,7 @@ import static com.azsspc.az_vault.DataLoader.loadScript;
 
 public class MainActivity extends AppCompatActivity {
     //public static Animation tile_center_close, tile_center_open;
-    public static final String SP_KEY_AS = "spas_kay";
+    public static final String SP_KEY_AS = "spas_key";
     public static SharedPreferences sp;
 
     public void buttonScriptManager(View v) {
