@@ -390,7 +390,7 @@ properties:
     abilities:
       - 'Вы не способны читать'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -431,7 +431,7 @@ properties:
     abilities:
       - 'Вы способны без травм перетерпеть недельный голод'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -445,7 +445,7 @@ properties:
       - 'Вы потребляете в полтора раза меньше воздуха'
       - 'Вы задерживать дыхание на 20 минут'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -459,7 +459,7 @@ properties:
       - 'Вы умеете расположить людей к себе'
       - 'Вы умеете управлять людьми'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -472,7 +472,7 @@ properties:
     abilities:
       - 'Вы крайне наблюдательны'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -484,7 +484,7 @@ properties:
     abilities:
       - 'Вам нужны очки'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -498,7 +498,7 @@ properties:
       - 'Соблюдайте диету, и все будет хорошо'
       - 'Вам нельзя употреблять быстрые углеводы'
     lore: Сладенького нельзя(
-    visible: ~
+    visible: normal
     status: on
     balance: -2
     tags:
@@ -510,7 +510,7 @@ properties:
     abilities:
       - 'Вы способны оказать больному больше, чем первую помочь'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -547,7 +547,7 @@ properties:
     abilities:
       - 'Навыки вашей самообороны превосходят строение вашего идеального тела'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: off
     balance: 1
     tags:
@@ -559,7 +559,7 @@ properties:
     abilities:
       - 'Вы приспособлены к долгой и неподвижной работе'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -640,7 +640,7 @@ properties:
     abilities:
       - 'Вы потребляете в полтора раза больше пищи, чем обычный игрок'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -667,7 +667,7 @@ properties:
     abilities:
       - 'В начале игры вы можете выбрать скрытое свойство, которое в дальнейшем будет игнорироваться'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 2
     tags:
@@ -693,7 +693,7 @@ properties:
     abilities:
       - 'В начале игры вы можете выбрать обычное свойство, которое в дальнейшем будет игнорироваться'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 2
     tags:
@@ -705,7 +705,7 @@ properties:
     abilities:
       - 'Вы не приспособлены к умственному труду и развитию'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -720,7 +720,7 @@ properties:
       - 'У вас астма, проблемы с кислородом могут доконать вас'
       - 'Вы потребляете в полтора раза больше кислорода'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -733,7 +733,7 @@ properties:
     abilities:
       - 'Вы не можете переварить тяжелую пищу'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -746,7 +746,7 @@ properties:
     abilities:
       - 'Вы можете съесть все, что сможете прожевать'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: off
     balance: 2
     tags:
@@ -760,7 +760,7 @@ properties:
       - 'Вы не можете питаться консервами'
       - 'Беспорядок вас пугает'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -773,7 +773,7 @@ properties:
     abilities:
       - 'Вы не можете нормально спать'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -786,7 +786,7 @@ properties:
     abilities:
       - 'Траур затрагивает вас сильнее'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -799,7 +799,7 @@ properties:
     abilities:
       - 'Вы крайне сильно боитесь трупов'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -811,7 +811,7 @@ properties:
     abilities:
       - 'Беспорядок вас ничем не напрягает'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -825,7 +825,7 @@ properties:
       - 'Вам запрещено лгать'
       - 'Никто не запрещает уходить от ответа'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -838,7 +838,7 @@ properties:
     abilities:
       - 'Вы не можете сдерживать свое желание'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -851,7 +851,7 @@ properties:
     abilities:
       - 'Вы не предрасположены к продолжению рода'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -871,7 +871,7 @@ properties:
       - 'Вы следуете любому приказу'
       - 'Вы не способны принимать решения'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -890,7 +890,7 @@ properties:
       - 'Вы следуете любому приказу'
       - 'Вы не способны принимать решения'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -903,7 +903,7 @@ properties:
     abilities:
       - 'Вы потребляете в полтора раза меньше пищи, чем обычный игрок'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -917,7 +917,7 @@ properties:
       - 'Вы - умный человек'
       - 'Вы крайне хорошо обучаетесь'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 2
     tags:
@@ -931,7 +931,7 @@ properties:
     abilities:
       - 'Вы крайне хорошо обучаетесь'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 1
     tags:
@@ -944,7 +944,7 @@ properties:
     abilities:
       - 'Вы боитесь замкнутого пространства'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -1
     tags:
@@ -957,7 +957,7 @@ properties:
       - 'При недостаточном потреблении алкоголя вы будете сходить с ума'
       - 'Все ваши свойства отыгрывают себя сильнее'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: -2
     tags:
@@ -996,7 +996,7 @@ properties:
     abilities:
       - 'Вы ненавиде все другие рассы'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -1034,7 +1034,7 @@ properties:
     abilities:
       - 'Вы ненавиде противоположный пол'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
@@ -1098,7 +1098,7 @@ properties:
     abilities:
       - 'Вы можете видеть мертвых игроков'
     lore: '--- --- ---'
-    visible: ~
+    visible: normal
     status: on
     balance: 0
     tags:
