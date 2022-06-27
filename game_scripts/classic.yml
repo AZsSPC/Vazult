@@ -12,7 +12,7 @@ settings:
 
 avatars:
 
-  - id: boris
+  boris:
     name: 'Борис'
     abilities:
       - 'Деятельность: Профессор биологии'
@@ -28,7 +28,7 @@ avatars:
       - diabetic
 
 
-  - id: olga
+  olga:
     name: 'Оля'
     abilities:
       - 'Деятельность: Оперная певица'
@@ -41,7 +41,7 @@ avatars:
       - sterility
 
 
-  - id: oleg
+  oleg:
     name: 'Олег'
     abilities:
       - 'Деятельность: Военный'
@@ -54,7 +54,7 @@ avatars:
       - invalid_arm_r
 
 
-  - id: valera
+  valera:
     name: 'Валера'
     abilities:
       - 'Деятельность: Программист'
@@ -67,7 +67,7 @@ avatars:
       - invalid_legs
 
 
-  - id: anton
+  anton:
     name: 'Антон'
     abilities:
       - 'Деятельность: Пеший турист'
@@ -81,7 +81,7 @@ avatars:
     properties:
 
 
-  - id: misha
+  misha:
     name: 'Миша'
     abilities:
       - 'Деятельность: Школьник'
@@ -94,7 +94,7 @@ avatars:
       - sterility
 
 
-  - id: lena
+  lena:
     name: 'Лена'
     abilities:
       - 'Деятельность: Выпускница'
@@ -107,7 +107,7 @@ avatars:
       - dumbness
 
 
-  - id: jon
+  jon:
     name: 'Джон'
     abilities:
       - 'Деятельность: Фермер'
@@ -121,7 +121,7 @@ avatars:
       - steel_stomach
 
 
-  - id: dag
+  dag:
     name: 'Даг'
     abilities:
       - 'Деятельность: Повар военного судна'
@@ -136,7 +136,7 @@ avatars:
       - dyslexia
 
 
-  - id: ula
+  ula:
     name: 'Юля'
     abilities:
       - 'Деятельность: Юрист'
@@ -150,7 +150,7 @@ avatars:
       - spy
 
 
-  - id: ura
+  ura:
     name: 'Юра'
     abilities:
       - 'Деятельность: Учитель труда'
@@ -161,7 +161,7 @@ avatars:
     properties:
 
 
-  - id: jenya
+  jenya:
     name: 'Женя'
     abilities:
       - 'Деятельность: Монополист'
@@ -172,7 +172,7 @@ avatars:
     properties:
 
 
-  - id: semen
+  semen:
     name: 'Семен'
     abilities:
       - 'Деятельность: Архитектор'
@@ -183,7 +183,7 @@ avatars:
     properties:
 
 
-  - id: akram
+  akram:
     name: 'Акрам'
     abilities:
       - 'Деятельность: Купец'
@@ -194,7 +194,7 @@ avatars:
     properties:
 
 
-  - id: iena
+  iena:
     name: 'Йена'
     abilities:
       - 'Деятельность: Фрилансер'
@@ -209,7 +209,7 @@ avatars:
 
 items:
 
-  - id: pistol
+  pistol:
     name: 'Пистолет'
     abilities:
       - 'Пистолет без боеприпасов'
@@ -220,7 +220,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: ammo
+  ammo:
     name: 'Патрон для пистолета'
     abilities:
       - 'Достаточно для одного выстрела из пистолета'
@@ -230,7 +230,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: book_botany
+  book_botany:
     name: '"Ботаника для садоводов"'
     abilities:
       - 'Книга по ботанике и садоводству'
@@ -240,7 +240,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: spy_set
+  spy_set:
     name: 'Набор шпиона'
     abilities:
       - 'Скрытая камера'
@@ -251,7 +251,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: beans
+  beans:
     name: 'Бобы'
     abilities:
       - 'Примерно пол-кило фасоли'
@@ -261,7 +261,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: invalid_chair
+  invalid_chair:
     name: 'Кресло-каталка'
     abilities:
       - 'Подходит для передвижения инвалидов'
@@ -271,7 +271,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: backpack
+  backpack:
     name: 'Рюкзак'
     abilities:
       - 'Увеличивает твой инвентарь!'
@@ -281,7 +281,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: knife_swiss
+  knife_swiss:
     name: 'Швейцарский нож'
     abilities:
       - 'Без него - никуда'
@@ -291,7 +291,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: knife
+  knife:
     name: 'Нож'
     abilities:
       - 'Хорошо заточенный нож в чехле'
@@ -301,7 +301,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: food_dry
+  food_dry:
     name: 'Сух-паёк'
     abilities:
       - 'Пусть и сухой, но питательный'
@@ -311,7 +311,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: art_kit
+  art_kit:
     name: 'Набор художника'
     abilities:
       - 'Ручка'
@@ -323,7 +323,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: hat
+  hat:
     name: 'Шляпа'
     abilities:
       - 'Стильная шляпа'
@@ -333,7 +333,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: glasses
+  glasses:
     name: 'Очки'
     abilities:
       - 'Неизвестные технологии сделали эти очки подходящими для любого отклонения зрения'
@@ -343,7 +343,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: goggles
+  goggles:
     name: 'Гогглы'
     abilities:
       - 'Как обычные очки, только с тонировкой, да и выглядят круче'
@@ -353,7 +353,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: cross
+  cross:
     name: 'Деревянный крестик'
     abilities:
       - 'Большой деревянный Хрест с Иисусом'
@@ -363,7 +363,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: wig
+  wig:
     name: 'Парик'
     abilities:
       - 'Просто парик'
@@ -373,7 +373,7 @@ items:
     img: '--- --- ---'
 
 
-  - id: gold_coin
+  gold_coin:
     name: 'Золотая монета'
     abilities:
       - 'В подобных условиях валюта теряет свою ценность, а металы - нет!'
@@ -385,7 +385,7 @@ items:
 
 properties:
 
-  - id: dyslexia
+  dyslexia:
     name: 'Дислексия'
     abilities:
       - 'Вы не способны читать'
@@ -398,7 +398,7 @@ properties:
     items:
 
 
-  - id: lang_eng
+  lang_eng:
     name: 'Американец'
     abilities:
       - 'Вы владеете только английским языком'
@@ -411,7 +411,7 @@ properties:
     items:
 
 
-  - id: lang_ua
+  lang_ua:
     name: Хохол
     abilities:
       - 'Вы владеете только украинским языком'
@@ -426,7 +426,7 @@ properties:
     items:
 
 
-  - id: starver
+  starver:
     name: 'Голодальщик'
     abilities:
       - 'Вы способны без травм перетерпеть недельный голод'
@@ -439,7 +439,7 @@ properties:
     items:
 
 
-  - id: breather
+  breather:
     name: 'Дыхалка'
     abilities:
       - 'Вы потребляете в полтора раза меньше воздуха'
@@ -453,7 +453,7 @@ properties:
     items:
 
 
-  - id: leader
+  leader:
     name: 'Лидер'
     abilities:
       - 'Вы умеете расположить людей к себе'
@@ -467,7 +467,7 @@ properties:
     items:
 
 
-  - id: spy
+  spy:
     name: 'Шпион'
     abilities:
       - 'Вы крайне наблюдательны'
@@ -479,7 +479,7 @@ properties:
     items:
 
 
-  - id: blindness_lite
+  blindness_lite:
     name: 'Плохое зрение'
     abilities:
       - 'Вам нужны очки'
@@ -492,7 +492,7 @@ properties:
     items:
 
 
-  - id: diabetic
+  diabetic:
     name: 'Диабет'
     abilities:
       - 'Соблюдайте диету, и все будет хорошо'
@@ -505,7 +505,7 @@ properties:
     items:
 
 
-  - id: medic
+  medic:
     name: 'Врач'
     abilities:
       - 'Вы способны оказать больному больше, чем первую помочь'
@@ -518,7 +518,7 @@ properties:
     items:
 
 
-  - id: invalid_legs
+  invalid_legs:
     name: 'Инвалид'
     abilities:
       - 'У вас атрофированы обе ноги'
@@ -530,7 +530,7 @@ properties:
     items:
 
 
-  - id: invalid_arm_r
+  invalid_arm_r:
     name: 'Инвалид'
     abilities:
       - 'У вас нет правой руки'
@@ -542,7 +542,7 @@ properties:
     items:
 
 
-  - id: vorior
+  vorior:
     name: 'Воитель'
     abilities:
       - 'Навыки вашей самообороны превосходят строение вашего идеального тела'
@@ -554,7 +554,7 @@ properties:
     items:
 
 
-  - id: freelancer
+  freelancer:
     name: 'Фрилансер'
     abilities:
       - 'Вы приспособлены к долгой и неподвижной работе'
@@ -567,7 +567,7 @@ properties:
     items:
 
 
-  - id: asian
+  asian:
     name: 'Азиат'
     abilities:
       - 'Ваш цвет кожи отличается'
@@ -582,7 +582,7 @@ properties:
     items:
 
 
-  - id: muteness
+  muteness:
     name: 'Немота'
     abilities:
       - 'Вы не можете использовать голос в игре'
@@ -595,7 +595,7 @@ properties:
     items:
 
 
-  - id: blindness
+  blindness:
     name: 'Слепота'
     abilities:
       - 'Вы не можете видеть происходящее в игре'
@@ -608,7 +608,7 @@ properties:
     items:
 
 
-  - id: deafness
+  deafness:
     name: 'Глухота'
     abilities:
       - 'Вы не способны слышать игровые звуки'
@@ -621,7 +621,7 @@ properties:
     items:
 
 
-  - id: weakness
+  weakness:
     name: 'Слабость'
     abilities:
       - 'У вас плохие гены, вашему телу не позавидует комар'
@@ -635,7 +635,7 @@ properties:
     items:
 
 
-  - id: metabolism_plus
+  metabolism_plus:
     name: 'Ускоренный метаболизм'
     abilities:
       - 'Вы потребляете в полтора раза больше пищи, чем обычный игрок'
@@ -647,7 +647,7 @@ properties:
     items:
 
 
-  - id: negroid
+  negroid:
     name: 'Негроид'
     abilities:
       - 'Ваш цвет кожи отличается'
@@ -662,7 +662,7 @@ properties:
     items:
 
 
-  - id: self_control
+  self_control:
     name: 'Самоконтроль'
     abilities:
       - 'В начале игры вы можете выбрать скрытое свойство, которое в дальнейшем будет игнорироваться'
@@ -674,7 +674,7 @@ properties:
     items:
 
 
-  - id: strength
+  strength:
     name: 'Крепкость'
     abilities:
       - 'У вас хорошие гены, ваше тело как у атлета'
@@ -688,7 +688,7 @@ properties:
     items:
 
 
-  - id: metamorphose
+  metamorphose:
     name: 'Метаморфоза'
     abilities:
       - 'В начале игры вы можете выбрать обычное свойство, которое в дальнейшем будет игнорироваться'
@@ -700,7 +700,7 @@ properties:
     items:
 
 
-  - id: dumbness
+  dumbness:
     name: 'Тупость'
     abilities:
       - 'Вы не приспособлены к умственному труду и развитию'
@@ -714,7 +714,7 @@ properties:
     items:
 
 
-  - id: asthma
+  asthma:
     name: 'Астма'
     abilities:
       - 'У вас астма, проблемы с кислородом могут доконать вас'
@@ -728,7 +728,7 @@ properties:
     items:
 
 
-  - id: stomach_fool
+  stomach_fool:
     name: 'Слабый желудок'
     abilities:
       - 'Вы не можете переварить тяжелую пищу'
@@ -741,7 +741,7 @@ properties:
     items:
 
 
-  - id: steel_stomach
+  steel_stomach:
     name: 'Стальной желудок'
     abilities:
       - 'Вы можете съесть все, что сможете прожевать'
@@ -754,7 +754,7 @@ properties:
     items:
 
 
-  - id: squeamishness
+  squeamishness:
     name: 'Брезгля'
     abilities:
       - 'Вы не можете питаться консервами'
@@ -768,7 +768,7 @@ properties:
     items:
 
 
-  - id: insomnia
+  insomnia:
     name: 'Бессонница'
     abilities:
       - 'Вы не можете нормально спать'
@@ -781,7 +781,7 @@ properties:
     items:
 
 
-  - id: affectionate
+  affectionate:
     name: 'Привязчивый'
     abilities:
       - 'Траур затрагивает вас сильнее'
@@ -794,7 +794,7 @@ properties:
     items:
 
 
-  - id: necrophobia
+  necrophobia:
     name: 'Некрофоб'
     abilities:
       - 'Вы крайне сильно боитесь трупов'
@@ -806,7 +806,7 @@ properties:
     items:
 
 
-  - id: ein_vis
+  ein_vis:
     name: 'Эйн-вис'
     abilities:
       - 'Беспорядок вас ничем не напрягает'
@@ -819,7 +819,7 @@ properties:
     items:
 
 
-  - id: honesty
+  honesty:
     name: 'Чистословие'
     abilities:
       - 'Вам запрещено лгать'
@@ -833,7 +833,7 @@ properties:
     items:
 
 
-  - id: nymphomania
+  nymphomania:
     name: 'Нимфомания'
     abilities:
       - 'Вы не можете сдерживать свое желание'
@@ -846,7 +846,7 @@ properties:
     items:
 
 
-  - id: asexual
+  asexual:
     name: 'Асексуальность'
     abilities:
       - 'Вы не предрасположены к продолжению рода'
@@ -860,7 +860,7 @@ properties:
 
 
 
-  - id: robot_m
+  robot_m:
     name: rst-nr-2w
     abilities:
       - 'Вы - робот не подчиняющийся законам Азимова'
@@ -884,7 +884,7 @@ properties:
     items:
 
 
-  - id: subordinate
+  subordinate:
     name: 'Подчиненный'
     abilities:
       - 'Вы следуете любому приказу'
@@ -898,7 +898,7 @@ properties:
     items:
 
 
-  - id: metabolism_slow
+  metabolism_slow:
     name: 'Замедленный метаболизм'
     abilities:
       - 'Вы потребляете в полтора раза меньше пищи, чем обычный игрок'
@@ -911,7 +911,7 @@ properties:
     items:
 
 
-  - id: intelligence
+  intelligence:
     name: 'Интеллект'
     abilities:
       - 'Вы - умный человек'
@@ -926,7 +926,7 @@ properties:
     items:
 
 
-  - id: quick_learner
+  quick_learner:
     name: 'Способный ученик'
     abilities:
       - 'Вы крайне хорошо обучаетесь'
@@ -939,7 +939,7 @@ properties:
     items:
 
 
-  - id: claustrophobia
+  claustrophobia:
     name: 'Клаустрофобия'
     abilities:
       - 'Вы боитесь замкнутого пространства'
@@ -951,7 +951,7 @@ properties:
     items:
 
 
-  - id: alcoholism
+  alcoholism:
     name: 'Алкоголизм'
     abilities:
       - 'При недостаточном потреблении алкоголя вы будете сходить с ума'
@@ -966,7 +966,7 @@ properties:
     items:
 
 
-  - id: psychopath
+  psychopath:
     name: 'Психологическая опасность'
     abilities:
       - 'Все ваши свойства отыгрывают себя сильнее'
@@ -979,7 +979,7 @@ properties:
     items:
 
 
-  - id: sterility
+  sterility:
     name: 'Бесплодие'
     abilities:
       - 'Вы не можете иметь детей'
@@ -991,7 +991,7 @@ properties:
     items:
 
 
-  - id: racist
+  racist:
     name: 'Рассизм'
     abilities:
       - 'Вы ненавиде все другие рассы'
@@ -1004,7 +1004,7 @@ properties:
     items:
 
 
-  - id: weak_heart
+  weak_heart:
     name: 'Слабое сердце'
     abilities:
       - 'Если вы испытаете большую нагрузку - вы умрете'
@@ -1016,7 +1016,7 @@ properties:
     items:
 
 
-  - id: incurable
+  incurable:
     name: 'Неизлечимый'
     abilities:
       - 'Ни одно ваше негативное качество нельзя излечить'
@@ -1029,7 +1029,7 @@ properties:
     items:
 
 
-  - id: sexist
+  sexist:
     name: 'Сексизм'
     abilities:
       - 'Вы ненавиде противоположный пол'
@@ -1041,7 +1041,7 @@ properties:
     items:
 
 
-  - id: chameleon
+  chameleon:
     name: 'Хамелеон'
     abilities:
       - 'Вас не засекают скрытые камеры'
@@ -1054,7 +1054,7 @@ properties:
     items:
 
 
-  - id: bipolar
+  bipolar:
     name: 'Биполярное расстройсто'
     abilities:
       - 'В вас скрыто много личностей'
@@ -1067,7 +1067,7 @@ properties:
     items:
 
 
-  - id: alzheimer
+  alzheimer:
     name: 'Альцгеймер'
     abilities:
       - 'Каждый месяц вы забываете что-либо, по решению ведущего'
@@ -1079,7 +1079,7 @@ properties:
     items:
 
 
-  - id: liar
+  liar:
     name: 'Лжец'
     abilities:
       - 'Вам запрещено говорить правду'
@@ -1093,7 +1093,7 @@ properties:
     items:
 
 
-  - id: sensitive
+  sensitive:
     name: 'Медиум'
     abilities:
       - 'Вы можете видеть мертвых игроков'
@@ -1107,7 +1107,7 @@ properties:
     items:
 
 
-  - id: robot_a
+  robot_a:
     name: ra1-az-7c
     abilities:
       - 'Вы - робот подчиняющийся законам Азимова'
@@ -1124,7 +1124,7 @@ properties:
     items:
 
 
-  - id: homie
+  homie:
     name: 'Как дома'
     abilities:
       - 'Что бы выйти из бункера нужен пароль, к счастью, вы его помните'
@@ -1138,7 +1138,7 @@ properties:
 
 targets:
 
-  - id: survivor
+  survivor:
     name: 'Выживальщик'
     abilities:
       - 'Следите за своим здоровьем'
@@ -1150,7 +1150,7 @@ targets:
     properties:
 
 
-  - id: egoist
+  egoist:
     name: 'Эгоист'
     abilities:
       - 'Останьтесь единственным выжившим'
@@ -1161,7 +1161,7 @@ targets:
     properties:
 
 
-  - id: suicide
+  suicide:
     name: 'Суицидник'
     abilities:
       - 'Покончите с собой в бункере'
@@ -1172,7 +1172,7 @@ targets:
     properties:
 
 
-  - id: genocide
+  genocide:
     name: 'Геноцидник'
     abilities:
       - 'Покончите со всеми, включая себя'
@@ -1183,7 +1183,7 @@ targets:
     properties:
 
 
-  - id: maniac
+  maniac:
     name: 'Маньяк'
     abilities:
       - 'Будьте свидетелем всех смертей, произошедших в бункере'
@@ -1194,7 +1194,7 @@ targets:
     properties:
 
 
-  - id: victim
+  victim:
     name: 'Жертва'
     abilities:
       - 'Останьтесь за пределами бункера'
@@ -1205,7 +1205,7 @@ targets:
     properties:
 
 
-  - id: vision
+  vision:
     name: 'Наблюдатель'
     abilities:
       - 'У вас нет цели'
@@ -1221,7 +1221,7 @@ targets:
 
 
 
-  - id: mommy
+  mommy:
     name: 'Мамочка'
     abilities:
       - 'Ни один выживший не должен умереть в бункере'
@@ -1233,7 +1233,7 @@ targets:
     properties:
 
 
-  - id: oracle
+  oracle:
     name: 'Оракул'
     abilities:
       - 'Раз в месяц узнайте что-либо у ведущего'
