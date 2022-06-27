@@ -162,8 +162,7 @@ avatars:
     properties: [strength , insomnia]
 
 
-items: []
-
+items:
   pistol:
     name: 'Пистолет'
     abilities: ['Пистолет без боеприпасов' , 'Кто знает, где их можно найти']
@@ -317,7 +316,7 @@ items: []
     img: '--- --- ---'
 
 
-properties: []
+properties:
 
   dyslexia:
     name: 'Дислексия'
