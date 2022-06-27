@@ -9,6 +9,7 @@ settings:
   balance_max: 2
   version: '2.1.8 beta'
 
+
 avatars:
 
   - id: boris
@@ -83,7 +84,7 @@ avatars:
   - id: misha
     name: 'Миша'
     abilities:
-      ' Деятельность: Школьник'
+      'Деятельность: Школьник'
     old: 16
     sex: М
     lore: '--- --- ---'
@@ -204,7 +205,6 @@ avatars:
     properties:
       - strength
       - insomnia
-
 
 
 items:
@@ -1244,9 +1244,3 @@ targets:
     items:
     properties:
       - muteness
-
-
-map:
-  zones:
-  loot_tables:
-
