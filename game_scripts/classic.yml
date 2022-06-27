@@ -162,7 +162,7 @@ avatars:
     properties: [strength , insomnia]
 
 
-items:
+items: []
 
   pistol:
     name: 'Пистолет'
@@ -327,7 +327,7 @@ properties: []
     status: on
     balance: -1
     tags: [intelligence]
-    items:
+    items: []
 
 
   lang_eng:
@@ -338,7 +338,7 @@ properties: []
     status: on
     balance: -1
     tags: [lang]
-    items:
+    items: []
 
 
   lang_ua:
@@ -349,7 +349,7 @@ properties: []
     status: on
     balance: 0
     tags: [lang]
-    items:
+    items: []
 
 
   starver:
@@ -360,7 +360,7 @@ properties: []
     status: on
     balance: 1
     tags: [stomach]
-    items:
+    items: []
 
 
   breather:
@@ -371,7 +371,7 @@ properties: []
     status: on
     balance: 1
     tags: [breath]
-    items:
+    items: []
 
 
   leader:
@@ -382,7 +382,7 @@ properties: []
     status: on
     balance: 1
     tags: [dumb]
-    items:
+    items: []
 
 
   spy:
@@ -393,7 +393,7 @@ properties: []
     status: on
     balance: 1
     tags: []
-    items:
+    items: []
 
 
   blindness_lite:
@@ -404,7 +404,7 @@ properties: []
     status: on
     balance: -1
     tags: [blindness]
-    items:
+    items: []
 
 
   diabetic:
@@ -415,7 +415,7 @@ properties: []
     status: on
     balance: -2
     tags: []
-    items:
+    items: []
 
 
   medic:
@@ -426,7 +426,7 @@ properties: []
     status: on
     balance: 1
     tags: [activity]
-    items:
+    items: []
 
 
   invalid_legs:
@@ -437,7 +437,7 @@ properties: []
     status: on
     balance: -2
     tags: []
-    items:
+    items: []
 
 
   invalid_arm_r:
@@ -448,7 +448,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   vorior:
@@ -459,7 +459,7 @@ properties: []
     status: off
     balance: 1
     tags: []
-    items:
+    items: []
 
 
   freelancer:
@@ -470,7 +470,7 @@ properties: []
     status: on
     balance: 1
     tags: [activity]
-    items:
+    items: []
 
 
   asian:
@@ -481,7 +481,7 @@ properties: []
     status: on
     balance: 0
     tags: [alko , race]
-    items:
+    items: []
 
 
   muteness:
@@ -492,7 +492,7 @@ properties: []
     status: on
     balance: -1
     tags: [talking]
-    items:
+    items: []
 
 
   blindness:
@@ -503,7 +503,7 @@ properties: []
     status: on
     balance: -1
     tags: [blindness]
-    items:
+    items: []
 
 
   deafness:
@@ -514,7 +514,7 @@ properties: []
     status: on
     balance: -1
     tags: [rumor]
-    items:
+    items: []
 
 
   weakness:
@@ -525,7 +525,7 @@ properties: []
     status: on
     balance: -2
     tags: [strength]
-    items:
+    items: []
 
 
   metabolism_plus:
@@ -536,7 +536,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   negroid:
@@ -547,7 +547,7 @@ properties: []
     status: on
     balance: 0
     tags: [race]
-    items:
+    items: []
 
 
   self_control:
@@ -558,7 +558,7 @@ properties: []
     status: on
     balance: 2
     tags: []
-    items:
+    items: []
 
 
   strength:
@@ -569,7 +569,7 @@ properties: []
     status: on
     balance: 2
     tags: [strength]
-    items:
+    items: []
 
 
   metamorphose:
@@ -580,7 +580,7 @@ properties: []
     status: on
     balance: 2
     tags: []
-    items:
+    items: []
 
 
   dumbness:
@@ -591,7 +591,7 @@ properties: []
     status: on
     balance: -1
     tags: [intelligence , dumb]
-    items:
+    items: []
 
 
   asthma:
@@ -602,7 +602,7 @@ properties: []
     status: on
     balance: -1
     tags: [breath]
-    items:
+    items: []
 
 
   stomach_fool:
@@ -613,7 +613,7 @@ properties: []
     status: on
     balance: -1
     tags: [stomach]
-    items:
+    items: []
 
 
   steel_stomach:
@@ -624,7 +624,7 @@ properties: []
     status: off
     balance: 2
     tags: [stomach]
-    items:
+    items: []
 
 
   squeamishness:
@@ -635,7 +635,7 @@ properties: []
     status: on
     balance: -1
     tags: [squeamishness]
-    items:
+    items: []
 
 
   insomnia:
@@ -646,7 +646,7 @@ properties: []
     status: on
     balance: -1
     tags: [rest]
-    items:
+    items: []
 
 
   affectionate:
@@ -657,7 +657,7 @@ properties: []
     status: on
     balance: 0
     tags: [attitude]
-    items:
+    items: []
 
 
   necrophobia:
@@ -668,7 +668,7 @@ properties: []
     status: on
     balance: 0
     tags: []
-    items:
+    items: []
 
 
   ein_vis:
@@ -679,7 +679,7 @@ properties: []
     status: on
     balance: 0
     tags: [squeamishness]
-    items:
+    items: []
 
 
   honesty:
@@ -690,7 +690,7 @@ properties: []
     status: on
     balance: 0
     tags: [honesty]
-    items:
+    items: []
 
 
   nymphomania:
@@ -701,7 +701,7 @@ properties: []
     status: on
     balance: 0
     tags: [attraction]
-    items:
+    items: []
 
 
   asexual:
@@ -712,7 +712,7 @@ properties: []
     status: on
     balance: 0
     tags: [attraction]
-    items:
+    items: []
 
 
 
@@ -724,7 +724,7 @@ properties: []
     status: on
     balance: 0
     tags: [robot , honesty , attitude , stomach , squeamishness , subaltern]
-    items:
+    items: []
 
 
   subordinate:
@@ -735,7 +735,7 @@ properties: []
     status: on
     balance: 0
     tags: [subaltern]
-    items:
+    items: []
 
 
   metabolism_slow:
@@ -746,7 +746,7 @@ properties: []
     status: on
     balance: 1
     tags: [metabolism]
-    items:
+    items: []
 
 
   intelligence:
@@ -757,7 +757,7 @@ properties: []
     status: on
     balance: 2
     tags: [subaltern , intelligence]
-    items:
+    items: []
 
 
   quick_learner:
@@ -768,7 +768,7 @@ properties: []
     status: on
     balance: 1
     tags: [intelligence]
-    items:
+    items: []
 
 
   claustrophobia:
@@ -779,7 +779,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   alcoholism:
@@ -790,7 +790,7 @@ properties: []
     status: on
     balance: -2
     tags: [alko , psycho]
-    items:
+    items: []
 
 
   psychopath:
@@ -801,7 +801,7 @@ properties: []
     status: on
     balance: -1
     tags: [psycho]
-    items:
+    items: []
 
 
   sterility:
@@ -812,7 +812,7 @@ properties: []
     status: on
     balance: -2
     tags: []
-    items:
+    items: []
 
 
   racist:
@@ -823,7 +823,7 @@ properties: []
     status: on
     balance: 0
     tags: [subaltern]
-    items:
+    items: []
 
 
   weak_heart:
@@ -834,7 +834,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   incurable:
@@ -845,7 +845,7 @@ properties: []
     status: on
     balance: -2
     tags: []
-    items:
+    items: []
 
 
   sexist:
@@ -856,7 +856,7 @@ properties: []
     status: on
     balance: 0
     tags: []
-    items:
+    items: []
 
 
   chameleon:
@@ -867,7 +867,7 @@ properties: []
     status: on
     balance: 1
     tags: []
-    items:
+    items: []
 
 
   bipolar:
@@ -878,7 +878,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   alzheimer:
@@ -889,7 +889,7 @@ properties: []
     status: on
     balance: -1
     tags: []
-    items:
+    items: []
 
 
   liar:
@@ -900,7 +900,7 @@ properties: []
     status: on
     balance: 0
     tags: [honesty]
-    items:
+    items: []
 
 
   sensitive:
@@ -911,7 +911,7 @@ properties: []
     status: on
     balance: 0
     tags: [intelligence , honesty]
-    items:
+    items: []
 
 
   robot_a:
@@ -922,7 +922,7 @@ properties: []
     status: on
     balance: 1
     tags: [robot]
-    items:
+    items: []
 
 
   homie:
@@ -933,7 +933,7 @@ properties: []
     status: on
     balance: 2
     tags: []
-    items:
+    items: []
 
 
 targets:
