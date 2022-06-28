@@ -1,9 +1,9 @@
 package com.azsspc.az_vault;
 
-import static com.azsspc.az_vault.DataLoader.as_url;
-import static com.azsspc.az_vault.DataLoader.as_settings;
-import static com.azsspc.az_vault.DataLoader.getFromCloud;
 import static com.azsspc.az_vault.DataLoader.loadScript;
+import static com.azsspc.az_vault.DataLoader.script;
+import static com.azsspc.az_vault.MainActivity.SP_KEY_AS;
+import static com.azsspc.az_vault.MainActivity.sp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -37,17 +37,17 @@ public class ScriptManagerActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     void setSettingsView() {
-        sc_path.setText(as_url);
-        sc_lore.setText(as_settings.getLore());
-        sc_name.setText(as_settings.getName());
-        sc_author.setText(getString(R.string.sc_author) + ": " + as_settings.getAuthor());
-        sc_inventory.setText(getString(R.string.sc_inventory) + ": " + as_settings.getInventorySize());
-        sc_prop.setText(getString(R.string.sc_prop) + ": " + as_settings.getPropertiesCount());
-        sc_balance.setText(getString(R.string.sc_balance) + ": [" + as_settings.getBalanceMin() + ", " + as_settings.getBalanceMax() + "]");
+        //sc_path.setText(script.url);
+        sc_lore.setText(script.settings.getLore());
+        sc_name.setText(script.settings.getName());
+        sc_author.setText(getString(R.string.sc_author) + ": " + script.settings.getAuthor());
+        sc_inventory.setText(getString(R.string.sc_inventory) + ": " + script.settings.getInventory());
+        sc_prop.setText(getString(R.string.sc_prop) + ": " + script.settings.getProperties());
+        sc_balance.setText(getString(R.string.sc_balance) + ": [" + script.settings.getBalance_min() + ", " + script.settings.getBalance_max() + "]");
     }
 
     public void buttonReloadActiveScript(View v) {
-        Log.e("asd", "" + loadScript(this, as_url, true));
+        loadScript(this, sp.getString(SP_KEY_AS, getResources().getStringArray(R.array.gs_url)[0]), true);
         setSettingsView();
     }
 

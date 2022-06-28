@@ -1,5 +1,7 @@
 package com.azsspc.az_vault.gamp.smsl;
 
+import static com.azsspc.az_vault.DataLoader.script;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +19,6 @@ import com.azsspc.az_vault.gamp.tiles.Property;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.azsspc.az_vault.DataLoader.as_items;
-import static com.azsspc.az_vault.DataLoader.as_properties;
 
 public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder> {
 
@@ -43,7 +42,7 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
-        holder.img.setImageResource(tile.getImg());
+        holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
         holder.bottom.setText(tile.getBottom(c));
@@ -54,11 +53,11 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder
         //holder.bottom.setTextColor(color);
 
         ArrayList<Item> items = new ArrayList<>();
-        for (String item : tile.getItems()) items.add(as_items.get(item));
+        for (String item : tile.getItems()) items.add(script.items.get(item));
         holder.rv_items.setAdapter(new ItemAdapter(holder.context.getContext(), items));
 
         ArrayList<Property> properties = new ArrayList<>();
-        for (String prop : tile.getProperties()) properties.add(as_properties.get(prop));
+        for (String prop : tile.getProperties()) properties.add(script.properties.get(prop));
         holder.rv_properties.setAdapter(new PropertyAdapter(holder.context.getContext(), properties));
 
         holder.context.setOnClickListener(new View.OnClickListener() {

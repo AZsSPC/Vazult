@@ -1,5 +1,7 @@
 package com.azsspc.az_vault.gamp.smsl;
 
+import static com.azsspc.az_vault.DataLoader.script;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,6 @@ import com.azsspc.az_vault.gamp.tiles.Property;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.azsspc.az_vault.DataLoader.as_items;
 
 public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHolder> {
 
@@ -41,7 +42,7 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
-        holder.img.setImageResource(tile.getImg());
+        holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getFullCenter(c));
         holder.bottom.setText(tile.getBottom(c));
@@ -52,7 +53,7 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         //holder.bottom.setTextColor(color);
 
         ArrayList<Item> items = new ArrayList<>();
-        for (String item : tile.getItems()) items.add(as_items.get(item));
+        for (String item : tile.getItems()) items.add(script.items.get(item));
         holder.rv_items.setAdapter(new ItemAdapter(holder.context.getContext(), items));
 
         holder.context.setOnClickListener(new View.OnClickListener() {

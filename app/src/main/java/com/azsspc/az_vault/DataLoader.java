@@ -2,70 +2,66 @@ package com.azsspc.az_vault;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.azsspc.az_vault.gamp.Script;
 import com.azsspc.az_vault.gamp.tiles.Avatar;
 import com.azsspc.az_vault.gamp.tiles.Item;
 import com.azsspc.az_vault.gamp.tiles.Property;
 import com.azsspc.az_vault.gamp.Settings;
 import com.azsspc.az_vault.gamp.tiles.Target;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.constructor.Constructor;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 import static com.azsspc.az_vault.MainActivity.SP_KEY_AS;
+import static com.azsspc.az_vault.MainActivity.sp;
 
 public class DataLoader {
     public static String as_url;
-    public static Settings as_settings;
-    public static HashMap<String, Avatar> as_avatars;
-    public static HashMap<String, Item> as_items;
-    public static HashMap<String, Property> as_properties;
-    public static HashMap<String, Target> as_targets;
+    public static Script script;
     public static final String gfs_error = "gfs_error";
 
 
-    public static boolean loadScript(Context c, String script_url, boolean from_cloud) {
-        try {
-            MainActivity.sp.edit().putString(SP_KEY_AS, as_url = script_url).apply();
-            String file_name = as_url.replaceAll("^.+/", "");
-            String script_in = getFromStorage(c, file_name).replaceAll("\\s+", " ");
-            JSONObject uj = new JSONObject(script_in.equals(gfs_error) || from_cloud ? DataLoader.getFromCloud(c, file_name, as_url) : script_in);
-            as_settings = new Settings(uj.getJSONObject("settings"));
-            as_avatars = Avatar.createArray(uj.getJSONArray("avatars"));
-            as_items = Item.createArray(uj.getJSONArray("items"));
-            as_properties = Property.createArray(uj.getJSONArray("properties"));
-            as_targets = Target.createArray(uj.getJSONArray("targets"));
-            return true;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return false;
+    public static void loadScript(Context c, String script_url, boolean from_cloud) {
+        sp.edit().putString(SP_KEY_AS, as_url = script_url).apply();
+        String file_name = as_url.replaceAll("^.+/", "");
+        String s = getFromStorage(c, file_name);
+        Yaml yml = new Yaml(new Constructor(Script.class));
+        script = (Script) yml.load((s.equals(gfs_error) || from_cloud) ? getFromCloud(c, file_name, script_url) : s);
     }
 
     public static String getFromCloud(Context c, String file_name, String url) {
         Toast.makeText(c, c.getString(R.string.sc_load_wait), Toast.LENGTH_SHORT).show();
-        new FromCloudLoader().execute(c, url, file_name);
+        try {
+            new FromCloudLoader().execute(c, url, file_name).get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Toast.makeText(c, c.getString(R.string.sc_load_done), Toast.LENGTH_SHORT).show();
-        return getFromStorage(c, file_name).replaceAll("\\s+", " ");
+        return getFromStorage(c, file_name);
     }
 
     public static String getFromStorage(Context c, String file_name) {
-        try {
+        try (BufferedReader bread = new BufferedReader(new InputStreamReader(
+                new FileInputStream(new File(c.getFilesDir(), file_name))))) {
             StringBuilder ret = new StringBuilder();
             String line;
-            BufferedReader bread = new BufferedReader(new InputStreamReader(new FileInputStream(new File(c.getFilesDir(), file_name))));
-            while ((line = bread.readLine()) != null) ret.append(line);
+            while ((line = bread.readLine()) != null) ret.append(line).append("\n");
             return ret.toString();
         } catch (Exception e) {
             e.printStackTrace();

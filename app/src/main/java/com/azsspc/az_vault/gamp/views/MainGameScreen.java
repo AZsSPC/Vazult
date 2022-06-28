@@ -25,11 +25,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
 
-import static com.azsspc.az_vault.DataLoader.as_avatars;
-import static com.azsspc.az_vault.DataLoader.as_items;
-import static com.azsspc.az_vault.DataLoader.as_properties;
-import static com.azsspc.az_vault.DataLoader.as_settings;
-import static com.azsspc.az_vault.DataLoader.as_targets;
+import static com.azsspc.az_vault.DataLoader.script;
 import static com.azsspc.az_vault.MainActivity.setClipboard;
 import static com.azsspc.az_vault.gamp.Tile.doesTagsEquals;
 
@@ -122,15 +118,19 @@ public class MainGameScreen extends AppCompatActivity {
         swb_map.setVisibility(id == R.id.to_map ? View.VISIBLE : View.GONE);
     }
 
+    String getID(String[] n) {
+        return n[(int) ((n.length - 0.1) * Math.random())];
+    }
+
     String tryGenKey(int counter) {
         StringBuilder char_key = new StringBuilder();
-        ArrayList<String> uf = new ArrayList<>(as_properties.keySet());
+        ArrayList<String> uf = new ArrayList<>(script.properties.keySet());
 
-        String[] buf = as_targets.keySet().toArray(new String[0]);
-        Target target = as_targets.get(buf[(int) (buf.length * Math.random())]);
-        buf = as_avatars.keySet().toArray(new String[0]);
-        Avatar avatar = as_avatars.get(buf[(int) (buf.length * Math.random())]);
-        char_key.append(target.getId()).append(" ").append(avatar.getId());
+        String target_id = getID(script.targets.keySet().toArray(new String[0]));
+        Target target = script.targets.get(target_id);
+        String avatar_id = getID(script.avatars.keySet().toArray(new String[0]));
+        Avatar avatar = script.avatars.get(avatar_id);
+        char_key.append(target_id).append(" ").append(avatar_id);
         uf.removeAll(Arrays.asList(target.getProperties()));
         uf.removeAll(Arrays.asList(avatar.getProperties()));
 
@@ -138,20 +138,18 @@ public class MainGameScreen extends AppCompatActivity {
         ArrayList<String> list_prop = new ArrayList<>();
         list_prop.addAll(Arrays.asList(avatar.getProperties()));
         list_prop.addAll(Arrays.asList(target.getProperties()));
-        for (String sin : list_prop) tags.addAll(Arrays.asList(as_properties.get(sin).getTags()));
-        int prop_count = as_settings.getPropertiesCount();
+        for (String sin : list_prop) tags.addAll(Arrays.asList(script.properties.get(sin).getTags()));
+        int prop_count = script.settings.getProperties();
         for (int i = 0; i < prop_count; i++)
             try {
                 String s = uf.get((int) ((uf.size() - 0.01) * Math.random()));
-                char_key.append(" ").append(as_properties.get(s).getId());
-                for (String sin : uf)
-                    if (doesTagsEquals(as_properties.get(sin).getTags(), tags.toArray(new String[0])))
-                        uf.remove(sin);
+                char_key.append(" ").append(s);
+                uf.removeIf(sin -> doesTagsEquals(script.properties.get(sin).getTags(), tags.toArray(new String[0])));
                 uf.remove(s);
             } catch (Exception ignored) {
             }
         Character player = new Character(char_key.toString());
-        if (player.getBalance() < as_settings.getBalanceMin() || player.getBalance() > as_settings.getBalanceMax())
+        if (player.getBalance() < script.settings.getBalance_min() || player.getBalance() > script.settings.getBalance_max())
             return tryGenKey(++counter);
         Toast.makeText(this, getString(R.string.key_gen_tries) + ": " + counter, Toast.LENGTH_SHORT).show();
         return char_key.toString();

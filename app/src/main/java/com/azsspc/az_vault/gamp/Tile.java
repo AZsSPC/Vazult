@@ -4,44 +4,45 @@ import android.content.Context;
 
 import com.azsspc.az_vault.R;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.Arrays;
 import java.util.HashSet;
-
-import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
 
 public class Tile {
     public static final String VISIBLE = "visible";
     public static final String INVISIBLE = "invisible";
-    public int color;
-    public int img;
-    public final String id;
-    public final String name;
-    public final String lore;
-    public final String[] abilities;
+    public int icon = R.drawable.ic_steam;
+    public int color = R.color.black;
+    public String name;
+    public String lore;
+    public String[] abilities;
 
-
-    public Tile(JSONObject data) throws JSONException {
-        this.img = R.drawable.ic_steam;
-        this.color = R.color.black;
-        this.id = data.getString("id").toLowerCase();
-        this.name = data.getString("name");
-        this.lore = data.getString("lore");
-        this.abilities = getFromJSONArray(data.getJSONArray("abilities"), false);
-    }
 
     public int getColor() {
         return color;
     }
 
-    public int getImg() {
-        return img;
+    public int getIcon() {
+        return icon;
     }
 
-    public String getId() {
-        return id;
+    public void setColor(int color) {
+        this.color = color;
+    }
+
+    public void setIcon(int icon) {
+        this.icon = icon;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLore(String lore) {
+        this.lore = lore;
+    }
+
+    public void setAbilities(String[] abilities) {
+        this.abilities = abilities;
     }
 
     public String getName() {

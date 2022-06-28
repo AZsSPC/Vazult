@@ -1,7 +1,8 @@
 package com.azsspc.az_vault;
 
+import static com.azsspc.az_vault.DataLoader.script;
+
 import android.Manifest;
-import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -9,9 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,19 +22,6 @@ import com.azsspc.az_vault.gamp.views.MainGameScreen;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
-
-import static com.azsspc.az_vault.DataLoader.as_settings;
-import static com.azsspc.az_vault.DataLoader.as_url;
-import static com.azsspc.az_vault.DataLoader.loadScript;
 
 public class MainActivity extends AppCompatActivity {
     //public static Animation tile_center_close, tile_center_open;
@@ -61,14 +47,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkPermissions();
-        DataLoader.loadScript(this, sp.getString(SP_KEY_AS, getResources().getStringArray(R.array.gs_url)[0]), false);
         try {
-            ((TextView) findViewById(R.id.placeholder)).setText(as_settings.getName());
+            DataLoader.loadScript(this, sp.getString(SP_KEY_AS, getResources().getStringArray(R.array.gs_url)[0]), false);
+            ((TextView) findViewById(R.id.placeholder)).setText(script.settings.getName());
         } catch (Exception ignored) {
         }
         findViewById(R.id.img_bg_main).startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate_center));
         //tile_center_close = AnimationUtils.loadAnimation(this, R.anim.close_center);
         //tile_center_open = AnimationUtils.loadAnimation(this, R.anim.open_center);
+
     }
 
     void checkPermissions() {

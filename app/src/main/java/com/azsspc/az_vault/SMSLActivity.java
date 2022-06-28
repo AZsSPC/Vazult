@@ -1,5 +1,7 @@
 package com.azsspc.az_vault;
 
+import static com.azsspc.az_vault.DataLoader.script;
+
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +18,6 @@ import com.azsspc.az_vault.gamp.smsl.TargetAdapter;
 
 import java.util.ArrayList;
 import java.util.Map;
-
-import static com.azsspc.az_vault.DataLoader.as_avatars;
-import static com.azsspc.az_vault.DataLoader.as_items;
-import static com.azsspc.az_vault.DataLoader.as_properties;
-import static com.azsspc.az_vault.DataLoader.as_targets;
 
 public class SMSLActivity extends AppCompatActivity {
     public static final String key = "smsl_key";
@@ -41,25 +38,25 @@ public class SMSLActivity extends AppCompatActivity {
         switch (arguments.getString(key)) {
             case key_a:
                 ArrayList<Avatar> avatars = new ArrayList<>();
-                for (Map.Entry<String, Avatar> entry : as_avatars.entrySet())
+                for (Map.Entry<String, Avatar> entry : script.avatars.entrySet())
                     avatars.add(entry.getValue());
                 rv.setAdapter(new AvatarAdapter(this, avatars));
                 break;
             case key_i:
                 ArrayList<Item> items = new ArrayList<>();
-                for (Map.Entry<String, Item> entry : as_items.entrySet())
+                for (Map.Entry<String, Item> entry : script.items.entrySet())
                     items.add(entry.getValue());
                 rv.setAdapter(new ItemAdapter(this, items));
                 break;
             case key_t:
                 ArrayList<Target> tiles = new ArrayList<>();
-                for (Map.Entry<String, Target> entry : as_targets.entrySet())
+                for (Map.Entry<String, Target> entry : script.targets.entrySet())
                     tiles.add(entry.getValue());
                 rv.setAdapter(new TargetAdapter(this, tiles));
                 break;
             case key_p:
                 ArrayList<Property> properties = new ArrayList<>();
-                for (Map.Entry<String, Property> entry : as_properties.entrySet())
+                for (Map.Entry<String, Property> entry : script.properties.entrySet())
                     properties.add(entry.getValue());
                 rv.setAdapter(new PropertyAdapter(this, properties));
                 break;

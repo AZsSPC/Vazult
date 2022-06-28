@@ -5,14 +5,6 @@ import android.content.Context;
 import com.azsspc.az_vault.R;
 import com.azsspc.az_vault.gamp.Tile;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-
-import static com.azsspc.az_vault.MainActivity.getFromJSONArray;
-
 public class Avatar extends Tile {
 
     int old;
@@ -20,27 +12,25 @@ public class Avatar extends Tile {
     String[] properties;
     String[] items;
 
-    Avatar(JSONObject data) throws JSONException {
-        super(data);
-        this.img = R.drawable.ic_avatar;
+    Avatar() {
+        this.icon = R.drawable.ic_avatar;
         this.color = R.color.avatar;
-        this.old = data.getInt("old");
-        this.sex = data.getString("sex");
-        this.properties = getFromJSONArray(data.getJSONArray("properties"), true);
-        this.items = getFromJSONArray(data.getJSONArray("items"), true);
     }
 
-    public static HashMap<String, Avatar> createArray(JSONArray data) {
-        int rel = data.length();
-        HashMap<String, Avatar> ret = new HashMap<>();
-        for (int i = 0; i < rel; i++)
-            try {
-                Avatar avatar = new Avatar(data.getJSONObject(i));
-                ret.put(avatar.getId(), avatar);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        return ret;
+    public void setOld(int old) {
+        this.old = old;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setProperties(String[] properties) {
+        this.properties = properties;
+    }
+
+    public void setItems(String[] items) {
+        this.items = items;
     }
 
     public int getOld() {

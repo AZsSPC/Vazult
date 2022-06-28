@@ -1,10 +1,8 @@
 package com.azsspc.az_vault.gamp;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class Settings {
-    //String img_url;
+    String img_url;
     String name;
     String lore;
     String author;
@@ -12,48 +10,80 @@ public class Settings {
     int properties;
     int balance_max;
     int balance_min;
+    String version;
 
-    public Settings(JSONObject data) throws JSONException {
-        name = data.getString("name");
-        lore = data.getString("lore");
-        author = data.getString("author");
-        inventory = data.getInt("inventory");
-        properties = data.getInt("properties");
-        balance_max = data.getInt("balance_max");
-        balance_min = data.getInt("balance_min");
-        //img_url = data.getString("img_url");
+    public Settings() {
     }
 
-    /*
-        public String getImgURL() {
-            return img_url;
-        }
-    */
+    public String getImg_url() {
+        return img_url;
+    }
+
+    public void setImg_url(String img_url) {
+        this.img_url = img_url;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLore() {
         return lore;
     }
 
+    public void setLore(String lore) {
+        this.lore = lore;
+    }
+
     public String getAuthor() {
         return author;
     }
 
-    public int getInventorySize() {
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public int getInventory() {
         return inventory;
     }
 
-    public int getPropertiesCount() {
+    public void setInventory(int inventory) {
+        this.inventory = inventory;
+    }
+
+    public int getProperties() {
         return properties;
     }
 
-    public int getBalanceMax() {
+    public void setProperties(int properties) {
+        this.properties = properties;
+    }
+
+    public int getBalance_max() {
         return balance_max;
     }
 
-    public int getBalanceMin() {
+    public void setBalance_max(int balance_max) {
+        this.balance_max = balance_max;
+    }
+
+    public int getBalance_min() {
         return balance_min;
+    }
+
+    public void setBalance_min(int balance_min) {
+        this.balance_min = balance_min;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 }

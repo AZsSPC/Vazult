@@ -37,7 +37,7 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
-        holder.img.setImageResource(tile.getImg());
+        holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
         holder.bottom.setText(tile.getBottom(c));

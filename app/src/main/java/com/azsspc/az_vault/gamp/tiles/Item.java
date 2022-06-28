@@ -3,36 +3,38 @@ package com.azsspc.az_vault.gamp.tiles;
 import com.azsspc.az_vault.R;
 import com.azsspc.az_vault.gamp.Tile;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-
 public class Item extends Tile {
     int weight;
+    String type;
+    String img;
 
-    Item(JSONObject data) throws JSONException {
-        super(data);
-        this.img = R.drawable.ic_item;
+    Item() {
+        this.icon = R.drawable.ic_item;
         this.color = R.color.item;
-        this.weight = data.getInt("weight");
     }
 
-    public static HashMap<String, Item> createArray(JSONArray data) {
-        int rel = data.length();
-        HashMap<String, Item> ret = new HashMap<>();
-        for (int i = 0; i < rel; i++)
-            try {
-                Item item = new Item(data.getJSONObject(i));
-                ret.put(item.getId(), item);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        return ret;
-    }
 
     public int getWeight() {
         return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

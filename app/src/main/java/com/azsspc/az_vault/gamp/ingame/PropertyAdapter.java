@@ -1,7 +1,6 @@
 package com.azsspc.az_vault.gamp.ingame;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         Context c = holder.context.getContext();
         int color = c.getColor(tile.getColor());
 
-        holder.img.setImageResource(tile.getImg());
+        holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
         holder.bottom.setText(tile.getBottom(c));
