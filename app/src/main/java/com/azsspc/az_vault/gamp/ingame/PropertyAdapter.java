@@ -40,8 +40,9 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
-        if (!tile.getBottom(c).equals("")) holder.bottom.setText(tile.getBottom(c));
-        else holder.bottom.setVisibility(View.GONE);
+        if (tile.getBottom(c).equals("")) holder.bottom.setVisibility(View.GONE);
+        else holder.bottom.setText(tile.getBottom(c));
+
 
         holder.img.setColorFilter(color);
         holder.top.setTextColor(color);

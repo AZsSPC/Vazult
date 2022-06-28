@@ -40,22 +40,17 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
-        holder.bottom.setText(tile.getBottom(c));
+        if (tile.getBottom(c).equals("")) holder.bottom.setVisibility(View.GONE);
+        else holder.bottom.setText(tile.getBottom(c));
 
         holder.img.setColorFilter(color);
         holder.top.setTextColor(color);
         holder.center.setTextColor(color);
         //holder.bottom.setTextColor(color);
 
-        holder.context.setOnClickListener(v -> {
-            View c1 = holder.bottom;
-            if (c1.getVisibility() == View.VISIBLE) c1.setVisibility(View.GONE);
-            else c1.setVisibility(View.VISIBLE);
-        });
+        holder.context.setOnClickListener(v -> holder.bottom.setVisibility(holder.bottom.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
         holder.context.setOnLongClickListener(v -> {
-            View c12 = holder.center;
-            if (c12.getVisibility() == View.VISIBLE) c12.setVisibility(View.GONE);
-            else c12.setVisibility(View.VISIBLE);
+            holder.center.setVisibility(holder.center.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
             return true;
         });
     }
