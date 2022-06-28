@@ -40,29 +40,18 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         holder.img.setImageResource(tile.getIcon());
         holder.top.setText(tile.getTop(c));
         holder.center.setText(tile.getCenter(c));
-        holder.bottom.setText(tile.getBottom(c));
+        if (!tile.getBottom(c).equals("")) holder.bottom.setText(tile.getBottom(c));
+        else holder.bottom.setVisibility(View.GONE);
 
         holder.img.setColorFilter(color);
         holder.top.setTextColor(color);
         holder.center.setTextColor(color);
         //holder.bottom.setTextColor(color);
 
-        holder.context.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View c = holder.bottom;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
-            }
-        });
-        holder.context.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                View c = holder.center;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
-                return true;
-            }
+        holder.context.setOnClickListener(v -> holder.bottom.setVisibility(holder.bottom.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE));
+        holder.context.setOnLongClickListener(v -> {
+            holder.center.setVisibility(holder.center.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+            return true;
         });
     }
 

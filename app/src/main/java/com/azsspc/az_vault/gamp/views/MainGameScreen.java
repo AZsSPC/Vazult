@@ -1,33 +1,27 @@
 package com.azsspc.az_vault.gamp.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
+import static com.azsspc.az_vault.DataLoader.script;
+import static com.azsspc.az_vault.MainActivity.setClipboard;
+import static com.azsspc.az_vault.gamp.Tile.doesTagsEquals;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.azsspc.az_vault.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.azsspc.az_vault.R;
 import com.azsspc.az_vault.gamp.Character;
-import com.azsspc.az_vault.gamp.tiles.Avatar;
-import com.azsspc.az_vault.gamp.tiles.Item;
-import com.azsspc.az_vault.gamp.tiles.Property;
-import com.azsspc.az_vault.gamp.tiles.Target;
-import com.azsspc.az_vault.gamp.ingame.PropertyAdapter;
 import com.azsspc.az_vault.gamp.ingame.ItemAdapter;
+import com.azsspc.az_vault.gamp.ingame.PropertyAdapter;
+import com.azsspc.az_vault.gamp.tiles.Avatar;
+import com.azsspc.az_vault.gamp.tiles.Target;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Map;
-
-import static com.azsspc.az_vault.DataLoader.script;
-import static com.azsspc.az_vault.MainActivity.setClipboard;
-import static com.azsspc.az_vault.gamp.Tile.doesTagsEquals;
 
 public class MainGameScreen extends AppCompatActivity {
     TextView ap_t_t, ap_t_c, ap_t_b, ap_a_t, ap_a_c, ap_a_b, char_key_view;
@@ -71,43 +65,28 @@ public class MainGameScreen extends AppCompatActivity {
         rv_p.setAdapter(new PropertyAdapter(this, Arrays.asList(player.getProperties())));
         rv_i.setAdapter(new ItemAdapter(this, Arrays.asList(player.getInventory())));
 
-        ap_t_context.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ap_t_b.getVisibility() == View.VISIBLE) ap_t_b.setVisibility(View.GONE);
-                else ap_t_b.setVisibility(View.VISIBLE);
-            }
+        ap_t_context.setOnClickListener(v -> {
+            if (ap_t_b.getVisibility() == View.VISIBLE) ap_t_b.setVisibility(View.GONE);
+            else ap_t_b.setVisibility(View.VISIBLE);
         });
-        ap_t_context.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if (ap_t_c.getVisibility() == View.VISIBLE) ap_t_c.setVisibility(View.GONE);
-                else ap_t_c.setVisibility(View.VISIBLE);
-                return true;
-            }
+        ap_t_context.setOnLongClickListener(v -> {
+            if (ap_t_c.getVisibility() == View.VISIBLE) ap_t_c.setVisibility(View.GONE);
+            else ap_t_c.setVisibility(View.VISIBLE);
+            return true;
         });
-        ap_a_context.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ap_a_b.getVisibility() == View.VISIBLE) ap_a_b.setVisibility(View.GONE);
-                else ap_a_b.setVisibility(View.VISIBLE);
-            }
+        ap_a_context.setOnClickListener(v -> {
+            if (ap_a_b.getVisibility() == View.VISIBLE) ap_a_b.setVisibility(View.GONE);
+            else ap_a_b.setVisibility(View.VISIBLE);
         });
-        ap_a_context.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if (ap_a_c.getVisibility() == View.VISIBLE) ap_a_c.setVisibility(View.GONE);
-                else ap_a_c.setVisibility(View.VISIBLE);
-                return true;
-            }
+        ap_a_context.setOnLongClickListener(v -> {
+            if (ap_a_c.getVisibility() == View.VISIBLE) ap_a_c.setVisibility(View.GONE);
+            else ap_a_c.setVisibility(View.VISIBLE);
+            return true;
         });
 
-        char_key_view.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                setClipboard(v.getContext(), player.getCKC());
-                return true;
-            }
+        char_key_view.setOnLongClickListener(v -> {
+            setClipboard(v.getContext(), player.getCKC());
+            return true;
         });
     }
 

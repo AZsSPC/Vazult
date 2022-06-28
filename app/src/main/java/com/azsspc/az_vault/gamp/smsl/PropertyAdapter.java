@@ -56,22 +56,16 @@ public class PropertyAdapter extends RecyclerView.Adapter<PropertyAdapter.ViewHo
         for (String item : tile.getItems()) items.add(script.items.get(item));
         holder.rv_items.setAdapter(new ItemAdapter(holder.context.getContext(), items));
 
-        holder.context.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View c = holder.rv_items;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
-            }
+        holder.context.setOnClickListener(v -> {
+            View c12 = holder.rv_items;
+            if (c12.getVisibility() == View.VISIBLE) c12.setVisibility(View.GONE);
+            else c12.setVisibility(View.VISIBLE);
         });
-        holder.context.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                View c = holder.center;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
-                return true;
-            }
+        holder.context.setOnLongClickListener(v -> {
+            View c1 = holder.center;
+            if (c1.getVisibility() == View.VISIBLE) c1.setVisibility(View.GONE);
+            else c1.setVisibility(View.VISIBLE);
+            return true;
         });
     }
 

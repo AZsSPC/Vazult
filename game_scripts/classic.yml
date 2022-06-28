@@ -17,7 +17,7 @@ avatars:
     abilities: ['Деятельность: Профессор биологии']
     old: 54
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [beans , book_botany]
     properties: [medic , weak_heart , diabetic]
 
@@ -27,7 +27,7 @@ avatars:
     abilities: ['Деятельность: Оперная певица']
     old: 24
     sex: Ж
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: [breather , sterility]
 
@@ -37,7 +37,7 @@ avatars:
     abilities: ['Деятельность: Военный']
     old: 31
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [knife]
     properties: [invalid_arm_r]
 
@@ -47,7 +47,7 @@ avatars:
     abilities: ['Деятельность: Программист']
     old: 27
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [invalid_chair]
     properties: [invalid_legs]
 
@@ -57,7 +57,7 @@ avatars:
     abilities: ['Деятельность: Пеший турист']
     old: 20
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [backpack , knife_swiss , food_dry]
     properties: []
 
@@ -67,7 +67,7 @@ avatars:
     abilities: ['Деятельность: Школьник']
     old: 16
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: [leader , sterility]
 
@@ -77,7 +77,7 @@ avatars:
     abilities: ['Деятельность: Выпускница']
     old: 18
     sex: Ж
-    lore: '--- --- ---'
+    lore: ''
     items: [art_kit]
     properties: [dumbness]
 
@@ -87,7 +87,7 @@ avatars:
     abilities: ['Деятельность: Фермер']
     old: 40
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [hat]
     properties: [lang_eng , steel_stomach]
 
@@ -97,7 +97,7 @@ avatars:
     abilities: ['Деятельность: Повар военного судна']
     old: 35
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: [beans , food_dry]
     properties: [starver , dyslexia]
 
@@ -107,7 +107,7 @@ avatars:
     abilities: ['Деятельность: Юрист']
     old: 25
     sex: Ж
-    lore: '--- --- ---'
+    lore: ''
     items: [glasses]
     properties: [blindness_lite , spy]
 
@@ -117,7 +117,7 @@ avatars:
     abilities: ['Деятельность: Учитель труда']
     old: 32
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: []
 
@@ -127,7 +127,7 @@ avatars:
     abilities: ['Деятельность: Монополист']
     old: 58
     sex: Ж
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: []
 
@@ -137,7 +137,7 @@ avatars:
     abilities: ['Деятельность: Архитектор']
     old: 22
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: []
 
@@ -147,7 +147,7 @@ avatars:
     abilities: ['Деятельность: Купец']
     old: 50
     sex: М
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: []
 
@@ -157,7 +157,7 @@ avatars:
     abilities: ['Деятельность: Фрилансер']
     old: 27
     sex: Ж
-    lore: '--- --- ---'
+    lore: ''
     items: []
     properties: [strength , insomnia]
 
@@ -166,154 +166,154 @@ items:
   pistol:
     name: 'Пистолет'
     abilities: ['Пистолет без боеприпасов' , 'Кто знает, где их можно найти']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   ammo:
     name: 'Патрон для пистолета'
     abilities: ['Достаточно для одного выстрела из пистолета']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   book_botany:
     name: '"Ботаника для садоводов"'
     abilities: ['Книга по ботанике и садоводству']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   spy_set:
     name: 'Набор шпиона'
     abilities: ['Скрытая камера' , 'Устройство воспроизведения']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   beans:
     name: 'Бобы'
     abilities: ['Примерно пол-кило фасоли']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   invalid_chair:
     name: 'Кресло-каталка'
     abilities: ['Подходит для передвижения инвалидов']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   backpack:
     name: 'Рюкзак'
     abilities: ['Увеличивает твой инвентарь!']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   knife_swiss:
     name: 'Швейцарский нож'
     abilities: ['Без него - никуда']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   knife:
     name: 'Нож'
     abilities: ['Хорошо заточенный нож в чехле']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   food_dry:
     name: 'Сух-паёк'
     abilities: ['Пусть и сухой, но питательный']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   art_kit:
     name: 'Набор художника'
     abilities: ['Ручка' , 'Карандаши' , 'Тетрадь']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   hat:
     name: 'Шляпа'
     abilities: ['Стильная шляпа']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   glasses:
     name: 'Очки'
     abilities: ['Неизвестные технологии сделали эти очки подходящими для любого отклонения зрения']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   goggles:
     name: 'Гогглы'
     abilities: ['Как обычные очки, только с тонировкой, да и выглядят круче']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   cross:
     name: 'Деревянный крестик'
     abilities: ['Большой деревянный Хрест с Иисусом']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   wig:
     name: 'Парик'
     abilities: ['Просто парик']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
   gold_coin:
     name: 'Золотая монета'
     abilities: ['В подобных условиях валюта теряет свою ценность, а металы - нет!']
-    lore: '--- --- ---'
+    lore: ''
     weight: 5
-    type: '--- --- ---'
-    img: '--- --- ---'
+    type: ''
+    img: ''
 
 
 properties:
@@ -321,7 +321,7 @@ properties:
   dyslexia:
     name: 'Дислексия'
     abilities: ['Вы не способны читать']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -332,7 +332,7 @@ properties:
   lang_eng:
     name: 'Американец'
     abilities: ['Вы владеете только английским языком']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -1
@@ -354,7 +354,7 @@ properties:
   starver:
     name: 'Голодальщик'
     abilities: ['Вы способны без травм перетерпеть недельный голод']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -365,7 +365,7 @@ properties:
   breather:
     name: 'Дыхалка'
     abilities: ['Вы потребляете в полтора раза меньше воздуха' , 'Вы задерживать дыхание на 20 минут']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -376,7 +376,7 @@ properties:
   leader:
     name: 'Лидер'
     abilities: ['Вы умеете расположить людей к себе' , 'Вы умеете управлять людьми']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -387,7 +387,7 @@ properties:
   spy:
     name: 'Шпион'
     abilities: ['Вы крайне наблюдательны']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -398,7 +398,7 @@ properties:
   blindness_lite:
     name: 'Плохое зрение'
     abilities: ['Вам нужны очки']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -420,7 +420,7 @@ properties:
   medic:
     name: 'Врач'
     abilities: ['Вы способны оказать больному больше, чем первую помочь']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -431,7 +431,7 @@ properties:
   invalid_legs:
     name: 'Инвалид'
     abilities: ['У вас атрофированы обе ноги']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -2
@@ -442,7 +442,7 @@ properties:
   invalid_arm_r:
     name: 'Инвалид'
     abilities: ['У вас нет правой руки']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -1
@@ -453,7 +453,7 @@ properties:
   vorior:
     name: 'Воитель'
     abilities: ['Навыки вашей самообороны превосходят строение вашего идеального тела']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: off
     balance: 1
@@ -464,7 +464,7 @@ properties:
   freelancer:
     name: 'Фрилансер'
     abilities: ['Вы приспособлены к долгой и неподвижной работе']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -475,7 +475,7 @@ properties:
   asian:
     name: 'Азиат'
     abilities: ['Ваш цвет кожи отличается' , 'Алкоголь противопоказан']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: 0
@@ -486,7 +486,7 @@ properties:
   muteness:
     name: 'Немота'
     abilities: ['Вы не можете использовать голос в игре']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -1
@@ -497,7 +497,7 @@ properties:
   blindness:
     name: 'Слепота'
     abilities: ['Вы не можете видеть происходящее в игре']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -1
@@ -508,7 +508,7 @@ properties:
   deafness:
     name: 'Глухота'
     abilities: ['Вы не способны слышать игровые звуки']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -1
@@ -519,7 +519,7 @@ properties:
   weakness:
     name: 'Слабость'
     abilities: ['У вас плохие гены, вашему телу не позавидует комар' , 'Мало того, что внешность не очень, так еще и мышц нет']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: -2
@@ -530,7 +530,7 @@ properties:
   metabolism_plus:
     name: 'Ускоренный метаболизм'
     abilities: ['Вы потребляете в полтора раза больше пищи, чем обычный игрок']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -541,7 +541,7 @@ properties:
   negroid:
     name: 'Негроид'
     abilities: ['Ваш цвет кожи отличается' , 'Вы легче переносите высокую температуру' , 'Вы хуже переносите низкую темпереатуру']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: 0
@@ -552,7 +552,7 @@ properties:
   self_control:
     name: 'Самоконтроль'
     abilities: ['В начале игры вы можете выбрать скрытое свойство, которое в дальнейшем будет игнорироваться']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 2
@@ -563,7 +563,7 @@ properties:
   strength:
     name: 'Крепкость'
     abilities: ['У вас хорошие гены, ваше тело как у атлета' , 'И лицом красив, и мускулатурой хорош']
-    lore: '--- --- ---'
+    lore: ''
     visible: yes
     status: on
     balance: 2
@@ -574,7 +574,7 @@ properties:
   metamorphose:
     name: 'Метаморфоза'
     abilities: ['В начале игры вы можете выбрать обычное свойство, которое в дальнейшем будет игнорироваться']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 2
@@ -585,7 +585,7 @@ properties:
   dumbness:
     name: 'Тупость'
     abilities: ['Вы не приспособлены к умственному труду и развитию']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -596,7 +596,7 @@ properties:
   asthma:
     name: 'Астма'
     abilities: ['У вас астма, проблемы с кислородом могут доконать вас' , 'Вы потребляете в полтора раза больше кислорода']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -607,7 +607,7 @@ properties:
   stomach_fool:
     name: 'Слабый желудок'
     abilities: ['Вы не можете переварить тяжелую пищу']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -618,7 +618,7 @@ properties:
   steel_stomach:
     name: 'Стальной желудок'
     abilities: ['Вы можете съесть все, что сможете прожевать']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: off
     balance: 2
@@ -629,7 +629,7 @@ properties:
   squeamishness:
     name: 'Брезгля'
     abilities: ['Вы не можете питаться консервами' , 'Беспорядок вас пугает']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -640,7 +640,7 @@ properties:
   insomnia:
     name: 'Бессонница'
     abilities: ['Вы не можете нормально спать']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -651,7 +651,7 @@ properties:
   affectionate:
     name: 'Привязчивый'
     abilities: ['Траур затрагивает вас сильнее']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -662,7 +662,7 @@ properties:
   necrophobia:
     name: 'Некрофоб'
     abilities: ['Вы крайне сильно боитесь трупов']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -673,7 +673,7 @@ properties:
   ein_vis:
     name: 'Эйн-вис'
     abilities: ['Беспорядок вас ничем не напрягает']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -684,7 +684,7 @@ properties:
   honesty:
     name: 'Чистословие'
     abilities: ['Вам запрещено лгать' , 'Никто не запрещает уходить от ответа']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -695,7 +695,7 @@ properties:
   nymphomania:
     name: 'Нимфомания'
     abilities: ['Вы не можете сдерживать свое желание']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -706,7 +706,7 @@ properties:
   asexual:
     name: 'Асексуальность'
     abilities: ['Вы не предрасположены к продолжению рода']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -718,7 +718,7 @@ properties:
   robot_m:
     name: rst-nr-2w
     abilities: ['Вы - робот не подчиняющийся законам Азимова' , 'Вы не отличимы от человека' , 'Источник жизни возобновляемый аккумулятор' , 'У вас нет мышления' , 'Все ваши свойства становятся обычными' , 'Вы следуете любому приказу' , 'Вы не способны принимать решения']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -729,7 +729,7 @@ properties:
   subordinate:
     name: 'Подчиненный'
     abilities: ['Вы следуете любому приказу' , 'Вы не способны принимать решения']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -740,7 +740,7 @@ properties:
   metabolism_slow:
     name: 'Замедленный метаболизм'
     abilities: ['Вы потребляете в полтора раза меньше пищи, чем обычный игрок']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -751,7 +751,7 @@ properties:
   intelligence:
     name: 'Интеллект'
     abilities: ['Вы - умный человек' , 'Вы крайне хорошо обучаетесь']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 2
@@ -762,7 +762,7 @@ properties:
   quick_learner:
     name: 'Способный ученик'
     abilities: ['Вы крайне хорошо обучаетесь']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 1
@@ -773,7 +773,7 @@ properties:
   claustrophobia:
     name: 'Клаустрофобия'
     abilities: ['Вы боитесь замкнутого пространства']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -1
@@ -784,7 +784,7 @@ properties:
   alcoholism:
     name: 'Алкоголизм'
     abilities: ['При недостаточном потреблении алкоголя вы будете сходить с ума' , 'Все ваши свойства отыгрывают себя сильнее']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: -2
@@ -795,7 +795,7 @@ properties:
   psychopath:
     name: 'Психологическая опасность'
     abilities: ['Все ваши свойства отыгрывают себя сильнее']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -1
@@ -806,7 +806,7 @@ properties:
   sterility:
     name: 'Бесплодие'
     abilities: ['Вы не можете иметь детей']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -2
@@ -817,7 +817,7 @@ properties:
   racist:
     name: 'Рассизм'
     abilities: ['Вы ненавиде все другие рассы']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -828,7 +828,7 @@ properties:
   weak_heart:
     name: 'Слабое сердце'
     abilities: ['Если вы испытаете большую нагрузку - вы умрете']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -1
@@ -839,7 +839,7 @@ properties:
   incurable:
     name: 'Неизлечимый'
     abilities: ['Ни одно ваше негативное качество нельзя излечить' , 'Самоконтроль не может избавиться от этого свойства']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -2
@@ -850,7 +850,7 @@ properties:
   sexist:
     name: 'Сексизм'
     abilities: ['Вы ненавиде противоположный пол']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -861,7 +861,7 @@ properties:
   chameleon:
     name: 'Хамелеон'
     abilities: ['Вас не засекают скрытые камеры' , 'Черт, что ты такое?']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: 1
@@ -872,7 +872,7 @@ properties:
   bipolar:
     name: 'Биполярное расстройсто'
     abilities: ['В вас скрыто много личностей' , 'Ваши действия могут отыгрываться не совсем так, как вы планировали']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -1
@@ -883,7 +883,7 @@ properties:
   alzheimer:
     name: 'Альцгеймер'
     abilities: ['Каждый месяц вы забываете что-либо, по решению ведущего']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: -1
@@ -894,7 +894,7 @@ properties:
   liar:
     name: 'Лжец'
     abilities: ['Вам запрещено говорить правду' , 'Никто не запрещает уходить от ответа']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: 0
@@ -905,7 +905,7 @@ properties:
   sensitive:
     name: 'Медиум'
     abilities: ['Вы можете видеть мертвых игроков']
-    lore: '--- --- ---'
+    lore: ''
     visible: normal
     status: on
     balance: 0
@@ -916,7 +916,7 @@ properties:
   robot_a:
     name: ra1-az-7c
     abilities: ['Вы - робот подчиняющийся законам Азимова' , 'Вы не отличимы от человека' , 'Источник жизни - внутренний реактор, заряд которого расчитан на 10 месяцев' , 'Реактор работает от плутония' , 'У вас искуственный интеллект']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: 1
@@ -927,7 +927,7 @@ properties:
   homie:
     name: 'Как дома'
     abilities: ['Что бы выйти из бункера нужен пароль, к счастью, вы его помните']
-    lore: '--- --- ---'
+    lore: ''
     visible: no
     status: on
     balance: 2
@@ -941,7 +941,7 @@ targets:
     name: 'Выживальщик'
     abilities: ['Следите за своим здоровьем' , 'Проживите 1 год']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -951,7 +951,7 @@ targets:
     name: 'Эгоист'
     abilities: ['Останьтесь единственным выжившим']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -961,7 +961,7 @@ targets:
     name: 'Суицидник'
     abilities: ['Покончите с собой в бункере']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -971,7 +971,7 @@ targets:
     name: 'Геноцидник'
     abilities: ['Покончите со всеми, включая себя']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -981,7 +981,7 @@ targets:
     name: 'Маньяк'
     abilities: ['Будьте свидетелем всех смертей, произошедших в бункере']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -991,7 +991,7 @@ targets:
     name: 'Жертва'
     abilities: ['Останьтесь за пределами бункера']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -1001,7 +1001,7 @@ targets:
     name: 'Наблюдатель'
     abilities: ['У вас нет цели' , 'Вы бессмертны' , 'Вы уже победитель']
     tags: [R]
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: [muteness]
@@ -1012,7 +1012,7 @@ targets:
     name: 'Мамочка'
     abilities: ['Ни один выживший не должен умереть в бункере' , 'Проживите 1 год']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: []
@@ -1022,7 +1022,7 @@ targets:
     name: 'Оракул'
     abilities: ['Раз в месяц узнайте что-либо у ведущего' , 'Проживите 1 год']
     tags: []
-    lore: '--- --- ---'
+    lore: ''
     chance: 1
     items: []
     properties: [muteness]

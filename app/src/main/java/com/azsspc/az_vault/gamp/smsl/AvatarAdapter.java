@@ -60,28 +60,22 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.ViewHolder
         for (String prop : tile.getProperties()) properties.add(script.properties.get(prop));
         holder.rv_properties.setAdapter(new PropertyAdapter(holder.context.getContext(), properties));
 
-        holder.context.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View c = holder.rv_items;
-                View c2 = holder.rv_properties;
-                if (c.getVisibility() == View.VISIBLE) {
-                    c.setVisibility(View.GONE);
-                    c2.setVisibility(View.GONE);
-                } else {
-                    c.setVisibility(View.VISIBLE);
-                    c2.setVisibility(View.VISIBLE);
-                }
+        holder.context.setOnClickListener(v -> {
+            View c1 = holder.rv_items;
+            View c2 = holder.rv_properties;
+            if (c1.getVisibility() == View.VISIBLE) {
+                c1.setVisibility(View.GONE);
+                c2.setVisibility(View.GONE);
+            } else {
+                c1.setVisibility(View.VISIBLE);
+                c2.setVisibility(View.VISIBLE);
             }
         });
-        holder.context.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                View c = holder.center;
-                if (c.getVisibility() == View.VISIBLE) c.setVisibility(View.GONE);
-                else c.setVisibility(View.VISIBLE);
-                return true;
-            }
+        holder.context.setOnLongClickListener(v -> {
+            View c12 = holder.center;
+            if (c12.getVisibility() == View.VISIBLE) c12.setVisibility(View.GONE);
+            else c12.setVisibility(View.VISIBLE);
+            return true;
         });
     }
 
